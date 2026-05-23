@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Investment Council · 投研圆桌报告归档</title>
+<meta name="description" content="14 Agent · 5 Phase · 多空辩论的本地化投研圆桌报告归档站点" />
+<style>
+:root {
+  --bg-base:#0b1020; --bg-elev1:#111933; --bg-elev2:#161e3d; --bg-elev3:#1f2748;
+  --bg-tint:rgba(129,140,248,.04);
+  --border-soft:rgba(129,140,248,.12); --border-mid:rgba(129,140,248,.22); --border-strong:rgba(129,140,248,.45);
+  --text-primary:#e2e8f0; --text-body:#cbd5e1; --text-muted:#94a3b8; --text-faint:#64748b;
+  --accent-indigo:#818cf8; --accent-cyan:#22d3ee; --accent-magenta:#f43f5e;
+  --accent-violet:#a78bfa; --accent-iris:#6366f1; --accent-mint:#34d399; --accent-amber:#fbbf24;
+  --shadow-card:0 1px 0 rgba(255,255,255,.02),0 12px 32px -16px rgba(0,0,0,.6);
+  --shadow-float:0 4px 0 rgba(255,255,255,.02),0 32px 64px -24px rgba(0,0,0,.7);
+  --radius-s:6px; --radius-m:10px; --radius-l:14px;
+  --font-sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;
+  --font-mono:ui-monospace,"SF Mono","Menlo","Consolas","JetBrains Mono",monospace;
+}
+[data-theme="light"]{
+  --bg-base:#f8fafc; --bg-elev1:#fff; --bg-elev2:#f1f5f9; --bg-elev3:#e2e8f0;
+  --bg-tint:rgba(99,102,241,.04);
+  --border-soft:rgba(99,102,241,.14); --border-mid:rgba(99,102,241,.24); --border-strong:rgba(99,102,241,.5);
+  --text-primary:#0f172a; --text-body:#1e293b; --text-muted:#475569; --text-faint:#94a3b8;
+  --accent-indigo:#6366f1; --accent-cyan:#0891b2; --accent-magenta:#e11d48; --accent-violet:#7c3aed;
+  --shadow-card:0 1px 0 rgba(255,255,255,.5),0 8px 24px -12px rgba(15,23,42,.12);
+  --shadow-float:0 4px 0 rgba(255,255,255,.7),0 24px 48px -16px rgba(15,23,42,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-sans);font-size:16px;line-height:1.7;color:var(--text-body);
+  background:var(--bg-base);
+  background-image:
+    radial-gradient(ellipse 1400px 700px at 20% -10%,rgba(99,102,241,.10),transparent 60%),
+    radial-gradient(ellipse 1100px 550px at 90% 30%,rgba(34,211,238,.06),transparent 70%),
+    radial-gradient(ellipse 900px 450px at 50% 110%,rgba(167,139,250,.05),transparent 60%);
+  background-attachment:fixed;min-height:100vh;
+  transition:background-color 220ms ease;-webkit-font-smoothing:antialiased;
+}
+.num,code{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+a{color:var(--accent-cyan);text-decoration:none;transition:color 150ms}
+a:hover{color:var(--accent-violet)}
+
+/* ===== 顶部 Hero ===== */
+.hero{
+  position:relative;max-width:1280px;margin:0 auto;padding:80px 32px 56px;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 15% 30%,rgba(129,140,248,.18),transparent 50%),
+    radial-gradient(circle at 85% 70%,rgba(34,211,238,.12),transparent 55%);
+  pointer-events:none;z-index:-1;
+}
+.hero .brand-row{display:flex;align-items:center;gap:14px;margin-bottom:32px;flex-wrap:wrap}
+.hero .brand-mark{
+  display:inline-flex;align-items:center;gap:10px;padding:8px 16px;
+  background:linear-gradient(135deg,var(--accent-indigo),var(--accent-iris));
+  color:#fff;border-radius:var(--radius-s);font-weight:800;letter-spacing:.16em;font-size:13px;
+  box-shadow:0 0 0 1px rgba(255,255,255,.1),0 8px 20px -8px rgba(129,140,248,.5);
+}
+.hero .brand-mark .dot{width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 8px #fff;animation:dot-pulse 2.4s ease-in-out infinite}
+@keyframes dot-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.7)}}
+.hero .meta-pill{
+  padding:6px 12px;background:var(--bg-elev2);border:1px solid var(--border-soft);
+  border-radius:999px;font-size:12px;color:var(--text-muted);letter-spacing:.04em;
+}
+.hero .meta-pill b{color:var(--text-body);font-family:var(--font-mono)}
+.hero h1{
+  font-size:48px;font-weight:800;letter-spacing:.01em;color:var(--text-primary);
+  margin-bottom:14px;line-height:1.15;
+  background:linear-gradient(135deg,var(--text-primary) 0%,var(--accent-indigo) 50%,var(--accent-cyan) 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero .tagline{font-size:18px;color:var(--text-muted);margin-bottom:32px;max-width:780px;line-height:1.65}
+.hero .tagline b{color:var(--text-body);font-weight:600}
+.hero .stats{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.stat-card{
+  flex:1;min-width:140px;padding:18px 20px;
+  background:linear-gradient(160deg,var(--bg-elev1),var(--bg-elev2));
+  border:1px solid var(--border-soft);border-radius:var(--radius-m);
+  box-shadow:var(--shadow-card);transition:all 180ms ease;
+}
+.stat-card:hover{transform:translateY(-2px);border-color:var(--border-mid)}
+.stat-card .lbl{font-size:11px;letter-spacing:.16em;color:var(--text-muted);font-weight:600;margin-bottom:8px}
+.stat-card .val{font-family:var(--font-mono);font-size:32px;font-weight:800;color:var(--text-primary);line-height:1;letter-spacing:.02em}
+.stat-card .val small{font-size:14px;color:var(--text-muted);font-weight:500;margin-left:4px}
+.stat-card.iris .val{color:var(--accent-violet)}
+.stat-card.cyan .val{color:var(--accent-cyan)}
+.stat-card.amber .val{color:var(--accent-amber)}
+.theme-toggle{
+  position:fixed;top:24px;right:24px;z-index:100;
+  width:42px;height:42px;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid var(--border-mid);background:var(--bg-elev1);color:var(--text-muted);
+  border-radius:50%;cursor:pointer;transition:all 150ms ease;
+  box-shadow:var(--shadow-card);
+}
+.theme-toggle:hover{color:var(--accent-indigo);border-color:var(--border-strong);transform:rotate(20deg)}
+.theme-toggle svg{width:20px;height:20px}
+.theme-toggle .ico-sun{display:none}
+[data-theme="light"] .theme-toggle .ico-moon{display:none}
+[data-theme="light"] .theme-toggle .ico-sun{display:block}
+
+/* ===== 筛选条 ===== */
+.toolbar{max-width:1280px;margin:0 auto;padding:0 32px 24px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.search-box{
+  flex:1;min-width:240px;display:flex;align-items:center;gap:10px;
+  padding:10px 16px;background:var(--bg-elev1);border:1px solid var(--border-soft);
+  border-radius:var(--radius-m);transition:all 150ms ease;
+}
+.search-box:focus-within{border-color:var(--accent-cyan);box-shadow:0 0 0 3px rgba(34,211,238,.12)}
+.search-box svg{width:16px;height:16px;color:var(--text-muted)}
+.search-box input{flex:1;background:transparent;border:0;outline:0;color:var(--text-primary);font-size:14px;font-family:inherit}
+.search-box input::placeholder{color:var(--text-faint)}
+.filter-group{display:flex;gap:6px;flex-wrap:wrap}
+.filter-chip{
+  padding:6px 14px;background:var(--bg-elev1);border:1px solid var(--border-soft);
+  color:var(--text-muted);font-size:12.5px;letter-spacing:.02em;
+  border-radius:999px;cursor:pointer;transition:all 150ms ease;font-family:inherit;
+}
+.filter-chip:hover{color:var(--text-primary);border-color:var(--border-mid)}
+.filter-chip.active{background:linear-gradient(135deg,var(--accent-indigo),var(--accent-violet));color:#fff;border-color:transparent;font-weight:600}
+
+/* ===== 报告卡片网格 ===== */
+.grid-wrap{max-width:1280px;margin:0 auto;padding:0 32px 64px}
+.report-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px;
+}
+.empty-state{
+  padding:60px 32px;text-align:center;color:var(--text-muted);
+  background:var(--bg-elev1);border:1px dashed var(--border-mid);border-radius:var(--radius-l);
+}
+.empty-state .emoji{font-size:48px;margin-bottom:12px;opacity:.5}
+.empty-state .title{font-size:18px;color:var(--text-body);margin-bottom:6px;font-weight:600}
+.empty-state .desc{font-size:13px}
+
+.report-card{
+  position:relative;display:block;padding:22px 22px 20px;
+  background:linear-gradient(160deg,var(--bg-elev1) 0%,var(--bg-elev2) 100%);
+  border:1px solid var(--border-soft);border-radius:var(--radius-l);
+  box-shadow:var(--shadow-card);overflow:hidden;color:inherit;
+  transition:all 220ms cubic-bezier(.2,.7,.3,1);
+}
+.report-card::before{
+  content:"";position:absolute;left:0;top:0;width:4px;height:100%;
+  background:var(--card-accent,var(--accent-indigo));
+  transition:width 220ms ease;
+}
+.report-card:hover{transform:translateY(-4px);border-color:var(--border-mid);box-shadow:var(--shadow-float)}
+.report-card:hover::before{width:6px}
+.report-card.dec-BUY{--card-accent:var(--accent-magenta)}
+.report-card.dec-SELL{--card-accent:var(--accent-mint)}
+.report-card.dec-HOLD{--card-accent:var(--accent-amber)}
+.report-card.dec-AVOID{--card-accent:var(--accent-mint)}
+
+.rc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px dashed var(--border-soft)}
+.rc-id{flex:1;min-width:0}
+.rc-code{font-family:var(--font-mono);font-size:11px;color:var(--text-muted);letter-spacing:.06em;margin-bottom:3px}
+.rc-name{font-size:19px;font-weight:800;color:var(--text-primary);letter-spacing:.01em;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.rc-name .market-tag{
+  font-family:var(--font-mono);font-size:10px;padding:2px 6px;
+  background:var(--bg-elev3);color:var(--text-muted);
+  border:1px solid var(--border-soft);border-radius:3px;font-weight:600;letter-spacing:.06em;
+}
+.rc-decision{
+  flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;
+  min-width:60px;padding:6px 12px;font-size:13px;font-weight:800;letter-spacing:.12em;
+  color:#fff;background:var(--card-accent);border-radius:6px;
+  box-shadow:0 0 0 1px rgba(255,255,255,.1),0 4px 12px -4px var(--card-accent);
+}
+.rc-industry{font-size:12.5px;color:var(--text-muted);margin-bottom:14px;display:flex;align-items:center;gap:6px}
+.rc-industry::before{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--text-faint)}
+
+.rc-prices{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;
+  padding:12px 10px;background:var(--bg-elev3);border-radius:var(--radius-s);border:1px solid var(--border-soft);
+}
+.rc-price-cell{text-align:center}
+.rc-price-cell .k{font-size:10px;letter-spacing:.1em;color:var(--text-muted);font-weight:600;margin-bottom:3px}
+.rc-price-cell .v{font-family:var(--font-mono);font-size:13.5px;font-weight:700;color:var(--text-primary);letter-spacing:.02em}
+.rc-price-cell.t1 .v{color:var(--accent-magenta)}
+.rc-price-cell.t2 .v{color:var(--accent-magenta)}
+.rc-price-cell.stop .v{color:var(--accent-mint)}
+
+.rc-summary{font-size:13px;line-height:1.65;color:var(--text-body);margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+
+.rc-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:14px;border-top:1px dashed var(--border-soft)}
+.rc-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rc-date{font-family:var(--font-mono);font-size:12px;color:var(--text-muted)}
+.rc-confidence{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted);letter-spacing:.06em}
+.rc-confidence b{font-family:var(--font-mono);font-size:14px;color:var(--accent-cyan);font-weight:800}
+.rc-cta{
+  display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:600;
+  color:var(--accent-cyan);letter-spacing:.02em;
+}
+.rc-cta svg{width:12px;height:12px;transition:transform 180ms ease}
+.report-card:hover .rc-cta svg{transform:translateX(3px)}
+
+/* ===== Footer ===== */
+.footer{
+  max-width:1280px;margin:0 auto;padding:36px 32px 60px;
+  border-top:1px solid var(--border-soft);
+}
+.footer .row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--text-muted)}
+.footer a{color:var(--text-body)}
+.footer a:hover{color:var(--accent-cyan)}
+.footer .disclaimer{
+  margin-top:16px;padding:14px 16px;background:rgba(244,63,94,.06);
+  border-left:3px solid var(--accent-magenta);border-radius:0 var(--radius-s) var(--radius-s) 0;
+  font-size:12px;color:var(--text-muted);line-height:1.7;
+}
+.footer .disclaimer b{color:var(--accent-magenta);font-weight:700}
+
+@media (max-width:760px){
+  .hero{padding:60px 20px 40px}
+  .hero h1{font-size:34px}
+  .hero .tagline{font-size:15px}
+  .toolbar{padding:0 20px 18px}
+  .grid-wrap{padding:0 20px 40px}
+  .rc-prices{grid-template-columns:repeat(2,1fr)}
+  .theme-toggle{top:16px;right:16px}
+}
+</style>
+</head>
+<body data-theme="dark">
+
+<button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+  <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+</button>
+
+<section class="hero">
+  <div class="brand-row">
+    <span class="brand-mark"><span class="dot"></span>IC · INVESTMENT COUNCIL</span>
+    <span class="meta-pill">14 Agent · <b>5 Phase</b></span>
+    <span class="meta-pill">报告总数 · <b id="totalCount">—</b></span>
+    <span class="meta-pill">最近更新 · <b id="lastUpdated">—</b></span>
+  </div>
+  <h1>投研圆桌报告归档</h1>
+  <p class="tagline">
+    本站归档由 <b>Investment Council</b> 多智能体系统产出的深度研判报告：
+    14 位分析师顺序扮演 / 多空 7 Claim 辩论 / 三方风控博弈 / 组合经理终裁。
+    每份报告含执行摘要、5 维评分、决策路径、术语表与可交互图表。
+  </p>
+  <div class="stats">
+    <div class="stat-card iris"><div class="lbl">REPORTS</div><div class="val" id="statTotal">—</div></div>
+    <div class="stat-card cyan"><div class="lbl">A 股</div><div class="val" id="statAShare">—</div></div>
+    <div class="stat-card"><div class="lbl">港股</div><div class="val" id="statHK">—</div></div>
+    <div class="stat-card amber"><div class="lbl">美股</div><div class="val" id="statUS">—</div></div>
+  </div>
+</section>
+
+<section class="toolbar">
+  <label class="search-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+    <input id="searchInput" type="search" placeholder="搜索代码 / 名称 / 行业..." autocomplete="off" />
+  </label>
+  <div class="filter-group" id="filterMarket">
+    <button class="filter-chip active" data-market="ALL">全部</button>
+    <button class="filter-chip" data-market="A股">A 股</button>
+    <button class="filter-chip" data-market="港股">港股</button>
+    <button class="filter-chip" data-market="美股">美股</button>
+    <button class="filter-chip" data-market="指数">指数</button>
+    <button class="filter-chip" data-market="ETF">ETF</button>
+  </div>
+  <div class="filter-group" id="filterDecision">
+    <button class="filter-chip active" data-decision="ALL">所有决策</button>
+    <button class="filter-chip" data-decision="BUY">BUY</button>
+    <button class="filter-chip" data-decision="HOLD">HOLD</button>
+    <button class="filter-chip" data-decision="SELL">SELL</button>
+    <button class="filter-chip" data-decision="AVOID">AVOID</button>
+  </div>
+</section>
+
+<section class="grid-wrap">
+  <div class="report-grid" id="reportGrid">
+    <!-- 由 JS 从 manifest.json 渲染 -->
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="row">
+    <span>© Investment Council · 14 Agent 多智能体投研系统</span>
+    <span>
+      <a href="https://github.com/PatriotBo/investment-council-reports" target="_blank" rel="noopener">📦 GitHub 仓库</a>
+      &nbsp;·&nbsp;
+      <a href="manifest.json" target="_blank">📄 manifest</a>
+    </span>
+  </div>
+  <div class="disclaimer">
+    <b>免责声明</b>　本站所有报告由 Investment Council 多智能体系统基于公开数据自动生成，仅供研究讨论与教育用途，不构成任何投资建议、不保证准确性、不替代专业投顾。投资有风险，决策请自行承担。
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // ===== 主题切换 =====
+  var STORAGE_KEY = 'ic-pages-theme';
+  var saved = null;
+  try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+  if (saved === 'light' || saved === 'dark') document.body.setAttribute('data-theme', saved);
+  document.getElementById('themeToggle').addEventListener('click', function () {
+    var cur = document.body.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    var next = cur === 'light' ? 'dark' : 'light';
+    document.body.setAttribute('data-theme', next);
+    try { localStorage.setItem(STORAGE_KEY, next); } catch (e) {}
+  });
+
+  // ===== 数据加载 =====
+  var state = { reports: [], market: 'ALL', decision: 'ALL', q: '' };
+
+  function fmtPrice(v, ccy) {
+    if (v === undefined || v === null) return '—';
+    var prefix = ccy === 'HKD' ? 'HK$' : ccy === 'USD' ? '$' : '¥';
+    return prefix + Number(v).toFixed(2);
+  }
+
+  function render() {
+    var grid = document.getElementById('reportGrid');
+    var q = state.q.toLowerCase().trim();
+    var filtered = state.reports.filter(function (r) {
+      if (state.market !== 'ALL' && r.market !== state.market) return false;
+      if (state.decision !== 'ALL' && r.decision !== state.decision) return false;
+      if (q) {
+        var hay = (r.code + ' ' + r.name + ' ' + (r.industry || '') + ' ' + (r.summary || '')).toLowerCase();
+        if (hay.indexOf(q) === -1) return false;
+      }
+      return true;
+    });
+
+    if (filtered.length === 0) {
+      grid.innerHTML =
+        '<div class="empty-state" style="grid-column:1/-1">' +
+        '<div class="emoji">🪐</div>' +
+        '<div class="title">没找到匹配的报告</div>' +
+        '<div class="desc">换个搜索词或筛选条件试试</div>' +
+        '</div>';
+      return;
+    }
+
+    var html = filtered.map(function (r) {
+      var ccy = r.market === '港股' ? 'HKD' : r.market === '美股' ? 'USD' : 'CNY';
+      var suf = r.suffix ? '.' + r.suffix : '';
+      return '' +
+        '<a class="report-card dec-' + r.decision + '" href="' + r.file + '">' +
+          '<div class="rc-head">' +
+            '<div class="rc-id">' +
+              '<div class="rc-code">' + r.code + suf + '</div>' +
+              '<div class="rc-name">' + r.name + '<span class="market-tag">' + (r.market || '—') + '</span></div>' +
+            '</div>' +
+            '<span class="rc-decision">' + r.decision + '</span>' +
+          '</div>' +
+          (r.industry ? '<div class="rc-industry">' + r.industry + '</div>' : '') +
+          '<div class="rc-prices">' +
+            '<div class="rc-price-cell"><div class="k">现价</div><div class="v">' + fmtPrice(r.current_price, ccy) + '</div></div>' +
+            '<div class="rc-price-cell t1"><div class="k">T1</div><div class="v">' + fmtPrice(r.target_t1, ccy) + '</div></div>' +
+            '<div class="rc-price-cell t2"><div class="k">T2</div><div class="v">' + fmtPrice(r.target_t2, ccy) + '</div></div>' +
+            '<div class="rc-price-cell stop"><div class="k">止损</div><div class="v">' + fmtPrice(r.stop_loss, ccy) + '</div></div>' +
+          '</div>' +
+          '<p class="rc-summary">' + (r.summary || '') + '</p>' +
+          '<div class="rc-foot">' +
+            '<div class="rc-meta">' +
+              '<span class="rc-date">' + (r.date || '—') + '</span>' +
+              '<span class="rc-confidence">CONF <b>' + (r.confidence !== undefined ? r.confidence : '—') + '</b></span>' +
+            '</div>' +
+            '<span class="rc-cta">查看报告 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>' +
+          '</div>' +
+        '</a>';
+    }).join('');
+    grid.innerHTML = html;
+  }
+
+  function renderStats() {
+    var total = state.reports.length;
+    var aShare = state.reports.filter(function (r) { return r.market === 'A股'; }).length;
+    var hk = state.reports.filter(function (r) { return r.market === '港股'; }).length;
+    var us = state.reports.filter(function (r) { return r.market === '美股'; }).length;
+    var latest = state.reports.map(function (r) { return r.date; }).filter(Boolean).sort().pop() || '—';
+    document.getElementById('statTotal').innerHTML = total + '<small>份</small>';
+    document.getElementById('statAShare').innerHTML = aShare + '<small>份</small>';
+    document.getElementById('statHK').innerHTML = hk + '<small>份</small>';
+    document.getElementById('statUS').innerHTML = us + '<small>份</small>';
+    document.getElementById('totalCount').textContent = total;
+    document.getElementById('lastUpdated').textContent = latest;
+  }
+
+  function bindUI() {
+    document.getElementById('searchInput').addEventListener('input', function (e) {
+      state.q = e.target.value;
+      render();
+    });
+    document.querySelectorAll('#filterMarket .filter-chip').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('#filterMarket .filter-chip').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        state.market = btn.getAttribute('data-market');
+        render();
+      });
+    });
+    document.querySelectorAll('#filterDecision .filter-chip').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('#filterDecision .filter-chip').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        state.decision = btn.getAttribute('data-decision');
+        render();
+      });
+    });
+  }
+
+  // 加载 manifest.json
+  fetch('manifest.json?t=' + Date.now())
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      var reports = (data && data.reports) || [];
+      // 按日期倒序
+      reports.sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
+      state.reports = reports;
+      renderStats();
+      bindUI();
+      render();
+    })
+    .catch(function (err) {
+      console.error('Failed to load manifest:', err);
+      document.getElementById('reportGrid').innerHTML =
+        '<div class="empty-state" style="grid-column:1/-1">' +
+        '<div class="emoji">⚠️</div>' +
+        '<div class="title">manifest.json 加载失败</div>' +
+        '<div class="desc">' + (err.message || err) + '</div>' +
+        '</div>';
+    });
+})();
+</script>
+</body>
+</html>

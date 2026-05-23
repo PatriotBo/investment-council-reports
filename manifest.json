@@ -1,0 +1,27 @@
+{
+  "$schema": "investment-council/pages-manifest@v1",
+  "site": {
+    "title": "Investment Council · 投研圆桌报告归档",
+    "subtitle": "14 Agent · 5 Phase · 多空辩论 · 三向风控 · 组合经理终裁",
+    "owner": "PatriotBo",
+    "repo": "investment-council-reports"
+  },
+  "reports": [
+    {
+      "code": "002463",
+      "suffix": "SZ",
+      "name": "沪电股份",
+      "market": "A股",
+      "industry": "PCB / AI 算力",
+      "date": "2026-05-23",
+      "decision": "HOLD",
+      "confidence": 62,
+      "current_price": 114.07,
+      "target_t1": 120,
+      "target_t2": 137,
+      "stop_loss": 95,
+      "summary": "好公司碰上贵价格 · PE_TTM 51× 处于历史 95% 分位，外资长线增持但游资涨停日撤退；不追涨，等回踩 ¥98-108 分批建仓",
+      "file": "reports/002463-SZ-2026-05-23.html"
+    }
+  ]
+}

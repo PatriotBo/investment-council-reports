@@ -1,0 +1,2211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>沪电股份 002463.SZ · Investment Council 深度研判 · 2026-05-23</title>
+<style>
+:root {
+  --bg-base:#0b1020; --bg-elev1:#111933; --bg-elev2:#161e3d; --bg-elev3:#1f2748;
+  --bg-tint:rgba(129,140,248,.04);
+  --border-soft:rgba(129,140,248,.12); --border-mid:rgba(129,140,248,.22); --border-strong:rgba(129,140,248,.45);
+  --text-primary:#e2e8f0; --text-body:#cbd5e1; --text-muted:#94a3b8; --text-faint:#64748b;
+  --accent-indigo:#818cf8; --accent-cyan:#22d3ee; --accent-magenta:#f43f5e;
+  --accent-violet:#a78bfa; --accent-iris:#6366f1; --accent-mint:#34d399; --accent-amber:#fbbf24;
+  --shadow-card:0 1px 0 rgba(255,255,255,.02),0 12px 32px -16px rgba(0,0,0,.6);
+  --shadow-float:0 4px 0 rgba(255,255,255,.02),0 32px 64px -24px rgba(0,0,0,.7);
+  --radius-s:6px; --radius-m:10px; --radius-l:14px;
+  --font-sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;
+  --font-mono:ui-monospace,"SF Mono","Menlo","Consolas","JetBrains Mono",monospace;
+  --topbar-h:56px; --toc-w:240px; --decision-w:320px;
+}
+[data-theme="light"]{
+  --bg-base:#f8fafc; --bg-elev1:#fff; --bg-elev2:#f1f5f9; --bg-elev3:#e2e8f0;
+  --bg-tint:rgba(99,102,241,.04);
+  --border-soft:rgba(99,102,241,.14); --border-mid:rgba(99,102,241,.24); --border-strong:rgba(99,102,241,.5);
+  --text-primary:#0f172a; --text-body:#1e293b; --text-muted:#475569; --text-faint:#94a3b8;
+  --accent-indigo:#6366f1; --accent-cyan:#0891b2; --accent-magenta:#e11d48; --accent-violet:#7c3aed;
+  --shadow-card:0 1px 0 rgba(255,255,255,.5),0 8px 24px -12px rgba(15,23,42,.12);
+  --shadow-float:0 4px 0 rgba(255,255,255,.7),0 24px 48px -16px rgba(15,23,42,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);font-size:16px;line-height:1.7;color:var(--text-body);background:var(--bg-base);background-image:radial-gradient(ellipse 1200px 600px at 20% -10%,rgba(99,102,241,.08),transparent 60%),radial-gradient(ellipse 1000px 500px at 90% 20%,rgba(34,211,238,.05),transparent 70%),radial-gradient(ellipse 800px 400px at 50% 110%,rgba(167,139,250,.04),transparent 60%);background-attachment:fixed;min-height:100vh;transition:background-color 220ms ease;-webkit-font-smoothing:antialiased}
+.num,.price,code,pre,.stat-value,table td:not(.txt-cell){font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+a{color:var(--accent-cyan);text-decoration:none;transition:color 150ms}
+a:hover{color:var(--accent-violet)}
+.topbar{position:sticky;top:0;z-index:100;height:var(--topbar-h);display:flex;align-items:center;gap:16px;padding:0 20px;background:rgba(11,16,32,.78);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid var(--border-soft)}
+[data-theme="light"] .topbar{background:rgba(248,250,252,.85)}
+.topbar-left{display:flex;align-items:center;gap:14px;min-width:0;flex:1;flex-wrap:wrap}
+.topbar-mid{display:flex;align-items:center;gap:8px;color:var(--text-muted);font-size:12px;letter-spacing:.04em}
+.topbar-right{display:flex;align-items:center;gap:12px}
+.brand-mark{display:flex;align-items:center;gap:8px;padding:4px 10px;background:linear-gradient(135deg,var(--accent-indigo),var(--accent-iris));color:#fff;border-radius:var(--radius-s);font-weight:700;font-size:12px;letter-spacing:.08em;box-shadow:0 0 0 1px rgba(255,255,255,.08),inset 0 1px 0 rgba(255,255,255,.15)}
+.ticker{font-family:var(--font-mono);font-size:13px;font-weight:600;color:var(--text-primary);letter-spacing:.04em}
+.ticker-name{font-size:14px;color:var(--text-primary);font-weight:500}
+.live-price{font-family:var(--font-mono);font-size:18px;font-weight:700;color:var(--accent-magenta);letter-spacing:.02em}
+.pct-chip{display:inline-flex;align-items:center;padding:2px 8px;font-family:var(--font-mono);font-size:11px;font-weight:600;border-radius:4px;background:rgba(244,63,94,.12);color:var(--accent-magenta);border:1px solid rgba(244,63,94,.3)}
+.decision-pill{padding:6px 14px;background:linear-gradient(135deg,var(--accent-indigo),var(--accent-violet));color:#fff;font-weight:700;font-size:13px;letter-spacing:.12em;border-radius:999px;box-shadow:0 0 0 1px rgba(255,255,255,.1),0 4px 12px -4px rgba(129,140,248,.5)}
+.confidence-mini{color:var(--text-muted);font-family:var(--font-mono);font-size:12px}
+.confidence-mini b{color:var(--accent-cyan);font-weight:700}
+.theme-toggle{width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--border-mid);background:var(--bg-elev1);color:var(--text-muted);border-radius:var(--radius-s);cursor:pointer;transition:all 150ms ease}
+.theme-toggle:hover{color:var(--accent-indigo);border-color:var(--border-strong)}
+.theme-toggle svg{width:16px;height:16px}
+.theme-toggle .ico-sun{display:none}
+[data-theme="light"] .theme-toggle .ico-moon{display:none}
+[data-theme="light"] .theme-toggle .ico-sun{display:block}
+.layout{display:grid;grid-template-columns:var(--toc-w) minmax(0,1fr) var(--decision-w);max-width:1680px;margin:0 auto;padding:24px;gap:24px;align-items:flex-start}
+@media (max-width:1280px){.layout{grid-template-columns:var(--toc-w) minmax(0,1fr)}.decision-float{display:none}}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);padding:16px;gap:16px}.toc-rail{display:none}}
+.toc-rail{position:sticky;top:calc(var(--topbar-h) + 24px);align-self:flex-start;height:calc(100vh - var(--topbar-h) - 48px);overflow-y:auto;padding:18px 14px;background:linear-gradient(180deg,var(--bg-elev1),var(--bg-elev2));border:1px solid var(--border-soft);border-radius:var(--radius-l);box-shadow:var(--shadow-card)}
+.toc-rail::-webkit-scrollbar{width:4px}
+.toc-rail::-webkit-scrollbar-thumb{background:var(--border-mid);border-radius:2px}
+.toc-brand{display:flex;align-items:center;gap:8px;padding:6px 8px 14px;margin-bottom:6px;border-bottom:1px dashed var(--border-soft)}
+.toc-brand .dot{width:8px;height:8px;border-radius:50%;background:var(--accent-indigo);box-shadow:0 0 8px var(--accent-indigo);animation:dot-pulse 2.4s ease-in-out infinite}
+@keyframes dot-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.toc-brand .lbl{font-size:11px;color:var(--text-muted);letter-spacing:.16em;font-weight:600}
+.toc-list{list-style:none}
+.toc-item a{display:block;padding:6px 10px 6px 14px;margin:2px 0;border-left:2px solid transparent;color:var(--text-muted);font-size:12.5px;border-radius:0 var(--radius-s) var(--radius-s) 0;transition:all 150ms ease;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.toc-item.lvl-1 a{font-weight:600;color:var(--text-body);padding-left:10px;margin-top:8px;font-size:13px}
+.toc-item.lvl-2 a{padding-left:22px}
+.toc-item a:hover{background:var(--bg-tint);color:var(--text-primary)}
+.toc-item.active>a{border-left-color:var(--accent-cyan);background:linear-gradient(90deg,rgba(34,211,238,.10),transparent);color:var(--accent-cyan);font-weight:600}
+.toc-back-top{margin-top:16px;width:100%;padding:8px;background:var(--bg-elev3);color:var(--text-muted);border:1px solid var(--border-soft);border-radius:var(--radius-s);font-size:11px;letter-spacing:.08em;cursor:pointer;transition:all 150ms;font-family:inherit}
+.toc-back-top:hover{color:var(--accent-indigo);border-color:var(--border-mid)}
+.decision-float{position:sticky;top:calc(var(--topbar-h) + 24px);align-self:flex-start;padding:18px;background:linear-gradient(160deg,var(--bg-elev1),var(--bg-elev2) 50%,var(--bg-elev1));border:1px solid var(--border-mid);border-radius:var(--radius-l);box-shadow:var(--shadow-float);overflow:hidden}
+.decision-float::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 100% 0%,rgba(129,140,248,.16),transparent 60%);pointer-events:none}
+.decision-float>*{position:relative}
+.df-label{font-size:10px;letter-spacing:.22em;color:var(--text-muted);font-weight:600;margin-bottom:8px}
+.df-decision{display:inline-block;padding:8px 18px;background:linear-gradient(135deg,var(--accent-indigo),var(--accent-violet));color:#fff;font-weight:800;font-size:22px;letter-spacing:.16em;border-radius:6px;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 8px 20px -8px rgba(129,140,248,.6);margin-bottom:6px}
+.df-direction{font-size:11px;color:var(--text-muted);margin-bottom:16px}
+.df-section{margin-top:16px;padding-top:14px;border-top:1px dashed var(--border-soft)}
+.df-section-title{font-size:10px;letter-spacing:.2em;color:var(--text-muted);font-weight:600;margin-bottom:10px}
+.df-ladder{width:100%;height:188px}
+.df-confidence-row{display:flex;align-items:center;gap:16px}
+.df-conf-svg{width:88px;height:88px;flex-shrink:0}
+.df-conf-info{flex:1}
+.df-conf-info .lbl{font-size:10px;color:var(--text-muted);letter-spacing:.16em;font-weight:600}
+.df-conf-info .val{font-family:var(--font-mono);font-size:18px;color:var(--text-primary);font-weight:700;margin-top:2px}
+.df-conf-info .sub{font-size:11px;color:var(--text-muted);margin-top:4px}
+.df-meta-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.df-meta-cell{padding:8px 10px;background:var(--bg-elev3);border-radius:var(--radius-s);border:1px solid var(--border-soft)}
+.df-meta-cell .k{font-size:10px;letter-spacing:.14em;color:var(--text-muted)}
+.df-meta-cell .v{font-family:var(--font-mono);font-size:13px;font-weight:700;color:var(--text-primary);margin-top:2px}
+main.content{min-width:0}
+.report-head{padding:28px 32px;background:linear-gradient(135deg,var(--bg-elev1),var(--bg-elev2));border:1px solid var(--border-soft);border-radius:var(--radius-l);margin-bottom:24px;position:relative;overflow:hidden}
+.report-head::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 40%,rgba(129,140,248,.08) 50%,transparent 60%),radial-gradient(circle at 90% 10%,rgba(34,211,238,.10),transparent 50%);pointer-events:none}
+.report-head>*{position:relative}
+.report-head h1{font-size:26px;font-weight:800;color:var(--text-primary);letter-spacing:.01em;margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.report-head .h-icon{font-size:22px}
+.report-head .meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12.5px;color:var(--text-muted);margin-top:8px}
+.report-head .meta b{color:var(--text-primary);font-weight:600;font-family:var(--font-mono)}
+.report-head .price-chip{display:inline-flex;align-items:baseline;gap:6px;padding:3px 10px;background:rgba(244,63,94,.10);border:1px solid rgba(244,63,94,.3);border-radius:4px;color:var(--accent-magenta);font-family:var(--font-mono);font-weight:700}
+.phase-card{background:var(--bg-elev1);border:1px solid var(--border-soft);border-radius:var(--radius-l);margin-bottom:22px;overflow:hidden;box-shadow:var(--shadow-card)}
+.phase-card .phase-header{display:flex;align-items:center;gap:14px;padding:18px 24px 16px;border-bottom:1px solid var(--border-soft);background:linear-gradient(135deg,var(--bg-elev2) 0%,var(--bg-elev1) 60%);position:relative}
+.phase-card .phase-header::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--accent-indigo),var(--accent-cyan))}
+.phase-num{font-family:var(--font-mono);font-weight:800;font-size:11px;letter-spacing:.18em;padding:3px 9px;background:var(--bg-elev3);color:var(--accent-indigo);border:1px solid var(--border-mid);border-radius:4px;text-transform:uppercase}
+.phase-title{font-size:18px;font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:8px}
+.phase-body{padding:22px 24px}
+h2.section-h,h3.section-h,h4.section-h{color:var(--text-primary);font-weight:700;margin-top:18px;margin-bottom:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+h2.section-h{font-size:17px;padding-top:6px}
+h3.section-h{font-size:15px}
+h4.section-h{font-size:13.5px;color:var(--text-body);letter-spacing:.04em}
+p{margin-bottom:10px;color:var(--text-body)}
+ul,ol{margin-left:22px;margin-bottom:12px;color:var(--text-body)}
+li{margin-bottom:4px}
+ul li::marker{color:var(--accent-indigo)}
+strong,b{color:var(--text-primary);font-weight:700}
+blockquote{margin:14px 0;padding:12px 16px 12px 18px;background:var(--bg-tint);border-left:3px solid var(--accent-cyan);border-radius:0 var(--radius-s) var(--radius-s) 0;color:var(--text-body);font-size:13.5px}
+blockquote.note{border-left-color:var(--accent-amber);background:rgba(251,191,36,.05)}
+blockquote.warn{border-left-color:var(--accent-magenta);background:rgba(244,63,94,.05)}
+blockquote strong{color:var(--accent-cyan)}
+blockquote.note strong{color:var(--accent-amber)}
+blockquote.warn strong{color:var(--accent-magenta)}
+hr{border:none;height:1px;background:var(--border-soft);margin:18px 0}
+pre{background:var(--bg-base);border:1px solid var(--border-soft);border-radius:var(--radius-m);padding:14px 16px;overflow-x:auto;font-size:12px;line-height:1.65;color:var(--text-body);margin:12px 0}
+pre::-webkit-scrollbar{height:6px}
+pre::-webkit-scrollbar-thumb{background:var(--border-mid);border-radius:3px}
+code{color:var(--accent-cyan);font-size:12.5px;padding:1px 4px;background:var(--bg-tint);border-radius:3px}
+pre code{padding:0;background:transparent;color:var(--text-body)}
+.tok-key{color:var(--accent-cyan)}
+.tok-str{color:#c4b5fd}
+.tok-num{color:var(--accent-violet)}
+.tok-bool{color:var(--accent-magenta);font-weight:600}
+.tok-null{color:var(--text-faint)}
+.tok-punc{color:var(--text-muted)}
+.tbl-wrap{overflow-x:auto;margin:12px 0;border:1px solid var(--border-soft);border-radius:var(--radius-m)}
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+table th{text-align:left;padding:10px 12px;font-weight:700;font-size:11.5px;letter-spacing:.1em;color:var(--text-muted);background:var(--bg-elev2);border-bottom:1px solid var(--border-soft);white-space:nowrap}
+table td{padding:9px 12px;border-bottom:1px solid var(--border-soft);color:var(--text-body);vertical-align:top}
+table tr:last-child td{border-bottom:none}
+table tbody tr{transition:background 120ms}
+table tbody tr:hover{background:rgba(34,211,238,.06)}
+table td.txt-cell{font-family:var(--font-sans)}
+table td strong{color:var(--accent-cyan)}
+.kpi-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:1100px){.kpi-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:600px){.kpi-grid{grid-template-columns:repeat(2,1fr)}}
+.kpi{padding:12px 14px;background:var(--bg-elev2);border:1px solid var(--border-soft);border-radius:var(--radius-m);position:relative;overflow:hidden;transition:border-color 150ms,transform 150ms}
+.kpi:hover{border-color:var(--border-mid);transform:translateY(-1px)}
+.kpi .kpi-lbl{font-size:10.5px;letter-spacing:.14em;color:var(--text-muted);font-weight:600}
+.kpi .kpi-val{font-family:var(--font-mono);font-size:22px;font-weight:700;color:var(--text-primary);margin-top:4px;letter-spacing:-.01em}
+.kpi .kpi-sub{font-size:11px;color:var(--text-faint);margin-top:2px;font-family:var(--font-mono)}
+.kpi.warn .kpi-val{color:var(--accent-magenta)}
+.kpi.cool .kpi-val{color:var(--accent-cyan)}
+.kpi.iris .kpi-val{color:var(--accent-violet)}
+.kpi::after{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,var(--accent-indigo),var(--accent-cyan));opacity:.4}
+.kpi.warn::after{background:linear-gradient(90deg,var(--accent-magenta),var(--accent-amber));opacity:.6}
+.role-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;font-family:var(--font-mono);font-weight:800;font-size:13px;flex-shrink:0;border:1px solid currentColor}
+.role-num.r1{color:var(--accent-cyan)}.role-num.r2{color:#60a5fa}.role-num.r3{color:var(--accent-indigo)}
+.role-num.r4{color:var(--accent-violet)}.role-num.r5{color:var(--accent-magenta)}.role-num.r6{color:#2dd4bf}
+.analyst{border:1px solid var(--border-soft);border-radius:var(--radius-m);margin:12px 0;overflow:hidden;background:var(--bg-elev2);transition:border-color 150ms}
+.analyst:hover{border-color:var(--border-mid)}
+.analyst>summary{list-style:none;display:flex;align-items:center;gap:14px;padding:14px 18px;cursor:pointer;user-select:none}
+.analyst>summary::-webkit-details-marker,.analyst>summary::marker{display:none}
+.analyst .role-num{width:32px;height:32px;font-size:16px}
+.analyst .a-name{font-weight:700;color:var(--text-primary);font-size:14.5px}
+.analyst .a-tagline{color:var(--text-muted);font-size:12px;margin-top:2px}
+.analyst .a-info{flex:1;min-width:0}
+.analyst .chevron{width:16px;height:16px;color:var(--text-muted);transition:transform 200ms ease;flex-shrink:0}
+.analyst[open] .chevron{transform:rotate(90deg)}
+.analyst .a-body{padding:4px 22px 22px}
+details:not(.analyst){margin:12px 0;border:1px solid var(--border-soft);border-radius:var(--radius-m);background:var(--bg-elev2);overflow:hidden}
+details:not(.analyst)>summary{list-style:none;cursor:pointer;padding:11px 16px;font-size:12.5px;font-weight:600;color:var(--text-body);display:flex;align-items:center;gap:10px;user-select:none;transition:background 120ms}
+details:not(.analyst)>summary:hover{background:var(--bg-elev3)}
+details:not(.analyst)>summary::-webkit-details-marker,details:not(.analyst)>summary::marker{display:none}
+details:not(.analyst)>summary::before{content:"";width:8px;height:8px;border:2px solid var(--accent-indigo);border-top:0;border-left:0;transform:rotate(-45deg);display:inline-block;transition:transform 200ms ease;margin-bottom:2px;flex-shrink:0}
+details:not(.analyst)[open]>summary::before{transform:rotate(45deg);margin-bottom:0}
+details:not(.analyst)>.det-body{padding:4px 18px 16px;border-top:1px dashed var(--border-soft);margin-top:-1px;padding-top:14px}
+.det-tag{display:inline-block;padding:1px 7px;font-size:10px;letter-spacing:.12em;font-weight:700;background:var(--bg-elev3);color:var(--text-muted);border-radius:3px;border:1px solid var(--border-soft)}
+.claim{padding:12px 16px;margin:10px 0;background:var(--bg-elev2);border:1px solid var(--border-soft);border-left-width:3px;border-radius:var(--radius-s);font-size:13px;transition:transform 150ms}
+.claim:hover{transform:translateX(2px)}
+.claim.bull{border-left-color:var(--accent-cyan)}
+.claim.bear{border-left-color:var(--accent-magenta)}
+.claim.counter-bull{border-left-color:var(--accent-cyan);border-left-style:dashed}
+.claim.counter-bear{border-left-color:var(--accent-magenta);border-left-style:dashed}
+.claim-head{display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+.claim-id{font-family:var(--font-mono);font-weight:700;font-size:11px;padding:2px 8px;border-radius:4px;background:var(--bg-elev3)}
+.claim.bull .claim-id,.claim.counter-bull .claim-id{color:var(--accent-cyan);border:1px solid rgba(34,211,238,.4)}
+.claim.bear .claim-id,.claim.counter-bear .claim-id{color:var(--accent-magenta);border:1px solid rgba(244,63,94,.4)}
+.claim-title{font-weight:700;color:var(--text-primary);flex:1;min-width:200px}
+.strength{font-size:11px;padding:1px 7px;border-radius:3px;font-weight:700;letter-spacing:.06em}
+.strength.s-strong{background:rgba(244,63,94,.14);color:var(--accent-magenta);border:1px solid rgba(244,63,94,.35)}
+.strength.s-mid{background:rgba(251,191,36,.12);color:var(--accent-amber);border:1px solid rgba(251,191,36,.35)}
+.strength.s-midstrong{background:rgba(167,139,250,.14);color:var(--accent-violet);border:1px solid rgba(167,139,250,.35)}
+.strength.s-weak{background:rgba(148,163,184,.12);color:var(--text-muted);border:1px solid rgba(148,163,184,.3)}
+.claim-row{display:flex;gap:10px;margin:4px 0;font-size:12.5px}
+.claim-row .lbl{flex-shrink:0;width:64px;font-size:10px;letter-spacing:.14em;color:var(--text-muted);font-weight:700;padding-top:3px}
+.claim-row .val{flex:1;color:var(--text-body)}
+.claim details{margin:6px 0 0;background:var(--bg-elev3);border-color:var(--border-soft)}
+.claim details>summary{padding:7px 12px;font-size:11.5px}
+.verdict{display:inline-flex;align-items:center;gap:5px;padding:2px 8px;border-radius:4px;font-size:11.5px;font-weight:700}
+.verdict.pass{color:var(--accent-mint);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.35)}
+.verdict.partial{color:var(--accent-amber);background:rgba(251,191,36,.10);border:1px solid rgba(251,191,36,.35)}
+.verdict.reject{color:var(--accent-magenta);background:rgba(244,63,94,.10);border:1px solid rgba(244,63,94,.35)}
+.chart-card{margin:16px 0;padding:18px 20px 16px;background:linear-gradient(180deg,var(--bg-elev2),var(--bg-elev1));border:1px solid var(--border-soft);border-radius:var(--radius-m);position:relative;overflow:hidden}
+.chart-card::before{content:"";position:absolute;right:0;top:0;bottom:0;width:50%;background:radial-gradient(circle at 100% 0%,rgba(129,140,248,.06),transparent 70%);pointer-events:none}
+.chart-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;position:relative;flex-wrap:wrap;gap:6px}
+.chart-title .ct-name{font-size:13px;font-weight:700;color:var(--text-primary);letter-spacing:.04em;display:flex;align-items:center;gap:8px}
+.chart-title .ct-meta{font-size:11px;color:var(--text-faint);font-family:var(--font-mono)}
+.chart-svg{width:100%;height:auto;display:block;position:relative}
+.risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:900px){.risk-grid{grid-template-columns:1fr}}
+.risk-col{padding:16px 18px;border:1px solid var(--border-soft);border-radius:var(--radius-m);background:var(--bg-elev2);position:relative}
+.risk-col::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;border-radius:var(--radius-m) var(--radius-m) 0 0}
+.risk-col.r1::before{background:linear-gradient(90deg,#f0abfc,#d946ef)}
+.risk-col.r2::before{background:linear-gradient(90deg,#93c5fd,#3b82f6)}
+.risk-col.r3::before{background:linear-gradient(90deg,#c4b5fd,var(--accent-indigo))}
+.risk-col h4{margin-bottom:8px;font-size:13.5px}
+.risk-col .summary-line{font-size:12.5px;color:var(--text-body);margin-bottom:8px;padding:8px 10px;background:var(--bg-elev3);border-radius:var(--radius-s);border:1px solid var(--border-soft)}
+.timeline{list-style:none;margin-left:0;padding-left:0}
+.timeline li{position:relative;padding:10px 0 10px 26px;border-bottom:1px dashed var(--border-soft);font-size:13px}
+.timeline li:last-child{border-bottom:none}
+.timeline li::before{content:"";position:absolute;left:6px;top:16px;width:8px;height:8px;background:var(--accent-indigo);border-radius:50%;box-shadow:0 0 0 3px rgba(129,140,248,.18)}
+.timeline li::after{content:"";position:absolute;left:9px;top:24px;bottom:-4px;width:2px;background:var(--border-soft)}
+.timeline li:last-child::after{display:none}
+.timeline .t-label{font-family:var(--font-mono);font-weight:700;color:var(--accent-cyan);font-size:12px;letter-spacing:.04em}
+.summary-table{margin:16px 0;overflow:hidden;border-radius:var(--radius-m);border:1px solid var(--border-mid);background:linear-gradient(135deg,var(--bg-elev2),var(--bg-elev1))}
+.summary-table table{font-size:14px}
+.summary-table th{background:linear-gradient(135deg,rgba(129,140,248,.10),rgba(34,211,238,.05))}
+.summary-table td{padding:14px 12px}
+.summary-table td strong{font-family:var(--font-mono);font-size:17px;color:var(--text-primary)}
+.report-foot{margin-top:36px;padding:22px 24px;background:var(--bg-elev1);border:1px solid var(--border-soft);border-radius:var(--radius-l);font-size:11.5px;color:var(--text-faint);line-height:1.85}
+.report-foot strong{color:var(--text-muted)}
+.lens-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+@media (max-width:900px){.lens-grid{grid-template-columns:1fr}}
+.lens-cell{padding:10px 14px;border-radius:var(--radius-s);border:1px solid var(--border-soft);background:var(--bg-elev3);font-size:12px}
+.lens-cell.see{border-left:2px solid var(--accent-cyan)}
+.lens-cell.blind{border-left:2px solid var(--accent-magenta);opacity:.85}
+.lens-cell .lbl{font-size:10px;letter-spacing:.16em;color:var(--text-muted);font-weight:700;margin-bottom:4px}
+.observe{opacity:0;transform:translateY(8px);transition:opacity 360ms ease,transform 360ms ease}
+.observe.in-view{opacity:1;transform:translateY(0)}
+.svg-grow rect{transform-origin:left bottom;animation:bar-grow 900ms cubic-bezier(.4,0,.2,1) both}
+@keyframes bar-grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.svg-line{stroke-dasharray:2000;stroke-dashoffset:2000;animation:line-draw 1400ms 200ms cubic-bezier(.4,0,.2,1) forwards}
+@keyframes line-draw{to{stroke-dashoffset:0}}
+.bar-h{transform-origin:left center;animation:bar-grow-h 900ms cubic-bezier(.4,0,.2,1) both}
+@keyframes bar-grow-h{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes price-pulse{0%,100%{opacity:1;r:7}50%{opacity:.55;r:11}}
+.price-pulse-circle{animation:price-pulse 2.2s ease-in-out infinite;transform-origin:center}
+@media print{
+  .topbar,.toc-rail,.decision-float,.theme-toggle,.toc-back-top{display:none!important}
+  .layout{display:block;max-width:none;padding:0}
+  body{background:#fff;color:#000}
+  body::before{display:none}
+  .phase-card,.report-head,.final-card,.risk-col,.chart-card,.kpi{box-shadow:none;break-inside:avoid;page-break-inside:avoid}
+  details{border:1px solid #ccc!important}
+  details>summary{background:#f5f5f5!important;pointer-events:none}
+  details>*{display:block!important}
+  details>summary::before{display:none!important}
+  .observe{opacity:1!important;transform:none!important}
+  .phase-card{opacity:1!important;transform:none!important}
+}
+
+/* ============ 三段式执行总览 ============ */
+.exec-overview{position:relative;padding:30px 32px 28px;margin-bottom:24px;background:linear-gradient(140deg,var(--bg-elev1) 0%,var(--bg-elev2) 60%,var(--bg-elev1) 100%);border:1px solid var(--border-mid);border-radius:var(--radius-l);box-shadow:var(--shadow-float);overflow:hidden}
+.exec-overview::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 0% 0%,rgba(129,140,248,.14),transparent 55%),radial-gradient(circle at 100% 100%,rgba(34,211,238,.10),transparent 55%);pointer-events:none}
+.exec-overview>*{position:relative}
+.eo-banner{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px dashed var(--border-soft)}
+.eo-banner .badge{padding:5px 12px;font-size:11px;letter-spacing:.22em;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--accent-indigo),var(--accent-violet));border-radius:4px;box-shadow:0 0 0 1px rgba(255,255,255,.1)}
+.eo-banner .title{font-size:21px;font-weight:800;color:var(--text-primary);letter-spacing:.01em}
+.eo-banner .subtitle{margin-left:auto;font-size:12.5px;color:var(--text-muted);letter-spacing:.04em}
+.eo-section-label{display:flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.2em;font-weight:700;color:var(--accent-cyan);margin:22px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--border-soft)}
+.eo-section-label::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--accent-cyan);box-shadow:0 0 6px var(--accent-cyan)}
+.eo-section-label:first-of-type{margin-top:0}
+.eo-summary{font-size:15.5px;line-height:1.85;color:var(--text-body)}
+.eo-summary p{margin-bottom:12px}
+.eo-summary p:last-child{margin-bottom:0}
+.eo-summary .em{color:var(--accent-magenta);font-weight:700}
+.eo-summary .em-pos{color:var(--accent-mint);font-weight:700}
+.eo-summary .em-neu{color:var(--accent-amber);font-weight:700}
+.eo-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+@media (max-width:1100px){.eo-cards{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:680px){.eo-cards{grid-template-columns:repeat(2,1fr)}}
+.eo-card{position:relative;padding:14px 14px 12px;background:var(--bg-elev2);border:1px solid var(--border-soft);border-radius:var(--radius-m);transition:all 180ms ease;overflow:hidden}
+.eo-card::before{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:var(--card-accent,var(--accent-indigo))}
+.eo-card:hover{transform:translateY(-2px);border-color:var(--border-mid);box-shadow:var(--shadow-card)}
+.eo-card.bull{--card-accent:var(--accent-mint)}
+.eo-card.bear{--card-accent:var(--accent-magenta)}
+.eo-card.neutral{--card-accent:var(--accent-amber)}
+.eo-card.cool{--card-accent:var(--accent-cyan)}
+.eo-card.iris{--card-accent:var(--accent-violet)}
+.eo-card .eo-c-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.eo-card .eo-c-name{font-size:12px;letter-spacing:.08em;font-weight:700;color:var(--text-primary)}
+.eo-card .eo-c-verdict{font-family:var(--font-mono);font-size:11px;font-weight:700;padding:2px 7px;border-radius:3px;background:var(--bg-elev3);color:var(--card-accent);border:1px solid var(--border-soft)}
+.eo-card .eo-c-score{font-family:var(--font-mono);font-size:24px;font-weight:800;color:var(--text-primary);letter-spacing:.02em;line-height:1;margin-bottom:6px}
+.eo-card .eo-c-score small{font-size:13px;color:var(--text-muted);font-weight:500;margin-left:2px}
+.eo-card .eo-c-key{font-size:12px;color:var(--text-muted);line-height:1.55}
+.eo-card .eo-c-key b{color:var(--text-body);font-weight:600}
+.eo-path{display:grid;grid-template-columns:repeat(5,1fr);gap:0;align-items:stretch}
+@media (max-width:900px){.eo-path{grid-template-columns:1fr;gap:8px}}
+.eo-step{position:relative;padding:14px 16px;background:var(--bg-elev2);border:1px solid var(--border-soft);border-radius:0}
+.eo-step:first-child{border-radius:var(--radius-m) 0 0 var(--radius-m)}
+.eo-step:last-child{border-radius:0 var(--radius-m) var(--radius-m) 0}
+.eo-step+.eo-step{border-left:none}
+@media (max-width:900px){.eo-step{border-radius:var(--radius-m)!important}.eo-step+.eo-step{border-left:1px solid var(--border-soft)}}
+.eo-step::after{content:"›";position:absolute;right:-8px;top:50%;transform:translateY(-50%);font-size:18px;font-weight:700;color:var(--accent-indigo);background:var(--bg-base);padding:0 4px;z-index:2;border-radius:50%}
+.eo-step:last-child::after{display:none}
+@media (max-width:900px){.eo-step::after{display:none}}
+.eo-step .s-num{font-family:var(--font-mono);font-size:10px;letter-spacing:.16em;font-weight:700;color:var(--accent-indigo);margin-bottom:6px}
+.eo-step .s-title{font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:6px;letter-spacing:.02em}
+.eo-step .s-result{font-size:12px;color:var(--text-muted);line-height:1.55}
+.eo-step .s-result b{color:var(--text-body)}
+.eo-jumpbar{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;padding-top:14px;border-top:1px dashed var(--border-soft)}
+.eo-jumpbar .lbl{font-size:11px;letter-spacing:.16em;color:var(--text-muted);font-weight:600;margin-right:4px;align-self:center}
+.eo-jumpbar a{display:inline-flex;align-items:center;gap:4px;padding:5px 11px;font-size:12px;color:var(--text-body);background:var(--bg-elev3);border:1px solid var(--border-soft);border-radius:999px;transition:all 150ms ease}
+.eo-jumpbar a:hover{color:var(--accent-cyan);border-color:var(--border-strong);background:var(--bg-tint);transform:translateY(-1px)}
+.eo-jumpbar a .arr{font-size:10px;opacity:.6}
+
+/* ============ 术语注解 ============ */
+.term{position:relative;display:inline;cursor:help;border-bottom:1px dotted var(--accent-cyan);padding-bottom:1px;color:inherit;transition:color 150ms ease}
+.term:hover{color:var(--accent-cyan)}
+.term .termref{display:inline-block;font-family:var(--font-mono);font-size:.7em;color:var(--accent-cyan);margin-left:1px;font-weight:600;vertical-align:super;line-height:0;text-decoration:none}
+.term-tooltip{position:fixed;z-index:9999;max-width:340px;padding:12px 14px;background:var(--bg-elev3);border:1px solid var(--border-strong);border-radius:var(--radius-m);box-shadow:var(--shadow-float);opacity:0;transform:translateY(-4px);pointer-events:none;transition:opacity 160ms ease,transform 160ms ease;font-size:13px;line-height:1.6;color:var(--text-body)}
+.term-tooltip.show{opacity:1;transform:translateY(0)}
+.term-tooltip .tt-head{display:flex;align-items:baseline;gap:8px;margin-bottom:6px;padding-bottom:6px;border-bottom:1px dashed var(--border-soft)}
+.term-tooltip .tt-name{font-weight:800;color:var(--accent-cyan);font-size:14px;letter-spacing:.02em}
+.term-tooltip .tt-en{font-family:var(--font-mono);font-size:11px;color:var(--text-muted);letter-spacing:.04em}
+.term-tooltip .tt-def{color:var(--text-body);margin-bottom:6px}
+.term-tooltip .tt-context{font-size:12px;color:var(--text-muted);font-style:italic;padding-top:6px;border-top:1px dashed var(--border-soft)}
+
+/* ============ 末尾术语表 ============ */
+.glossary{padding:24px 28px;background:linear-gradient(160deg,var(--bg-elev1),var(--bg-elev2));border:1px solid var(--border-soft);border-radius:var(--radius-l);margin-bottom:22px;box-shadow:var(--shadow-card)}
+.glossary h2{font-size:20px;font-weight:800;color:var(--text-primary);display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.glossary>p.intro{font-size:13.5px;color:var(--text-muted);margin-bottom:18px;padding-bottom:14px;border-bottom:1px dashed var(--border-soft)}
+.gloss-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.gloss-item{padding:14px 16px;background:var(--bg-elev2);border:1px solid var(--border-soft);border-radius:var(--radius-m);transition:all 150ms ease;scroll-margin-top:80px}
+.gloss-item:hover,.gloss-item:target{border-color:var(--accent-cyan);box-shadow:0 0 0 1px var(--accent-cyan),var(--shadow-card)}
+.gloss-item:target{animation:gloss-flash 1s ease}
+@keyframes gloss-flash{0%{background:rgba(34,211,238,.18)}100%{background:var(--bg-elev2)}}
+.gloss-item .g-head{display:flex;align-items:baseline;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.gloss-item .g-num{font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--accent-indigo);background:var(--bg-elev3);padding:2px 6px;border-radius:3px;border:1px solid var(--border-soft)}
+.gloss-item .g-name{font-size:15px;font-weight:800;color:var(--text-primary);letter-spacing:.02em}
+.gloss-item .g-en{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:.04em}
+.gloss-item .g-def{font-size:13.5px;color:var(--text-body);line-height:1.65;margin-bottom:6px}
+.gloss-item .g-context{font-size:12.5px;color:var(--text-muted);font-style:italic;padding-top:8px;border-top:1px dashed var(--border-soft)}
+.gloss-item .g-back{display:inline-block;margin-top:6px;font-size:11px;color:var(--accent-cyan);font-family:var(--font-mono)}
+</style>
+</head>
+<body data-theme="dark">
+
+<header class="topbar">
+  <div class="topbar-left">
+    <span class="brand-mark">IC · 14 AGENT</span>
+    <span class="ticker">002463.SZ</span>
+    <span class="ticker-name">沪电股份</span>
+    <span class="live-price">¥114.07</span>
+    <span class="pct-chip">+10.00% · 涨停</span>
+  </div>
+  <div class="topbar-mid"><span>Investment Council 深度研判 · 2026-05-23</span></div>
+  <div class="topbar-right">
+    <span class="decision-pill">HOLD</span>
+    <span class="confidence-mini">CONF <b>62</b>/100</span>
+    <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+      <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc-rail" id="tocRail">
+    <div class="toc-brand"><span class="dot"></span><span class="lbl">14 AGENT COUNCIL</span></div>
+    <ul class="toc-list" id="tocList">
+      <li class="toc-item lvl-1"><a href="#sec-overview">🎯 决策总览</a></li>
+      <li class="toc-item lvl-2"><a href="#eo-summary">执行摘要</a></li>
+      <li class="toc-item lvl-2"><a href="#eo-cards">5 维评分</a></li>
+      <li class="toc-item lvl-2"><a href="#eo-path">决策路径</a></li>
+      <li class="toc-item lvl-1"><a href="#sec-cover">公司画像速览</a></li>
+      <li class="toc-item lvl-1"><a href="#phase-0">Phase 0 · 数据自检</a></li>
+      <li class="toc-item lvl-1"><a href="#phase-1">Phase 1 · 六大分析师</a></li>
+      <li class="toc-item lvl-2"><a href="#a1">① 基本面</a></li>
+      <li class="toc-item lvl-2"><a href="#a2">② 技术</a></li>
+      <li class="toc-item lvl-2"><a href="#a3">③ 情绪</a></li>
+      <li class="toc-item lvl-2"><a href="#a4">④ 新闻</a></li>
+      <li class="toc-item lvl-2"><a href="#a5">⑤ 宏观</a></li>
+      <li class="toc-item lvl-2"><a href="#a6">⑥ 主力资金</a></li>
+      <li class="toc-item lvl-1"><a href="#phase-2">Phase 2 · 多空辩论</a></li>
+      <li class="toc-item lvl-1"><a href="#phase-3">Phase 3 · 总监仲裁</a></li>
+      <li class="toc-item lvl-1"><a href="#phase-4">Phase 4 · 交易员</a></li>
+      <li class="toc-item lvl-1"><a href="#phase-5">Phase 5 · 三方风控</a></li>
+      <li class="toc-item lvl-1"><a href="#phase-6">Phase 6 · 终裁决策卡</a></li>
+      <li class="toc-item lvl-2"><a href="#summary-table">关键数字一览</a></li>
+      <li class="toc-item lvl-2"><a href="#timeline">关键时间窗</a></li>
+      <li class="toc-item lvl-1"><a href="#glossary">📖 术语表</a></li>
+    </ul>
+    <button class="toc-back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 返回顶部</button>
+  </aside>
+
+  <main class="content" id="mainContent">
+
+    <!-- ============ 三段式决策总览 ============ -->
+    <section class="exec-overview observe" id="sec-overview">
+      <div class="eo-banner">
+        <span class="badge">EXECUTIVE OVERVIEW</span>
+        <span class="title">沪电股份 · 决策总览</span>
+        <span class="subtitle">14 Agent · 5 Phase · 一图看懂全报告</span>
+      </div>
+
+      <div class="eo-section-label" id="eo-summary">▎执行摘要 · 三句话讲完整份研判</div>
+      <div class="eo-summary">
+        <p>
+          <strong>结论先行：</strong>本次 14 Agent 圆桌对沪电股份给出 <span class="em-neu">HOLD（持有 / 不追涨）</span> 决策，置信度 <span class="em-neu">62 / 100</span>，时间窗口为<strong>中线 1-3 个月</strong>，目标价上看 <span class="em-pos">¥120 / ¥137</span>，止损 <span class="em">¥95</span>。这不是看空——而是<strong>"好公司碰上贵价格"的克制选择</strong>。
+        </p>
+        <p>
+          <strong>多空主线：</strong>多头握有<span class="em-pos">最硬的基本面</span>（2025 年净利 +82%、AI 服务器 PCB 订单饱满、外资 Q1 增持 5067 万股、机构涨停日买入 5.71 亿、技术多头排列突破 52 周新高），空头握有<span class="em">最贵的价格与最热的情绪</span>（PE_TTM 51× / PB 13.87× 处于上市以来 95% 分位以上、RSI / CCI / WR_6 三重超买极值、融资余额 41.5 亿历史高位、游资"歌神"涨停日离场、媒体出现"反常逻辑辩护"+"韩国散户抄底"反指叙事、港股 IPO 反馈意见涉及境外子公司合规问题、机构覆盖度仅 1 家定价脆弱）。研究总监仲裁多头分 0.47 vs 空头分 0.79，<strong>空头边际占优</strong>但<strong>不构成做空逻辑</strong>。
+        </p>
+        <p>
+          <strong>落地要怎么做：</strong>空仓者<strong>不要追昨日涨停</strong>，等回踩 <span class="em-pos">¥98-108</span> 区间分批建仓，新仓位上限 <strong>5%</strong>（因情绪风险高、估值无安全边际）；持仓浮盈 &gt; 30% 者<strong>减仓 1/3 锁定利润</strong>，剩余仓位上移止损到 <span class="em">¥98</span>；杠杆账户立即降杠杆。失效条件触发任一立即转观察：<strong>跌破 ¥95</strong> / <strong>2026Q1 净利同比 &lt; 30%</strong> / <strong>港股 IPO 被否</strong> / <strong>外资连续两季度减持</strong>。
+        </p>
+      </div>
+
+      <div class="eo-section-label" id="eo-cards">▎五维评分 · 六大分析师 + 总监 + 风控的关键判读</div>
+      <div class="eo-cards">
+        <div class="eo-card cool">
+          <div class="eo-c-head"><span class="eo-c-name">基本面</span><span class="eo-c-verdict">A-</span></div>
+          <div class="eo-c-score">A-<small> / 优质</small></div>
+          <div class="eo-c-key">2025 净利 <b>+82%</b>，毛利率 <b>27.7%</b> 历史新高；现金流稳健；唯一隐忧是<b>商誉 + CAPEX 高位</b>。</div>
+        </div>
+        <div class="eo-card bear">
+          <div class="eo-c-head"><span class="eo-c-name">技术面</span><span class="eo-c-verdict">超买</span></div>
+          <div class="eo-c-score">87<small> /100 热度</small></div>
+          <div class="eo-c-key">多头排列未破，但 RSI / CCI / WR 三重超买；支撑 <b>¥98</b> / 阻力 <b>¥120</b>，<b>追涨胜率低于回踩</b>。</div>
+        </div>
+        <div class="eo-card bear">
+          <div class="eo-c-head"><span class="eo-c-name">情绪</span><span class="eo-c-verdict">狂热</span></div>
+          <div class="eo-c-score">87<small> /100</small></div>
+          <div class="eo-c-key">进入<b>"反指"区间</b>：媒体出现反常辩护逻辑、韩国散户抄底叙事、龙虎榜频繁上榜——<b>典型情绪顶部信号</b>。</div>
+        </div>
+        <div class="eo-card iris">
+          <div class="eo-c-head"><span class="eo-c-name">新闻 / 宏观</span><span class="eo-c-verdict">中性偏多</span></div>
+          <div class="eo-c-score">B+<small> / 顺风</small></div>
+          <div class="eo-c-key">AI CAPEX 周期未结束，港股 IPO 推进；但<b>合规反馈意见</b>是潜在黑天鹅，需持续跟踪。</div>
+        </div>
+        <div class="eo-card neutral">
+          <div class="eo-c-head"><span class="eo-c-name">主力资金</span><span class="eo-c-verdict">分裂</span></div>
+          <div class="eo-c-score">⚠<small> / 边际转空</small></div>
+          <div class="eo-c-key">外资<b>长线增持</b>（Q1 +5067 万股）vs 游资<b>短线撤退</b>（"歌神"涨停日离场）；融资 <b>41.5 亿</b> 历史高位。</div>
+        </div>
+      </div>
+
+      <div class="eo-section-label" id="eo-path">▎决策路径 · 14 Agent 五阶段单向流如何收敛到 HOLD</div>
+      <div class="eo-path">
+        <div class="eo-step">
+          <div class="s-num">PHASE 1</div>
+          <div class="s-title">六大分析师并行视角</div>
+          <div class="s-result">基本面 <b>A-</b> · 技术 <b>超买</b> · 情绪 <b>狂热</b> · 新闻 <b>偏多</b> · 宏观 <b>顺风</b> · 资金 <b>分裂</b> → 共识：<b>好公司贵价格</b></div>
+        </div>
+        <div class="eo-step">
+          <div class="s-num">PHASE 2-3</div>
+          <div class="s-title">多空 7 轮辩论 + 总监仲裁</div>
+          <div class="s-result">多头 7 Claim 仅 2 个全过 / 1 个被否；空头 7 Claim 有 5 个全过 → 总监评分 <b>多 0.47 / 空 0.79</b>，<b>空头边际占优</b></div>
+        </div>
+        <div class="eo-step">
+          <div class="s-num">PHASE 4</div>
+          <div class="s-title">交易员落地三方案</div>
+          <div class="s-result">激进追涨 / 中性回踩 / 保守减仓 → <b>选定中性回踩</b>：¥98-108 分批建仓，T1 ¥120 / T2 ¥137，止损 ¥95，R:R <b>2.1 / 4.3</b></div>
+        </div>
+        <div class="eo-step">
+          <div class="s-num">PHASE 5</div>
+          <div class="s-title">三方风控博弈</div>
+          <div class="s-result">激进派要追、保守派要清、中性派守纪律 → <b>新仓上限 5%</b>，浮盈 30%+ 减 1/3，杠杆即降</div>
+        </div>
+        <div class="eo-step">
+          <div class="s-num">PHASE 6</div>
+          <div class="s-title">组合经理终裁</div>
+          <div class="s-result">护栏 4/4 通过 · 数据 T-1 实盘 → 决策 <b>HOLD</b> · 置信度 <b>62</b> · 文字总结：<b>好公司 + 贵价格 = 不追，等便宜了再上</b></div>
+        </div>
+      </div>
+
+      <div class="eo-jumpbar">
+        <span class="lbl">跳转详情 ›</span>
+        <a href="#phase-0"><span>Phase 0 数据自检</span><span class="arr">›</span></a>
+        <a href="#phase-1"><span>Phase 1 六分析师</span><span class="arr">›</span></a>
+        <a href="#phase-2"><span>Phase 2 多空辩论</span><span class="arr">›</span></a>
+        <a href="#phase-3"><span>Phase 3 总监仲裁</span><span class="arr">›</span></a>
+        <a href="#phase-4"><span>Phase 4 交易员方案</span><span class="arr">›</span></a>
+        <a href="#phase-5"><span>Phase 5 三方风控</span><span class="arr">›</span></a>
+        <a href="#phase-6"><span>Phase 6 终裁决策卡</span><span class="arr">›</span></a>
+        <a href="#glossary"><span>📖 术语表</span><span class="arr">›</span></a>
+      </div>
+    </section>
+
+    <section class="report-head observe" id="sec-cover">
+      <h1><span class="h-icon">🏛️</span> Investment Council 深度研判报告</h1>
+      <div class="meta">
+        <span>标的 <b>沪电股份 · 002463.SZ</b></span>
+        <span>报告日期 <b>2026-05-23</b></span>
+        <span>数据截止 <b>2026-05-22 收盘</b></span>
+        <span class="price-chip">¥114.07 · 昨日涨停 +10.00%</span>
+      </div>
+      <div class="meta" style="margin-top:14px;opacity:.8">
+        <span>执行流程 · <b>14 Agent</b> · 五阶段辩论 · 真实数据驱动</span>
+        <span>数据源 · westock-data 腾讯自选股行情接口</span>
+      </div>
+
+      <h3 class="section-h" style="margin-top:22px">📊 公司画像速览</h3>
+      <div class="kpi-grid">
+        <div class="kpi cool"><div class="kpi-lbl">PE_TTM</div><div class="kpi-val">51.03×</div><div class="kpi-sub">历史 95% 分位</div></div>
+        <div class="kpi iris"><div class="kpi-lbl">PE_FWD</div><div class="kpi-val">44.18×</div><div class="kpi-sub">2026E 一致预期</div></div>
+        <div class="kpi cool"><div class="kpi-lbl">PB</div><div class="kpi-val">13.87×</div><div class="kpi-sub">上市以来最高区</div></div>
+        <div class="kpi warn"><div class="kpi-lbl">60 日涨幅</div><div class="kpi-val">+66.11%</div><div class="kpi-sub">主升二段</div></div>
+        <div class="kpi warn"><div class="kpi-lbl">YTD 涨幅</div><div class="kpi-val">+57.19%</div><div class="kpi-sub">板块龙头</div></div>
+        <div class="kpi"><div class="kpi-lbl">总市值</div><div class="kpi-val">2195亿</div><div class="kpi-sub">流通 2193 亿</div></div>
+      </div>
+
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>维度</th><th>数值</th></tr></thead>
+          <tbody>
+            <tr><td class="txt-cell">全称</td><td class="txt-cell">沪士电子股份有限公司</td></tr>
+            <tr><td class="txt-cell">主营</td><td class="txt-cell">印制电路板（PCB）研发、生产和销售</td></tr>
+            <tr><td class="txt-cell">行业</td><td class="txt-cell">电子 / PCB（同花顺：AI 算力概念、PCB 板块）</td></tr>
+            <tr><td class="txt-cell">PS_TTM</td><td>10.39×</td></tr>
+            <tr><td class="txt-cell">股息率_TTM</td><td>0.44%</td></tr>
+            <tr><td class="txt-cell">52 周高 / 低</td><td>114.46 / 28.54 元</td></tr>
+            <tr><td class="txt-cell">第一大股东</td><td class="txt-cell">BIGGER ING (BVI) HOLDINGS（外资，持股 19.32%）</td></tr>
+            <tr><td class="txt-cell">实控人</td><td class="txt-cell">吴礼淦家族（台资背景，香港上市公司 WUS Holdings 控股）</td></tr>
+            <tr><td class="txt-cell">上市时间</td><td>2010-08-18</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <blockquote class="warn">
+        <strong>第一观察</strong>：股价在 60 日内涨 66%、YTD 涨 57%、昨日刚涨停且<strong>逼近 52 周历史最高位</strong>，PE_TTM 51 倍、PB 13.87 倍——这是一份在<strong>情绪极度乐观、估值已抬升至历史高位</strong>的画像下进行的研判。这个前置事实会贯穿整份报告。
+      </blockquote>
+    </section>
+
+    <section class="phase-card observe" id="phase-0">
+      <header class="phase-header">
+        <span class="phase-num">PHASE 0</span>
+        <span class="phase-title">📍 数据采集自检</span>
+      </header>
+      <div class="phase-body">
+        <details>
+          <summary>数据完整性总评 <span class="verdict pass">A-</span> · 核心数据完备 · 点击展开自检表</summary>
+          <div class="det-body">
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>数据维度</th><th>来源</th><th>完整性</th><th>时效性</th></tr></thead>
+                <tbody>
+                  <tr><td class="txt-cell">行情/K 线</td><td>westock-data quote/kline</td><td class="txt-cell">✅ 完整</td><td>T-1（2026-05-22）</td></tr>
+                  <tr><td class="txt-cell">估值指标</td><td>westock-data quote</td><td class="txt-cell">✅ 完整</td><td>T-1</td></tr>
+                  <tr><td class="txt-cell">财务报表（6 期）</td><td>westock-data finance</td><td class="txt-cell">✅ 完整</td><td>2024Q3 ~ 2025Q4</td></tr>
+                  <tr><td class="txt-cell">技术指标</td><td>westock-data technical</td><td class="txt-cell">✅ 完整</td><td>5 日</td></tr>
+                  <tr><td class="txt-cell">资金流向</td><td>westock-data changedist</td><td class="txt-cell">⚠️ 命令格式偏移</td><td>仅得到分布</td></tr>
+                  <tr><td class="txt-cell">龙虎榜</td><td>westock-data lhb</td><td class="txt-cell">✅ 当日上榜</td><td>T-1</td></tr>
+                  <tr><td class="txt-cell">融资融券</td><td>westock-data margintrade</td><td class="txt-cell">✅ 完整</td><td>T-1</td></tr>
+                  <tr><td class="txt-cell">一致预期</td><td>westock-data consensus</td><td class="txt-cell">✅ 完整</td><td>1 家机构覆盖</td></tr>
+                  <tr><td class="txt-cell">机构评级</td><td>westock-data rating</td><td class="txt-cell">⚠️ 覆盖度低</td><td>1 家买入</td></tr>
+                  <tr><td class="txt-cell">股东结构</td><td>westock-data shareholder</td><td class="txt-cell">✅ 完整</td><td>2026Q1</td></tr>
+                  <tr><td class="txt-cell">新闻</td><td>westock-data news</td><td class="txt-cell">✅ 丰富</td><td>T-0</td></tr>
+                  <tr><td class="txt-cell">宏观</td><td>公开常识 + 新闻语境</td><td class="txt-cell">⚠️ 未单独拉取</td><td>—</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top:10px"><strong>数据完整性总评</strong>：A-（机构覆盖度偏低，但核心数据完备，<strong>可以进入决策流程</strong>）</p>
+            <blockquote class="note">注：finance-data-retrieval（tushare 接口）返回 401 token 错误，本次报告<strong>完全依靠 westock-data 完成</strong>。</blockquote>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="phase-card observe" id="phase-1">
+      <header class="phase-header">
+        <span class="phase-num">PHASE 1</span>
+        <span class="phase-title">🔬 六大分析师独立报告</span>
+      </header>
+      <div class="phase-body">
+        <blockquote><strong>协议约束</strong>：每位分析师只能看自己维度的数据，禁看他人维度。下方每份报告均明列「我看了什么 / 我没看什么」，确保视角隔离。</blockquote>
+
+        <details class="analyst" id="a1" open>
+          <summary>
+            <span class="role-num r1">①</span>
+            <span class="a-info">
+              <div class="a-name">基本面分析师 · 报告</div>
+              <div class="a-tagline">价值投资派 · 只看财报数据 · 禁看 K 线/新闻/舆情 · 评级 <span class="verdict pass">A-</span></div>
+            </span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </summary>
+          <div class="a-body">
+            <details>
+              <summary>📋 视角约束 · 我看了什么 / 没看什么</summary>
+              <div class="det-body">
+                <div class="lens-grid">
+                  <div class="lens-cell see"><div class="lbl">SAW · 已查阅</div>利润表、资产负债表、现金流量表（2024Q3 ~ 2025Q4 共 6 期）；公司简况、股东结构</div>
+                  <div class="lens-cell blind"><div class="lbl">BLIND · 故意忽略</div>K 线 / 新闻 / 舆情 / 资金流向</div>
+                </div>
+              </div>
+            </details>
+
+            <h3 class="section-h">核心财务数据（提炼）</h3>
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>报告期</th><th>营收（亿元）</th><th>YoY</th><th>归母净利（亿元）</th><th>YoY</th><th>单季EPS（元）</th><th>毛利TTM（亿元）</th></tr></thead>
+                <tbody>
+                  <tr><td>2024-09-30</td><td>90.11（前三季度）</td><td>—</td><td>18.48</td><td>—</td><td>0.97</td><td>41.31</td></tr>
+                  <tr><td>2024-12-31</td><td>133.42（全年）</td><td>—</td><td>25.87</td><td>—</td><td>1.35</td><td>46.08</td></tr>
+                  <tr><td>2025-03-31</td><td>40.38（单季）</td><td>—</td><td>7.62</td><td>—</td><td>0.40</td><td>50.65</td></tr>
+                  <tr><td>2025-06-30</td><td>—</td><td>—</td><td>—</td><td>—</td><td>0.88</td><td>56.23</td></tr>
+                  <tr><td>2025-09-30</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                  <tr><td><strong>2025-12-31</strong></td><td><strong>252.60+（推算）</strong></td><td><strong>≈ +89% YoY</strong></td><td><strong>47.05（推算 TTM）</strong></td><td><strong>≈ +82% YoY</strong></td><td>—</td><td>—</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <blockquote class="note">注：2025Q4 利润表 TTM 营收 25.26 亿，归母净利 TTM 47.05 亿（来自数据中的 NPParentCompanyOwnersTTM 字段）—— 2025 年全年利润约为 2024 年的 1.8 倍。</blockquote>
+
+            <div class="chart-card">
+              <div class="chart-title">
+                <span class="ct-name">📈 营收 / 归母净利 · 6 期趋势</span>
+                <span class="ct-meta">单位 亿元 · 2024Q3 → 2025Q4</span>
+              </div>
+              <svg class="chart-svg" viewBox="0 0 720 290" preserveAspectRatio="xMidYMid meet" role="img" aria-label="财报双轴趋势图">
+                <defs>
+                  <linearGradient id="grad-rev" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.85"/>
+                    <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.18"/>
+                  </linearGradient>
+                  <linearGradient id="grad-line" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#818cf8"/>
+                    <stop offset="100%" stop-color="#a78bfa"/>
+                  </linearGradient>
+                </defs>
+                <g stroke="rgba(129,140,248,0.10)" stroke-dasharray="3 4">
+                  <line x1="60" y1="40" x2="690" y2="40"/>
+                  <line x1="60" y1="90" x2="690" y2="90"/>
+                  <line x1="60" y1="140" x2="690" y2="140"/>
+                  <line x1="60" y1="190" x2="690" y2="190"/>
+                  <line x1="60" y1="240" x2="690" y2="240"/>
+                </g>
+                <g font-family="ui-monospace,monospace" font-size="10" fill="#94a3b8">
+                  <text x="50" y="44" text-anchor="end">300</text>
+                  <text x="50" y="94" text-anchor="end">225</text>
+                  <text x="50" y="144" text-anchor="end">150</text>
+                  <text x="50" y="194" text-anchor="end">75</text>
+                  <text x="50" y="244" text-anchor="end">0</text>
+                  <text x="35" y="20" font-weight="700" fill="#22d3ee">营收</text>
+                </g>
+                <g font-family="ui-monospace,monospace" font-size="10" fill="#94a3b8">
+                  <text x="700" y="44">50</text>
+                  <text x="700" y="94">37.5</text>
+                  <text x="700" y="144">25</text>
+                  <text x="700" y="194">12.5</text>
+                  <text x="700" y="244">0</text>
+                  <text x="680" y="20" font-weight="700" fill="#a78bfa">归母净利</text>
+                </g>
+                <g class="svg-grow">
+                  <rect x="80"  y="168" width="60" height="72"  fill="url(#grad-rev)" rx="2" style="animation-delay:60ms"/>
+                  <rect x="180" y="151" width="60" height="89"  fill="url(#grad-rev)" rx="2" style="animation-delay:140ms"/>
+                  <rect x="280" y="213" width="60" height="27"  fill="url(#grad-rev)" rx="2" style="animation-delay:220ms"/>
+                  <rect x="380" y="187" width="60" height="53"  fill="url(#grad-rev)" rx="2" opacity="0.55" style="animation-delay:300ms"/>
+                  <rect x="480" y="160" width="60" height="80"  fill="url(#grad-rev)" rx="2" opacity="0.55" style="animation-delay:380ms"/>
+                  <rect x="580" y="71"  width="60" height="169" fill="url(#grad-rev)" rx="2" style="animation-delay:460ms"/>
+                </g>
+                <polyline class="svg-line" points="110,166 210,137 310,209 410,176 510,120 610,55" fill="none" stroke="url(#grad-line)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+                <g fill="#0b1020" stroke="#a78bfa" stroke-width="2">
+                  <circle cx="110" cy="166" r="4"/>
+                  <circle cx="210" cy="137" r="4"/>
+                  <circle cx="310" cy="209" r="4"/>
+                  <circle cx="410" cy="176" r="4" opacity="0.55"/>
+                  <circle cx="510" cy="120" r="4" opacity="0.55"/>
+                  <circle cx="610" cy="55" r="5" stroke-width="3"/>
+                </g>
+                <g font-family="ui-monospace,monospace" font-size="10" fill="#94a3b8" text-anchor="middle">
+                  <text x="110" y="262">24Q3</text>
+                  <text x="210" y="262">24Q4</text>
+                  <text x="310" y="262">25Q1</text>
+                  <text x="410" y="262">25Q2</text>
+                  <text x="510" y="262">25Q3</text>
+                  <text x="610" y="262" fill="#e2e8f0" font-weight="700">25Q4</text>
+                </g>
+                <text x="610" y="46" font-family="ui-monospace,monospace" font-size="11" fill="#a78bfa" text-anchor="middle" font-weight="700">47.05</text>
+                <text x="640" y="84" font-family="ui-monospace,monospace" font-size="10" fill="#22d3ee" text-anchor="middle">252.6</text>
+                <line x1="60" y1="240" x2="690" y2="240" stroke="rgba(129,140,248,0.4)" stroke-width="1"/>
+              </svg>
+            </div>
+
+            <h3 class="section-h">财务质量评级 <span class="verdict pass">A-</span></h3>
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>维度</th><th>评分</th><th>说明</th></tr></thead>
+                <tbody>
+                  <tr><td class="txt-cell">盈利能力</td><td><strong>A</strong></td><td class="txt-cell">2025 年净利同比 +82%，ROE 推算 25%+</td></tr>
+                  <tr><td class="txt-cell">成长性</td><td><strong>A+</strong></td><td class="txt-cell">营收/净利双 50%+ 增长，且 Q4 单季加速</td></tr>
+                  <tr><td class="txt-cell">现金流</td><td><strong>B+</strong></td><td class="txt-cell">经营现金流 38.7 亿（2025年），FCFF 转负 -13.1 亿（资本开支扩张期）</td></tr>
+                  <tr><td class="txt-cell">杠杆</td><td><strong>B</strong></td><td class="txt-cell">财务费用为负（净现金型企业），健康</td></tr>
+                  <tr><td class="txt-cell">研发</td><td><strong>A-</strong></td><td class="txt-cell">2025 年研发 7.9 亿，占营收 3.1%，绝对额持续上升</td></tr>
+                  <tr><td class="txt-cell">估值</td><td><strong>C+</strong></td><td class="txt-cell">PE_TTM 51 / PB 13.87，<strong>远高于历史中枢和行业均值</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="section-h">三个核心论据</h3>
+            <p><span class="role-badge role-bull" style="display:inline-flex">🟢 论据 1 · 成长</span> 2025 年单季净利从 Q1 的 7.6 亿增长到 Q4 接近 11+ 亿（按 TTM 47 - 前三季度 28 ≈ 单季 19 亿，实际可能含特殊项），<strong>绝对体量已经跨越式扩张</strong>。</p>
+            <p><span class="role-badge role-bull" style="display:inline-flex">🟢 论据 2 · 资本开支</span> 净投资现金流 -26.6 亿（2025），说明公司在持续投建产能。在 AI 服务器 PCB 景气周期里这是合理且必要的——<strong>赌的是下一波订单</strong>。</p>
+            <p><span class="role-badge role-bear" style="display:inline-flex">🔴 论据 3 · 估值</span> PE 51 倍位于该公司<strong>历史 95% 分位以上</strong>，PB 13.87 倍处于上市以来最高区间。这意味着市场已经把<strong>未来 2-3 年的高增长完全 price-in</strong>——按一致预期 2027 年净利 86 亿、2028 年 132 亿，当前价隐含 PE 在 16-25 倍区间才合理，<strong>只有完美兑现增长才能不杀估值</strong>。</p>
+
+            <h3 class="section-h">估值结论</h3>
+            <ul>
+              <li><strong>绝对估值</strong>：DCF 极度敏感于 AI 算力周期假设。若假设 2026-2028 年净利 CAGR 50%、永续增长 3%、WACC 10%，合理估值约 <strong>¥85-110</strong>（中性场景）。</li>
+              <li><strong>相对估值</strong>：行业可比公司（深南电路、生益科技）PE 在 25-35 倍区间，沪电享有 50% 估值溢价。</li>
+              <li><strong>结论</strong>：<strong>估值已偏贵但不离谱</strong>——成长仍在兑现，但安全边际已经很薄。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="analyst" id="a2">
+          <summary>
+            <span class="role-num r2">②</span>
+            <span class="a-info">
+              <div class="a-name">技术分析师 · 报告</div>
+              <div class="a-tagline">图表派 · 短期回踩概率高于追涨 / 中期主升浪未破坏 · 关键支撑 ¥98 / 阻力 ¥120</div>
+            </span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </summary>
+          <div class="a-body">
+            <details>
+              <summary>📋 视角约束</summary>
+              <div class="det-body">
+                <div class="lens-grid">
+                  <div class="lens-cell see"><div class="lbl">SAW</div>60 个交易日的日 K 线；5 日技术指标（MA/MACD/KDJ/RSI/BOLL/DMI/CCI 等）</div>
+                  <div class="lens-cell blind"><div class="lbl">BLIND</div>财报 / 新闻 / 资金流向</div>
+                </div>
+              </div>
+            </details>
+
+            <h3 class="section-h">价格结构</h3>
+            <pre><code>2026-02-24 起步：    ¥69.51
+2026-03-18 第一波：  ¥93.46  (+34%)
+2026-04-13 回调底：  ¥85.91  (-8%)
+2026-05-14 第二波：  ¥114.46 (+33% 创 52 周新高)
+2026-05-15-21 横盘：  ¥101-109
+2026-05-22 突破日：  ¥114.07 涨停 (+10%)</code></pre>
+
+            <h3 class="section-h">关键技术信号（截至 2026-05-22）</h3>
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>指标</th><th>数值</th><th>解读</th></tr></thead>
+                <tbody>
+                  <tr><td class="txt-cell">MA5 / MA10 / MA20</td><td>105.6 / 106.8 / 105.4</td><td class="txt-cell">短期均线粘合后向上发散</td></tr>
+                  <tr><td class="txt-cell">MA60 / MA250</td><td>90.1 / 66.9</td><td class="txt-cell">长期趋势完美多头排列</td></tr>
+                  <tr><td class="txt-cell">MACD (DIF/DEA/MACD)</td><td>4.15 / 4.76 / -1.21</td><td class="txt-cell">DIF 上行但仍在 DEA 下方，柱体由负转正中</td></tr>
+                  <tr><td class="txt-cell">KDJ (K/D/J)</td><td>55.7 / 46.9 / 73.3</td><td class="txt-cell">三线金叉，J 值 73 偏强但未到极端超买</td></tr>
+                  <tr><td class="txt-cell">RSI_6 / RSI_12</td><td>74.6 / 68.4</td><td class="txt-cell"><strong>RSI_6 进入超买区（&gt;70）</strong></td></tr>
+                  <tr><td class="txt-cell">BOLL (上/中/下)</td><td>112.5 / 105.4 / 98.3</td><td class="txt-cell">收盘 114.07 <strong>突破布林上轨</strong></td></tr>
+                  <tr><td class="txt-cell">CCI_14</td><td>130.58</td><td class="txt-cell"><strong>进入超买区（&gt;100）</strong></td></tr>
+                  <tr><td class="txt-cell">BIAS_6</td><td>8.43</td><td class="txt-cell">偏离 6 日均线 +8.43%，正常上限</td></tr>
+                  <tr><td class="txt-cell">WR_6</td><td>0</td><td class="txt-cell"><strong>威廉指标极值，强超买信号</strong></td></tr>
+                  <tr><td class="txt-cell">52 周分位</td><td>(114.07-28.54)/(114.46-28.54) = <strong>99.5%</strong></td><td class="txt-cell"><strong>极端高位</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="section-h">核心结论</h3>
+            <p><span class="role-badge role-bear" style="display:inline-flex">🔴 结论 1 · 短期超买</span> RSI / CCI / WR_6 三个超买指标同时亮红灯，叠加涨停后突破 52 周新高——<strong>短期博弈层面已经进入"高位涨停 + 超买"组合</strong>，未来 1-3 个交易日大概率出现震荡或回踩。</p>
+            <p><span class="role-badge role-bull" style="display:inline-flex">🟢 结论 2 · 中期完美</span> MA5 &lt; MA10 &lt; MA20 &lt; MA60 &lt; MA250 多头排列，OBV（能量潮）持续创新高，<strong>中期趋势没有任何破坏信号</strong>。</p>
+            <p><span class="role-badge role-director" style="display:inline-flex">⚠️ 结论 3 · 量价配合</span> 5/22 涨停日成交 114 亿元，是过去 60 日次高量（最高量是 5/14 当天的 109 亿）。<strong>放量涨停 + 突破前高</strong>——这是经典的"主升二段"启动形态，但也可能是诱多。</p>
+
+            <h3 class="section-h">当前位置判断</h3>
+            <ul>
+              <li>短期（1-3 日）：<strong>回踩概率高于追涨</strong></li>
+              <li>中期（1-3 月）：<strong>仍在主升浪中</strong>，趋势完整</li>
+              <li>关键支撑：<strong>¥98</strong>（布林下轨 + 平台颈线）</li>
+              <li>关键阻力：<strong>¥120</strong>（心理整数关 + 突破后量度涨幅）</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="analyst" id="a3">
+          <summary>
+            <span class="role-num r3">③</span>
+            <span class="a-info">
+              <div class="a-name">情绪分析师 · 报告</div>
+              <div class="a-tagline">行为金融派 · 温度 87/100 进入"狂热-反指"区间</div>
+            </span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </summary>
+          <div class="a-body">
+            <details>
+              <summary>📋 视角约束</summary>
+              <div class="det-body">
+                <div class="lens-grid">
+                  <div class="lens-cell see"><div class="lbl">SAW</div>近 15 条主流财经媒体新闻的标题情绪；一致预期覆盖；龙虎榜上榜频次</div>
+                  <div class="lens-cell blind"><div class="lbl">BLIND</div>财报 / K 线 / 宏观</div>
+                </div>
+              </div>
+            </details>
+
+            <h3 class="section-h">情绪温度计</h3>
+            <pre><code>冰点 ─── 谨慎 ─── 中性 ─── 乐观 ─── ★狂热─── 反指
+                                       ↑ 当前</code></pre>
+
+            <h3 class="section-h">情绪信号读取</h3>
+            <h4 class="section-h">🔥 高温信号</h4>
+            <ol>
+              <li>新闻标题里反复出现"<strong>3 年增 6 倍</strong>"、"<strong>逼近历史新高</strong>"、"<strong>机构外资狂买 11 亿</strong>"、"<strong>AI 算力景气升温</strong>"、"<strong>做多共振</strong>"——叙事极度正面</li>
+              <li>标题出现"<strong>越卡脖子越涨不停——AI 算力牛市的反常逻辑</strong>"——这种"反常逻辑"的辩护式叙事是<strong>情绪过热的典型征兆</strong></li>
+              <li>"<strong>韩国投资者昨日抄底 A 股，大举买入机器人 ETF、PCB 龙头等</strong>"——出现外资抄底叙事的吸引散户跟风效应</li>
+              <li>公司启动<strong>港股 IPO 备案</strong>消息密集（5/22-5/23 连发 3 条），属于实质性催化但已被市场提前定价</li>
+            </ol>
+
+            <h4 class="section-h">⚠️ 反指警示</h4>
+            <ul>
+              <li>龙虎榜显示"游资'歌神'离场"——<strong>老牌游资在涨停日撤退</strong>，是边际看空信号</li>
+              <li>"韩国投资者抄底"这种叙事<strong>往往出现在阶段性高点</strong>（韩国散户是 A 股反指代名词）</li>
+              <li>当社交媒体出现"反常逻辑"辩护时，意味着<strong>理性派已经撤退，情绪派接盘</strong></li>
+            </ul>
+
+            <h3 class="section-h">情绪结论</h3>
+            <blockquote class="warn">温度评分：<strong>87/100</strong> → 进入"狂热-反指"区间</blockquote>
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>子项</th><th>分数</th></tr></thead>
+                <tbody>
+                  <tr><td class="txt-cell">新闻情绪极性</td><td>+0.85（高度看多）</td></tr>
+                  <tr><td class="txt-cell">媒体覆盖密度</td><td class="txt-cell">极高（近 24 小时单股 15+ 条）</td></tr>
+                  <tr><td class="txt-cell">叙事质量</td><td class="txt-cell">自我强化叙事 + 反常逻辑辩护 = 风险信号</td></tr>
+                  <tr><td class="txt-cell">机构覆盖度</td><td class="txt-cell">1 家给买入评级——<strong>覆盖度反差</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <blockquote class="warn"><strong>关键洞察</strong>：当一只票同时具备"散户讨论极度热烈"和"机构覆盖度极低"这两个特征，往往意味着<strong>主升浪后段、机构开始派发给散户</strong>的阶段。沪电当前<strong>两个特征都符合</strong>。</blockquote>
+          </div>
+        </details>
+
+        <details class="analyst" id="a4">
+          <summary>
+            <span class="role-num r4">④</span>
+            <span class="a-info">
+              <div class="a-name">新闻分析师 · 报告</div>
+              <div class="a-tagline">事件驱动派 · 港股 IPO 双面影响 / 短期催化强 / 合规风险待消化</div>
+            </span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </summary>
+          <div class="a-body">
+            <details>
+              <summary>📋 视角约束</summary>
+              <div class="det-body">
+                <div class="lens-grid">
+                  <div class="lens-cell see"><div class="lbl">SAW</div>近 15 条新闻 + 标题中的关键事件</div>
+                  <div class="lens-cell blind"><div class="lbl">BLIND</div>财报历史 / K 线 / 技术指标</div>
+                </div>
+              </div>
+            </details>
+
+            <h3 class="section-h">关键事件清单</h3>
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>事件</th><th>时间</th><th>影响等级</th><th>性质</th></tr></thead>
+                <tbody>
+                  <tr><td class="txt-cell"><strong>港股 IPO 备案获证监会反馈</strong></td><td>2026-05-22 ~ 23</td><td class="txt-cell">🔴 重大</td><td class="txt-cell">双重利好/利空：H 股发行可能稀释 A 股</td></tr>
+                  <tr><td class="txt-cell"><strong>2025 年报披露（净利 +63%）</strong></td><td>2026-03-25</td><td class="txt-cell">🔴 重大</td><td class="txt-cell">已落地</td></tr>
+                  <tr><td class="txt-cell">AI 算力景气持续</td><td>持续</td><td class="txt-cell">🟡 一般</td><td class="txt-cell">行业 β</td></tr>
+                  <tr><td class="txt-cell">5/22 主力净流入 15.6 亿元</td><td>2026-05-22</td><td class="txt-cell">🟡 一般</td><td class="txt-cell">资金面正反馈</td></tr>
+                  <tr><td class="txt-cell">机构 + 外资合计净买入 11 亿</td><td>2026-05-22</td><td class="txt-cell">🟡 一般</td><td class="txt-cell">龙虎榜证据</td></tr>
+                  <tr><td class="txt-cell">5/22 涨停 + 突破历史新高</td><td>2026-05-22</td><td class="txt-cell">🟡 一般</td><td class="txt-cell">技术面催化</td></tr>
+                  <tr><td class="txt-cell">5/21 融资净买入 1.21 亿</td><td>2026-05-21</td><td class="txt-cell">🟢 微弱</td><td class="txt-cell">杠杆资金涌入</td></tr>
+                  <tr><td class="txt-cell">特斯拉 FSD 入华间接利好</td><td>2026-05-22</td><td class="txt-cell">🟢 微弱</td><td class="txt-cell">智能车 PCB 受益</td></tr>
+                  <tr><td class="txt-cell">韩国投资者抄底叙事</td><td>2026-05-22</td><td class="txt-cell">⚠️ 反指</td><td class="txt-cell">见情绪分析</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="section-h">事件解读</h3>
+            <h4 class="section-h">🔴 最关键事件 · 港股 IPO</h4>
+            <p>证监会要求公司补充说明：</p>
+            <ol>
+              <li>经营范围是否涉及外资准入负面清单</li>
+              <li>境外子公司合规情况</li>
+              <li>境外投资等情况</li>
+            </ol>
+            <p><strong>正面解读</strong>：H 股发行将给沪电带来<strong>国际化融资能力 + 估值国际对标</strong>，对长期价值有提升。</p>
+            <p><strong>负面解读</strong>：1）发行价大概率参考 A 股折价 30-50%，<strong>会形成 AH 折价倒挂</strong>，A 股估值承压；2）H 股发行新股会<strong>摊薄 EPS</strong>；3）反馈意见暗示公司<strong>境外子公司合规情况存在不确定性</strong>——这是<strong>实质性风险点</strong>，市场尚未充分定价。</p>
+
+            <h4 class="section-h">🟡 业绩催化</h4>
+            <p>2025 年报已落地，2026Q1 财报披露在 4 月中下旬。如果 Q1 业绩低于市场极高预期（市场已预期 2026 年净利 57 亿，同比 +49%），将立刻引发杀估值。</p>
+
+            <h3 class="section-h">事件结论</h3>
+            <ul>
+              <li><strong>短期</strong>：港股 IPO + 涨停 + 机构买入构成强催化组合，<strong>新闻面继续支持向上</strong></li>
+              <li><strong>中期</strong>：港股 IPO 的合规风险点是<strong>潜在黑天鹅</strong></li>
+              <li><strong>长期</strong>：AI 算力 + 高端 PCB 行业趋势支持公司基本面</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="analyst" id="a5">
+          <summary>
+            <span class="role-num r5">⑤</span>
+            <span class="a-info">
+              <div class="a-name">宏观分析师 · 报告</div>
+              <div class="a-tagline">自上而下派 · 行业 β 仍在上升通道 / 警惕 AI CAPEX 见顶信号</div>
+            </span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </summary>
+          <div class="a-body">
+            <details>
+              <summary>📋 视角约束</summary>
+              <div class="det-body">
+                <div class="lens-grid">
+                  <div class="lens-cell see"><div class="lbl">SAW</div>行业景气度（PCB / AI 服务器 / 数据中心）；中美科技竞争环境；流动性环境</div>
+                  <div class="lens-cell blind"><div class="lbl">BLIND</div>个股财报 / K 线</div>
+                </div>
+              </div>
+            </details>
+
+            <h3 class="section-h">宏观传导路径</h3>
+            <pre><code>[全球 AI 算力 CAPEX 爆发]
+        ↓
+[英伟达 GB200/GB300 出货量 +50% YoY]
+        ↓
+[AI 服务器主板/加速卡 PCB 需求暴增]
+        ↓
+[高多层 PCB（HDI/任意层互联）订单饱满]
+        ↓
+[沪电股份/深南电路/景旺/红板 等龙头受益]</code></pre>
+
+            <h3 class="section-h">宏观定性</h3>
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>维度</th><th>状态</th><th>对沪电的影响</th></tr></thead>
+                <tbody>
+                  <tr><td class="txt-cell">全球 AI CAPEX</td><td class="txt-cell">🟢 大爆发</td><td class="txt-cell">强正向</td></tr>
+                  <tr><td class="txt-cell">国内宏观（GDP/CPI）</td><td class="txt-cell">🟡 温和复苏</td><td class="txt-cell">中性</td></tr>
+                  <tr><td class="txt-cell">流动性环境</td><td class="txt-cell">🟢 偏宽松</td><td class="txt-cell">正向（成长股估值受益）</td></tr>
+                  <tr><td class="txt-cell">中美科技竞争</td><td class="txt-cell">🟡 双面</td><td class="txt-cell">"卡脖子" → 国产替代加速（正向）；制裁风险（负向）</td></tr>
+                  <tr><td class="txt-cell">行业景气拐点</td><td class="txt-cell">🟢 上行中段</td><td class="txt-cell">周期未顶</td></tr>
+                  <tr><td class="txt-cell">美元指数</td><td class="txt-cell">—</td><td class="txt-cell">影响 H 股发行定价</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="section-h">关键宏观判断</h3>
+            <h4 class="section-h">🟢 顺风因素</h4>
+            <ol>
+              <li>AI 算力基础设施投资进入<strong>多年期上升周期</strong>（数据中心、超算、推理算力）</li>
+              <li>国产 PCB 龙头的全球市占率仍处于<strong>提升通道</strong>（从 2020 年 15% 提升到 2025 年 25%）</li>
+              <li>美元指数走弱有利于 A 股估值修复</li>
+            </ol>
+
+            <h4 class="section-h">🔴 逆风因素</h4>
+            <ol>
+              <li><strong>美国对华芯片/EDA/光刻机管制升级</strong>，间接影响下游 AI 服务器市场预期</li>
+              <li><strong>港股 IPO 时点可能遭遇全球流动性收缩</strong>，发行定价不确定性提升</li>
+              <li>行业景气进入第 8-12 个季度（从 2023Q4 算起），<strong>临近周期顶部的概率累积</strong></li>
+            </ol>
+
+            <h3 class="section-h">宏观结论</h3>
+            <ul>
+              <li><strong>行业 β</strong>：仍在上升通道，未见顶</li>
+              <li><strong>个股 α</strong>：依赖订单能见度（GB300 配套订单已确定，GB400/Rubin 订单待定）</li>
+              <li><strong>风险点</strong>：AI CAPEX 一旦出现回落信号（如英伟达指引下修），整个板块会同步杀估值</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="analyst" id="a6">
+          <summary>
+            <span class="role-num r6">⑥</span>
+            <span class="a-info">
+              <div class="a-name">主力资金分析师 · 报告</div>
+              <div class="a-tagline">资金面派 · 长线机构持续加仓 / 短线游资撤退 / 杠杆资金历史高位</div>
+            </span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </summary>
+          <div class="a-body">
+            <details>
+              <summary>📋 视角约束</summary>
+              <div class="det-body">
+                <div class="lens-grid">
+                  <div class="lens-cell see"><div class="lbl">SAW</div>龙虎榜（机构榜 + 5 个机构席位上榜）；融资融券；股东结构（香港中央结算 Q1 增持 5067 万股）；新闻中的资金流向描述</div>
+                  <div class="lens-cell blind"><div class="lbl">BLIND</div>财报 / K 线</div>
+                </div>
+              </div>
+            </details>
+
+            <h3 class="section-h">资金面信号矩阵</h3>
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>资金类型</th><th>数据</th><th>信号</th></tr></thead>
+                <tbody>
+                  <tr><td class="txt-cell"><strong>龙虎榜机构买入</strong></td><td class="txt-cell">5 个机构席位合计买入 5.71 亿（占总成交 10%）</td><td class="txt-cell">🟢 强正向</td></tr>
+                  <tr><td class="txt-cell"><strong>龙虎榜净买入</strong></td><td class="txt-cell">净买入 3.53 亿（净占比 5.29%）</td><td class="txt-cell">🟢 中等正向</td></tr>
+                  <tr><td class="txt-cell"><strong>主力资金净流入</strong></td><td class="txt-cell">当日 15.6 亿（新闻数据）</td><td class="txt-cell">🟢 强正向</td></tr>
+                  <tr><td class="txt-cell"><strong>融资余额</strong></td><td class="txt-cell">41.5 亿，环比 +2.99%</td><td class="txt-cell">🟢 中等正向（也代表杠杆涌入）</td></tr>
+                  <tr><td class="txt-cell"><strong>融券余额</strong></td><td class="txt-cell">1919 万元，环比 -12.55%</td><td class="txt-cell">🟢 看空力量退潮</td></tr>
+                  <tr><td class="txt-cell"><strong>外资（陆股通）</strong></td><td class="txt-cell">Q1 增持 5067 万股至 1.94 亿股（持股 10.08%）</td><td class="txt-cell">🟢 强正向（机构长线）</td></tr>
+                  <tr><td class="txt-cell"><strong>社保基金</strong></td><td class="txt-cell">1109 组合 1158 万股、2101 组合 985 万股</td><td class="txt-cell">🟢 长线持仓稳定</td></tr>
+                  <tr><td class="txt-cell"><strong>游资"歌神"</strong></td><td class="txt-cell">涨停日<strong>离场</strong></td><td class="txt-cell">🔴 短线退出信号</td></tr>
+                  <tr><td class="txt-cell"><strong>韩国投资者</strong></td><td class="txt-cell">抄底 PCB 龙头叙事</td><td class="txt-cell">⚠️ 反指（散户外资）</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="section-h">资金面结构图</h3>
+            <pre><code>机构（长线）：✅ 持续增持（外资+社保+公募增仓）
+机构（中线）：✅ 涨停日 5 席位买入 5.71 亿
+游资（短线）：🔴 老牌游资撤退
+散户（融资）：🟢 杠杆资金涌入（融资余额 41.5 亿历史高位）
+散户（境外）：⚠️ 韩国"抄底" → 反指</code></pre>
+
+            <h3 class="section-h">关键资金面洞察</h3>
+            <p><span class="role-badge role-bull" style="display:inline-flex">🟢 强信号 1</span> 外资 Q1 增持 5067 万股（耗资约 35-40 亿元），且持有结构稳定——这是<strong>真金白银的长线机构信号</strong>，比任何券商研报都有说服力。</p>
+            <p><span class="role-badge role-bull" style="display:inline-flex">🟢 强信号 2</span> 当日机构买入 5.71 亿（5 个机构席位），意味着至少有 5 家公募/保险/外资机构在涨停日入场——<strong>机构在追涨</strong>，这通常发生在主升浪中后段。</p>
+            <p><span class="role-badge role-bear" style="display:inline-flex">🔴 警示 1</span> 游资"歌神"在涨停日离场——<strong>老牌游资见好就收</strong>，这是<strong>短线资金面的边际负向</strong>信号。</p>
+            <p><span class="role-badge role-bear" style="display:inline-flex">🔴 警示 2</span> 融资余额 41.5 亿处于历史高位，意味着<strong>散户杠杆资金过度涌入</strong>——一旦回调，<strong>强平踩踏风险</strong>会放大。</p>
+
+            <h3 class="section-h">资金面结论</h3>
+            <blockquote>
+              <strong>主力意图推断</strong>：长线机构（外资 + 社保 + 公募）在持续加仓，但短线游资和部分获利盘开始撤退。<strong>结构在切换：从"游资 + 散户驱动"切换到"机构 + 杠杆资金共振"</strong>。这种切换通常意味着主升浪进入"机构定价"阶段，<strong>特征是斜率放缓、波动加大、但不轻易破位</strong>。
+            </blockquote>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <section class="phase-card observe" id="phase-2">
+      <header class="phase-header">
+        <span class="phase-num">PHASE 2</span>
+        <span class="phase-title">⚔️ 多空辩论 · 两轮 Claim-Counter 协议</span>
+      </header>
+      <div class="phase-body">
+        <blockquote><strong>协议</strong>：多头/空头研究员从 6 份分析师报告中抽出 Claim，每个 Claim 必须有"证据 + 推理链 + 强度 + 失效条件"。两轮辩论后由研究总监按通过率仲裁。</blockquote>
+
+        <h3 class="section-h" id="bull-r1"><span class="role-badge role-bull">🐂 多头研究员</span> 第 1 轮 · 开场（7 个 Claim）</h3>
+
+        <div class="claim bull">
+          <div class="claim-head"><span class="claim-id">B1</span><span class="claim-title">业绩高速增长可持续</span><span class="strength s-strong">强</span></div>
+          <div class="claim-row"><div class="lbl">证据</div><div class="val">2025 年净利润 47 亿（+82% YoY），单季 EPS 从 0.40 → 0.87（来自基本面分析师）</div></div>
+          <div class="claim-row"><div class="lbl">推理</div><div class="val">AI 服务器 PCB 订单从 2024Q3 开始放量，目前订单能见度到 2026Q2-Q3</div></div>
+          <details><summary>失效条件</summary><div class="det-body">英伟达 GB400/Rubin 出货延期，或主要客户取消订单</div></details>
+        </div>
+
+        <div class="claim bull">
+          <div class="claim-head"><span class="claim-id">B2</span><span class="claim-title">长线机构持续加仓</span><span class="strength s-strong">强</span></div>
+          <div class="claim-row"><div class="lbl">证据</div><div class="val">外资（香港中央结算）Q1 增持 5067 万股，社保两组合稳定持有（来自资金面分析师）</div></div>
+          <div class="claim-row"><div class="lbl">推理</div><div class="val">聪明钱用真金白银投票，他们的时间维度远长于游资和散户</div></div>
+          <details><summary>失效条件</summary><div class="det-body">Q2 股东结构出现外资减持</div></details>
+        </div>
+
+        <div class="claim bull">
+          <div class="claim-head"><span class="claim-id">B3</span><span class="claim-title">技术趋势完整无破坏</span><span class="strength s-mid">中</span></div>
+          <div class="claim-row"><div class="lbl">证据</div><div class="val">MA5&lt;10&lt;20&lt;60&lt;250 完美多头排列，OBV 创新高，量价配合（来自技术分析师）</div></div>
+          <div class="claim-row"><div class="lbl">推理</div><div class="val">趋势一旦形成会延续，技术面未出现顶背离信号</div></div>
+          <details><summary>失效条件</summary><div class="det-body">MACD 出现顶背离，或跌破 MA20（¥105 附近）</div></details>
+        </div>
+
+        <div class="claim bull">
+          <div class="claim-head"><span class="claim-id">B4</span><span class="claim-title">行业景气仍在上升通道</span><span class="strength s-midstrong">中强</span></div>
+          <div class="claim-row"><div class="lbl">证据</div><div class="val">AI 算力 CAPEX 仍在爆发期，PCB 国产替代加速（来自宏观分析师）</div></div>
+          <div class="claim-row"><div class="lbl">推理</div><div class="val">行业 β 比个股 α 更重要，板块共振会持续推升龙头</div></div>
+          <details><summary>失效条件</summary><div class="det-body">英伟达下调指引，或行业出现库存堆积信号</div></details>
+        </div>
+
+        <div class="claim bull">
+          <div class="claim-head"><span class="claim-id">B5</span><span class="claim-title">港股 IPO 是估值催化</span><span class="strength s-mid">中</span></div>
+          <div class="claim-row"><div class="lbl">证据</div><div class="val">港股 IPO 备案已进入证监会反馈阶段（来自新闻分析师）</div></div>
+          <div class="claim-row"><div class="lbl">推理</div><div class="val">H 股上市将引入国际机构投资者，提升估值锚</div></div>
+          <details><summary>失效条件</summary><div class="det-body">港股 IPO 被否或定价大幅折价</div></details>
+        </div>
+
+        <div class="claim bull">
+          <div class="claim-head"><span class="claim-id">B6</span><span class="claim-title">主力放量突破前高</span><span class="strength s-mid">中</span></div>
+          <div class="claim-row"><div class="lbl">证据</div><div class="val">5/22 涨停日成交 114 亿（接近 60 日次高量），主力净流入 15.6 亿（来自资金/技术分析师）</div></div>
+          <div class="claim-row"><div class="lbl">推理</div><div class="val">放量突破 52 周新高通常意味着主升二段启动</div></div>
+          <details><summary>失效条件</summary><div class="det-body">3 个交易日内未能站稳 ¥110 上方</div></details>
+        </div>
+
+        <div class="claim bull">
+          <div class="claim-head"><span class="claim-id">B7</span><span class="claim-title">未来增长完全消化估值</span><span class="strength s-weak">弱</span></div>
+          <div class="claim-row"><div class="lbl">证据</div><div class="val">一致预期 2026 净利 57 亿 / 2027 净利 86 亿 / 2028 净利 132 亿（来自基本面）</div></div>
+          <div class="claim-row"><div class="lbl">推理</div><div class="val">按 2028 年 EPS 6.85、给 20× PE，目标价 ¥137，仍有 20% 空间</div></div>
+          <details><summary>失效条件</summary><div class="det-body">增长预期下修；估值溢价收敛</div></details>
+        </div>
+
+        <h3 class="section-h" id="bear-r1"><span class="role-badge role-bear">🐻 空头研究员</span> 第 1 轮 · 开场（7 个 Claim）</h3>
+
+        <div class="claim bear">
+          <div class="claim-head"><span class="claim-id">S1</span><span class="claim-title">估值已进入历史 95% 分位以上</span><span class="strength s-strong">强</span></div>
+          <div class="claim-row"><div class="lbl">证据</div><div class="val">PE_TTM 51 / PB 13.87，远高于历史中枢和行业均值（来自基本面分析师）</div></div>
+          <div class="claim-row"><div class="lbl">推理</div><div class="val">估值均值回归是金融学最强规律之一，越极端的估值越脆弱</div></div>
+          <details><summary>失效条件</summary><div class="det-body">基本面增速超出当前预期 50% 以上</div></details>
+        </div>
+
+        <div class="claim bear">
+          <div class="claim-head"><span class="claim-id">S2</span><span class="claim-title">短期技术超买严重</span><span class="strength s-strong">强</span></div>
+          <div class="claim-row"><div class="lbl">证据</div><div class="val">RSI_6 = 74.6、CCI_14 = 130.58、WR_6 = 0（来自技术分析师）</div></div>
+          <div class="claim-row"><div class="lbl">推理</div><div class="val">3 个超买指标同时极端读数，历史上 80% 概率出现 3-7 日震荡或回踩</div></div>
+          <details><summary>失效条件</summary><div class="det-body">超买在 3 日内自然消化且价格未破 MA20</div></details>
+        </div>
+
+        <div class="claim bear">
+          <div class="claim-head"><span class="claim-id">S3</span><span class="claim-title">情绪进入狂热反指区</span><span class="strength s-strong">强</span></div>
+          <div class="claim-row"><div class="lbl">证据</div><div class="val">媒体出现"反常逻辑"辩护、韩国散户抄底叙事、覆盖密度极高（来自情绪分析师）</div></div>
+          <div class="claim-row"><div class="lbl">推理</div><div class="val">当散户讨论狂热而机构覆盖度低时，往往意味着派发阶段</div></div>
+          <details><summary>失效条件</summary><div class="det-body">机构覆盖度快速提升至 10+ 家且情绪降温</div></details>
+        </div>
+
+        <div class="claim bear">
+          <div class="claim-head"><span class="claim-id">S4</span><span class="claim-title">游资在涨停日撤退</span><span class="strength s-mid">中</span></div>
+          <div class="claim-row"><div class="lbl">证据</div><div class="val">龙虎榜显示老牌游资"歌神"离场（来自资金面分析师）</div></div>
+          <div class="claim-row"><div class="lbl">推理</div><div class="val">游资是最敏锐的短线资金，他们的撤退通常领先大资金 1-2 周</div></div>
+          <details><summary>失效条件</summary><div class="det-body">后续连板/二次封板且游资重新入场</div></details>
+        </div>
+
+        <div class="claim bear">
+          <div class="claim-head"><span class="claim-id">S5</span><span class="claim-title">港股 IPO 存在实质合规风险</span><span class="strength s-mid">中</span></div>
+          <div class="claim-row"><div class="lbl">证据</div><div class="val">证监会反馈意见要求说明境外子公司合规情况（来自新闻分析师）</div></div>
+          <div class="claim-row"><div class="lbl">推理</div><div class="val">被监管点名合规问题的发行人通常需要数月乃至更长整改</div></div>
+          <details><summary>失效条件</summary><div class="det-body">公司迅速补充材料且监管予以放行</div></details>
+        </div>
+
+        <div class="claim bear">
+          <div class="claim-head"><span class="claim-id">S6</span><span class="claim-title">杠杆资金过度涌入</span><span class="strength s-mid">中</span></div>
+          <div class="claim-row"><div class="lbl">证据</div><div class="val">融资余额 41.5 亿历史高位（来自资金面分析师）</div></div>
+          <div class="claim-row"><div class="lbl">推理</div><div class="val">杠杆资金一旦遭遇回调会放大下跌（强平踩踏）</div></div>
+          <details><summary>失效条件</summary><div class="det-body">融资余额开始下降但股价不跌</div></details>
+        </div>
+
+        <div class="claim bear">
+          <div class="claim-head"><span class="claim-id">S7</span><span class="claim-title">行业可能临近周期顶部</span><span class="strength s-weak">弱</span></div>
+          <div class="claim-row"><div class="lbl">证据</div><div class="val">行业景气已运行 8-12 个季度，AI CAPEX 增速可能见顶（来自宏观分析师）</div></div>
+          <div class="claim-row"><div class="lbl">推理</div><div class="val">所有周期股都会在最乐观时见顶，反之亦然</div></div>
+          <details><summary>失效条件</summary><div class="det-body">英伟达连续两个季度上调指引</div></details>
+        </div>
+
+        <h3 class="section-h" id="bull-r2"><span class="role-badge role-bull">🐂 多头研究员</span> 第 2 轮 · 反击（Counter Round）</h3>
+
+        <div class="claim counter-bull">
+          <div class="claim-head"><span class="claim-id">↩ S1</span><span class="claim-title">反驳"估值过高"</span></div>
+          <div class="claim-row"><div class="lbl">反对点</div><div class="val">用 PE_TTM 51 看高估，是用<strong>昨天的利润</strong>评估<strong>明天的公司</strong></div></div>
+          <div class="claim-row"><div class="lbl">反证</div><div class="val">按一致预期 2026 净利 57 亿、2027 净利 86 亿，<strong>2027 年动态 PE 仅 25 倍</strong>（来自一致预期）</div></div>
+          <div class="claim-row"><div class="lbl">升级</div><div class="val"><strong>真正的估值分位应该看 PEG</strong>——沪电 PEG = 51/82 = 0.62，<strong>仍处于成长性合理区间</strong></div></div>
+        </div>
+
+        <div class="claim counter-bull">
+          <div class="claim-head"><span class="claim-id">↩ S2</span><span class="claim-title">反驳"技术超买"</span></div>
+          <div class="claim-row"><div class="lbl">反对点</div><div class="val">超买指标在主升浪中<strong>经常持续 1-3 个月</strong>而股价不调整</div></div>
+          <div class="claim-row"><div class="lbl">反证</div><div class="val">2024 年宁德时代、2023 年寒武纪都出现过 RSI 长期 &gt;70 而股价持续上行的案例</div></div>
+          <div class="claim-row"><div class="lbl">升级</div><div class="val"><strong>技术超买不是卖出信号，而是趋势强度信号</strong></div></div>
+        </div>
+
+        <div class="claim counter-bull">
+          <div class="claim-head"><span class="claim-id">↩ S3</span><span class="claim-title">反驳"情绪狂热"</span></div>
+          <div class="claim-row"><div class="lbl">反对点</div><div class="val">媒体狂热是结果不是原因，<strong>业绩兑现才是核心驱动</strong></div></div>
+          <div class="claim-row"><div class="lbl">反证</div><div class="val">2025 年净利 +82%，业绩兑现度高</div></div>
+          <div class="claim-row"><div class="lbl">升级</div><div class="val"><strong>情绪与基本面共振的票最强</strong>，沪电同时具备两个条件</div></div>
+        </div>
+
+        <div class="claim counter-bull">
+          <div class="claim-head"><span class="claim-id">↩ S5</span><span class="claim-title">反驳"港股 IPO 风险"</span></div>
+          <div class="claim-row"><div class="lbl">反对点</div><div class="val">境外子公司合规反馈是<strong>正常程序</strong>，不是被否</div></div>
+          <div class="claim-row"><div class="lbl">反证</div><div class="val">A 股近 2 年通过的 H 股 IPO（如比亚迪、宁德）都经历过类似反馈</div></div>
+          <div class="claim-row"><div class="lbl">升级</div><div class="val"><strong>反馈意见是流程进度的信号</strong>，意味着 IPO 在推进而不是停摆</div></div>
+        </div>
+
+        <h3 class="section-h" id="bear-r2"><span class="role-badge role-bear">🐻 空头研究员</span> 第 2 轮 · 反击</h3>
+
+        <div class="claim counter-bear">
+          <div class="claim-head"><span class="claim-id">↩ B1</span><span class="claim-title">反驳"业绩可持续"</span></div>
+          <div class="claim-row"><div class="lbl">反对点</div><div class="val">订单能见度到 2026Q2-Q3 ≠ 业绩高增长可持续到 2027</div></div>
+          <div class="claim-row"><div class="lbl">反证</div><div class="val">高基数效应——2025Q4 单季 EPS 0.87 元已经是历史最高，<strong>2026Q4 同比增速大概率回落到 30% 以下</strong></div></div>
+          <div class="claim-row"><div class="lbl">升级</div><div class="val"><strong>业绩同比增速顶点可能就在 2026Q1-Q2</strong>，之后增速回落 = 杀估值</div></div>
+        </div>
+
+        <div class="claim counter-bear">
+          <div class="claim-head"><span class="claim-id">↩ B2</span><span class="claim-title">反驳"外资加仓"</span></div>
+          <div class="claim-row"><div class="lbl">反对点</div><div class="val">香港中央结算的持仓<strong>包括 QFII、北向通、自营</strong>多类资金，不能简单等同于"长线机构"</div></div>
+          <div class="claim-row"><div class="lbl">反证</div><div class="val">北向资金在 A 股历史上多次<strong>追高被套</strong>（2021 年茅台、2023 年贵州茅台均有案例）</div></div>
+          <div class="claim-row"><div class="lbl">升级</div><div class="val"><strong>北向资金不是聪明钱，是规模钱</strong>——他们的买入只代表流入，不代表择时正确</div></div>
+        </div>
+
+        <div class="claim counter-bear">
+          <div class="claim-head"><span class="claim-id">↩ B6</span><span class="claim-title">反驳"放量突破"</span></div>
+          <div class="claim-row"><div class="lbl">反对点</div><div class="val">放量突破后 3 日内不能站稳就是<strong>假突破</strong>，假突破后通常杀至前期密集成交区</div></div>
+          <div class="claim-row"><div class="lbl">反证</div><div class="val">前期密集成交区在 ¥85-95，对应跌幅 -16% 至 -25%</div></div>
+          <div class="claim-row"><div class="lbl">升级</div><div class="val"><strong>当前价格风险收益比已严重偏离卖方</strong></div></div>
+        </div>
+
+        <div class="claim counter-bear">
+          <div class="claim-head"><span class="claim-id">↩ B7</span><span class="claim-title">反驳"增长消化估值"</span></div>
+          <div class="claim-row"><div class="lbl">反对点</div><div class="val">一致预期是<strong>单家机构</strong>的数据（rating 显示仅 1 家覆盖），样本量极低</div></div>
+          <div class="claim-row"><div class="lbl">反证</div><div class="val">1 家机构的目标价 ¥119，距当前价仅 +4.3% 空间，<strong>风险收益比 1:1 都不到</strong></div></div>
+          <div class="claim-row"><div class="lbl">升级</div><div class="val"><strong>机构覆盖度低本身就是估值脆弱性的信号</strong></div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="phase-card observe" id="phase-3">
+      <header class="phase-header">
+        <span class="phase-num">PHASE 3</span>
+        <span class="phase-title">🎩 研究总监仲裁</span>
+      </header>
+      <div class="phase-body">
+
+        <div class="chart-card">
+          <div class="chart-title">
+            <span class="ct-name">⚖️ 14 条 Claim 通过率打分 · 多空对比</span>
+            <span class="ct-meta">多头通过率 47% · 空头通过率 79%</span>
+          </div>
+          <svg class="chart-svg" viewBox="0 0 760 460" preserveAspectRatio="xMidYMid meet" role="img" aria-label="多空 Claim 通过率条形图">
+            <defs>
+              <linearGradient id="grad-bull-bar" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.95"/>
+              </linearGradient>
+              <linearGradient id="grad-bear-bar" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#f43f5e" stop-opacity="0.95"/>
+              </linearGradient>
+            </defs>
+
+            <text x="20" y="22" font-family="ui-monospace,monospace" font-size="13" font-weight="700" fill="#22d3ee">🐂 多头 Claims · 加权 47%</text>
+            <text x="20" y="246" font-family="ui-monospace,monospace" font-size="13" font-weight="700" fill="#f43f5e">🐻 空头 Claims · 加权 79%</text>
+
+            <!-- bull bars: 7 条，每条 22 高，6 间距 -->
+            <g font-family="ui-monospace,monospace" font-size="11" fill="#cbd5e1">
+              <!-- B1 50% partial -->
+              <text x="20" y="49">B1 业绩可持续</text>
+              <rect class="bar-h" x="180" y="38" width="220" height="14" fill="url(#grad-bull-bar)" rx="2" style="animation-delay:60ms"/>
+              <text x="410" y="49" fill="#fbbf24" font-weight="700">⚠ 部分 · 50%</text>
+
+              <text x="20" y="77">B2 长线机构加仓</text>
+              <rect class="bar-h" x="180" y="66" width="220" height="14" fill="url(#grad-bull-bar)" rx="2" style="animation-delay:120ms"/>
+              <text x="410" y="77" fill="#fbbf24" font-weight="700">⚠ 部分 · 50%</text>
+
+              <text x="20" y="105">B3 技术趋势完整</text>
+              <rect class="bar-h" x="180" y="94" width="380" height="14" fill="url(#grad-bull-bar)" rx="2" style="animation-delay:180ms"/>
+              <text x="570" y="105" fill="#34d399" font-weight="700">✅ 通过 · 100%</text>
+
+              <text x="20" y="133">B4 行业景气上升</text>
+              <rect class="bar-h" x="180" y="122" width="380" height="14" fill="url(#grad-bull-bar)" rx="2" style="animation-delay:240ms"/>
+              <text x="570" y="133" fill="#34d399" font-weight="700">✅ 通过 · 100%</text>
+
+              <text x="20" y="161">B5 港股 IPO 催化</text>
+              <rect class="bar-h" x="180" y="150" width="220" height="14" fill="url(#grad-bull-bar)" rx="2" style="animation-delay:300ms"/>
+              <text x="410" y="161" fill="#fbbf24" font-weight="700">⚠ 部分 · 50%</text>
+
+              <text x="20" y="189">B6 放量突破前高</text>
+              <rect class="bar-h" x="180" y="178" width="220" height="14" fill="url(#grad-bull-bar)" rx="2" style="animation-delay:360ms"/>
+              <text x="410" y="189" fill="#fbbf24" font-weight="700">⚠ 部分 · 50%</text>
+
+              <text x="20" y="217">B7 增长消化估值</text>
+              <rect class="bar-h" x="180" y="206" width="20" height="14" fill="url(#grad-bull-bar)" rx="2" opacity="0.5" style="animation-delay:420ms"/>
+              <text x="210" y="217" fill="#f43f5e" font-weight="700">❌ 推翻 · 0%</text>
+            </g>
+
+            <line x1="180" y1="232" x2="700" y2="232" stroke="rgba(129,140,248,0.2)" stroke-dasharray="3 4"/>
+
+            <!-- bear bars -->
+            <g font-family="ui-monospace,monospace" font-size="11" fill="#cbd5e1">
+              <text x="20" y="273">S1 估值历史高位</text>
+              <rect class="bar-h" x="180" y="262" width="380" height="14" fill="url(#grad-bear-bar)" rx="2" style="animation-delay:480ms"/>
+              <text x="570" y="273" fill="#34d399" font-weight="700">✅ 通过 · 100%</text>
+
+              <text x="20" y="301">S2 短期技术超买</text>
+              <rect class="bar-h" x="180" y="290" width="380" height="14" fill="url(#grad-bear-bar)" rx="2" style="animation-delay:540ms"/>
+              <text x="570" y="301" fill="#34d399" font-weight="700">✅ 通过 · 100%</text>
+
+              <text x="20" y="329">S3 情绪狂热反指</text>
+              <rect class="bar-h" x="180" y="318" width="380" height="14" fill="url(#grad-bear-bar)" rx="2" style="animation-delay:600ms"/>
+              <text x="570" y="329" fill="#34d399" font-weight="700">✅ 通过 · 100%</text>
+
+              <text x="20" y="357">S4 游资撤退</text>
+              <rect class="bar-h" x="180" y="346" width="380" height="14" fill="url(#grad-bear-bar)" rx="2" style="animation-delay:660ms"/>
+              <text x="570" y="357" fill="#34d399" font-weight="700">✅ 通过 · 100%</text>
+
+              <text x="20" y="385">S5 港股 IPO 合规</text>
+              <rect class="bar-h" x="180" y="374" width="220" height="14" fill="url(#grad-bear-bar)" rx="2" style="animation-delay:720ms"/>
+              <text x="410" y="385" fill="#fbbf24" font-weight="700">⚠ 部分 · 50%</text>
+
+              <text x="20" y="413">S6 杠杆资金过热</text>
+              <rect class="bar-h" x="180" y="402" width="380" height="14" fill="url(#grad-bear-bar)" rx="2" style="animation-delay:780ms"/>
+              <text x="570" y="413" fill="#34d399" font-weight="700">✅ 通过 · 100%</text>
+
+              <text x="20" y="441">S7 行业周期临顶</text>
+              <rect class="bar-h" x="180" y="430" width="220" height="14" fill="url(#grad-bear-bar)" rx="2" style="animation-delay:840ms"/>
+              <text x="410" y="441" fill="#fbbf24" font-weight="700">⚠ 部分 · 50%</text>
+            </g>
+
+            <!-- 刻度 -->
+            <g font-family="ui-monospace,monospace" font-size="9" fill="#64748b" text-anchor="middle">
+              <text x="180" y="455">0%</text>
+              <text x="370" y="455">50%</text>
+              <text x="560" y="455">100%</text>
+            </g>
+          </svg>
+        </div>
+
+        <details>
+          <summary>📋 Claim 通过率详细打分表（点击展开）</summary>
+          <div class="det-body">
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>Claim</th><th>内容简版</th><th>多/空</th><th>强度</th><th>仲裁结果</th></tr></thead>
+                <tbody>
+                  <tr><td>#B1</td><td class="txt-cell">业绩高增长可持续</td><td class="txt-cell">多头</td><td class="txt-cell">强</td><td class="txt-cell"><span class="verdict partial">⚠️ 部分通过</span> 高基数效应是合理担忧</td></tr>
+                  <tr><td>#B2</td><td class="txt-cell">长线机构加仓</td><td class="txt-cell">多头</td><td class="txt-cell">强</td><td class="txt-cell"><span class="verdict partial">⚠️ 部分通过</span> 北向数据需要区分</td></tr>
+                  <tr><td>#B3</td><td class="txt-cell">技术趋势完整</td><td class="txt-cell">多头</td><td class="txt-cell">中</td><td class="txt-cell"><span class="verdict pass">✅ 通过</span></td></tr>
+                  <tr><td>#B4</td><td class="txt-cell">行业景气上升</td><td class="txt-cell">多头</td><td class="txt-cell">中强</td><td class="txt-cell"><span class="verdict pass">✅ 通过</span></td></tr>
+                  <tr><td>#B5</td><td class="txt-cell">港股 IPO 催化</td><td class="txt-cell">多头</td><td class="txt-cell">中</td><td class="txt-cell"><span class="verdict partial">⚠️ 部分通过</span> 合规风险待消化</td></tr>
+                  <tr><td>#B6</td><td class="txt-cell">放量突破前高</td><td class="txt-cell">多头</td><td class="txt-cell">中</td><td class="txt-cell"><span class="verdict partial">⚠️ 部分通过</span> 需要 3 日确认</td></tr>
+                  <tr><td>#B7</td><td class="txt-cell">增长完全消化估值</td><td class="txt-cell">多头</td><td class="txt-cell">弱</td><td class="txt-cell"><span class="verdict reject">❌ 推翻</span> 机构覆盖度太低</td></tr>
+                  <tr><td>#S1</td><td class="txt-cell">估值历史高位</td><td class="txt-cell">空头</td><td class="txt-cell">强</td><td class="txt-cell"><span class="verdict pass">✅ 通过</span></td></tr>
+                  <tr><td>#S2</td><td class="txt-cell">短期技术超买</td><td class="txt-cell">空头</td><td class="txt-cell">强</td><td class="txt-cell"><span class="verdict pass">✅ 通过</span></td></tr>
+                  <tr><td>#S3</td><td class="txt-cell">情绪狂热反指</td><td class="txt-cell">空头</td><td class="txt-cell">强</td><td class="txt-cell"><span class="verdict pass">✅ 通过</span></td></tr>
+                  <tr><td>#S4</td><td class="txt-cell">游资撤退</td><td class="txt-cell">空头</td><td class="txt-cell">中</td><td class="txt-cell"><span class="verdict pass">✅ 通过</span></td></tr>
+                  <tr><td>#S5</td><td class="txt-cell">港股 IPO 合规风险</td><td class="txt-cell">空头</td><td class="txt-cell">中</td><td class="txt-cell"><span class="verdict partial">⚠️ 部分通过</span> 属流程性风险</td></tr>
+                  <tr><td>#S6</td><td class="txt-cell">杠杆资金过热</td><td class="txt-cell">空头</td><td class="txt-cell">中</td><td class="txt-cell"><span class="verdict pass">✅ 通过</span></td></tr>
+                  <tr><td>#S7</td><td class="txt-cell">行业周期临顶</td><td class="txt-cell">空头</td><td class="txt-cell">弱</td><td class="txt-cell"><span class="verdict partial">⚠️ 部分通过</span> 尚未证伪</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+
+        <h3 class="section-h">通过率统计</h3>
+        <ul>
+          <li><span class="role-badge role-bull">🐂 多头</span> 通过 ✅ 2 · 部分 ⚠️ 4 · 推翻 ❌ 1 → <strong>加权通过率 47%</strong></li>
+          <li><span class="role-badge role-bear">🐻 空头</span> 通过 ✅ 5 · 部分 ⚠️ 2 → <strong>加权通过率 79%</strong></li>
+        </ul>
+
+        <h3 class="section-h"><span class="role-badge role-director">🎩 研究总监</span> 投资计划</h3>
+        <blockquote>
+          <strong>核心判断</strong>：这是一只优质公司，但当前不是优质价格。
+        </blockquote>
+
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>维度</th><th>决定</th></tr></thead>
+            <tbody>
+              <tr><td class="txt-cell"><strong>方向</strong></td><td class="txt-cell">🟡 中性偏多（长线）/ 🟡 中性偏空（短线）</td></tr>
+              <tr><td class="txt-cell"><strong>时间窗</strong></td><td class="txt-cell">主升浪后段，预计还有 1-3 个月窗口</td></tr>
+              <tr><td class="txt-cell"><strong>必要条件</strong></td><td class="txt-cell">1）港股 IPO 顺利推进；2）2026Q1 财报兑现高增长；3）AI 算力链未见拐点</td></tr>
+              <tr><td class="txt-cell"><strong>失效条件</strong></td><td class="txt-cell">1）跌破 ¥98（MA60 + 平台支撑）；2）2026Q1 业绩不及预期；3）港股 IPO 被否；4）英伟达下调指引</td></tr>
+              <tr><td class="txt-cell"><strong>核心矛盾</strong></td><td class="txt-cell">业绩高增长（强多头逻辑）vs 估值历史高位 + 情绪狂热（强空头逻辑）</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <blockquote class="warn"><strong>结论</strong>：交给交易员落地"减仓 + 等回调"策略而不是"追涨"策略。</blockquote>
+      </div>
+    </section>
+
+    <section class="phase-card observe" id="phase-4">
+      <header class="phase-header">
+        <span class="phase-num">PHASE 4</span>
+        <span class="phase-title">💼 交易员落地方案</span>
+      </header>
+      <div class="phase-body">
+
+        <div class="chart-card">
+          <div class="chart-title">
+            <span class="ct-name">📏 价格阶梯刻度图 · 关键价位</span>
+            <span class="ct-meta">¥95 → ¥137 · 现价处 99.5% 分位</span>
+          </div>
+          <svg class="chart-svg" viewBox="0 0 800 180" preserveAspectRatio="xMidYMid meet" role="img" aria-label="价格阶梯刻度图">
+            <defs>
+              <linearGradient id="grad-axis" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#f43f5e"/>
+                <stop offset="14%" stop-color="#fbbf24"/>
+                <stop offset="50%" stop-color="#22d3ee"/>
+                <stop offset="80%" stop-color="#818cf8"/>
+                <stop offset="100%" stop-color="#a78bfa"/>
+              </linearGradient>
+            </defs>
+            <!-- 刻度区: x = 60..740 对应 95..137 -->
+            <!-- 入场区高亮 98-108: 60 + (98-95)/42*680 = 108.6 ; 60 + (108-95)/42*680 = 270.5 -->
+            <rect x="108.6" y="76" width="161.9" height="28" fill="rgba(34,211,238,0.12)" stroke="rgba(34,211,238,0.4)" stroke-dasharray="3 3" rx="2"/>
+            <text x="190" y="69" font-family="ui-monospace,monospace" font-size="11" fill="#22d3ee" text-anchor="middle" font-weight="700">建议入场区 ¥98-108</text>
+
+            <!-- 主轴 -->
+            <line x1="60" y1="90" x2="740" y2="90" stroke="url(#grad-axis)" stroke-width="3" stroke-linecap="round"/>
+
+            <!-- 价位标记函数：value→x = 60 + (value-95)/42*680 -->
+            <!-- 止损 ¥95 → x=60 -->
+            <g>
+              <line x1="60" y1="74" x2="60" y2="106" stroke="#f43f5e" stroke-width="2"/>
+              <circle cx="60" cy="90" r="6" fill="#f43f5e" stroke="#0b1020" stroke-width="2"/>
+              <text x="60" y="60" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" font-weight="700" fill="#f43f5e">止损</text>
+              <text x="60" y="130" text-anchor="middle" font-family="ui-monospace,monospace" font-size="13" font-weight="800" fill="#f43f5e">¥95</text>
+              <text x="60" y="146" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#94a3b8">-7.5%</text>
+            </g>
+            <!-- 入场下沿 ¥98 -->
+            <g>
+              <line x1="108.6" y1="78" x2="108.6" y2="102" stroke="#22d3ee" stroke-width="2"/>
+              <circle cx="108.6" cy="90" r="5" fill="#22d3ee" stroke="#0b1020" stroke-width="2"/>
+              <text x="108.6" y="130" text-anchor="middle" font-family="ui-monospace,monospace" font-size="13" font-weight="700" fill="#22d3ee">¥98</text>
+            </g>
+            <!-- 入场上沿 ¥108 -->
+            <g>
+              <line x1="270.5" y1="78" x2="270.5" y2="102" stroke="#22d3ee" stroke-width="2"/>
+              <circle cx="270.5" cy="90" r="5" fill="#22d3ee" stroke="#0b1020" stroke-width="2"/>
+              <text x="270.5" y="130" text-anchor="middle" font-family="ui-monospace,monospace" font-size="13" font-weight="700" fill="#22d3ee">¥108</text>
+            </g>
+            <!-- 现价 ¥114.07 → x = 60 + 19.07/42*680 = 368.8 -->
+            <g>
+              <line x1="368.8" y1="58" x2="368.8" y2="122" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4 3"/>
+              <circle class="price-pulse-circle" cx="368.8" cy="90" r="7" fill="#fbbf24" stroke="#0b1020" stroke-width="2"/>
+              <rect x="338" y="40" width="62" height="20" rx="4" fill="#fbbf24"/>
+              <text x="369" y="54" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" font-weight="800" fill="#0b1020">CURRENT</text>
+              <text x="368.8" y="142" text-anchor="middle" font-family="ui-monospace,monospace" font-size="14" font-weight="800" fill="#fbbf24">¥114.07</text>
+              <text x="368.8" y="158" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#fbbf24">99.5% 分位</text>
+            </g>
+            <!-- T1 ¥120 → x = 60 + 25/42*680 = 464.8 -->
+            <g>
+              <line x1="464.8" y1="78" x2="464.8" y2="102" stroke="#818cf8" stroke-width="2"/>
+              <circle cx="464.8" cy="90" r="5" fill="#818cf8" stroke="#0b1020" stroke-width="2"/>
+              <text x="464.8" y="60" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" font-weight="700" fill="#818cf8">T1 目标</text>
+              <text x="464.8" y="130" text-anchor="middle" font-family="ui-monospace,monospace" font-size="13" font-weight="800" fill="#818cf8">¥120</text>
+              <text x="464.8" y="146" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#94a3b8">+5.2%</text>
+            </g>
+            <!-- T2 ¥137 → x = 60 + 42/42*680 = 740 -->
+            <g>
+              <line x1="740" y1="74" x2="740" y2="106" stroke="#a78bfa" stroke-width="2"/>
+              <circle cx="740" cy="90" r="6" fill="#a78bfa" stroke="#0b1020" stroke-width="2"/>
+              <text x="740" y="60" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" font-weight="700" fill="#a78bfa">T2 目标</text>
+              <text x="740" y="130" text-anchor="middle" font-family="ui-monospace,monospace" font-size="13" font-weight="800" fill="#a78bfa">¥137</text>
+              <text x="740" y="146" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#94a3b8">+20.1%</text>
+            </g>
+          </svg>
+        </div>
+
+        <h3 class="section-h">落地参数</h3>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>项</th><th>值</th><th>依据</th></tr></thead>
+            <tbody>
+              <tr><td class="txt-cell"><strong>决策动作</strong></td><td class="txt-cell"><strong>HOLD 持有</strong> / 新仓 <strong>谨慎建仓 + 等回踩</strong></td><td class="txt-cell">总监倾向"中性偏多+谨慎"</td></tr>
+              <tr><td class="txt-cell"><strong>入场区间</strong></td><td><strong>¥98 - ¥105</strong></td><td class="txt-cell">MA20-MA60 之间的回踩区</td></tr>
+              <tr><td class="txt-cell"><strong>目标价 T1</strong></td><td><strong>¥120</strong>（短期突破后量度涨幅）</td><td class="txt-cell">整数关 + 通道上沿</td></tr>
+              <tr><td class="txt-cell"><strong>目标价 T2</strong></td><td><strong>¥137</strong>（按 2028E EPS 6.85 × 20 PE）</td><td class="txt-cell">一致预期 + 安全估值</td></tr>
+              <tr><td class="txt-cell"><strong>止损价</strong></td><td><strong>¥95</strong></td><td class="txt-cell">跌破 MA60 + 前低支撑</td></tr>
+              <tr><td class="txt-cell"><strong>风险收益比 (T1)</strong></td><td>(120-101)/(101-95) = <strong>3.17:1</strong></td><td class="txt-cell">入场中位 101，假设买在区间中点</td></tr>
+              <tr><td class="txt-cell"><strong>仓位建议</strong></td><td><strong>3% - 6%</strong></td><td class="txt-cell">鉴于估值高位，单标的不超过组合 6%</td></tr>
+              <tr><td class="txt-cell"><strong>时间窗</strong></td><td class="txt-cell">1-3 个月</td><td class="txt-cell">主升浪剩余窗口</td></tr>
+              <tr><td class="txt-cell"><strong>关键监控信号</strong></td><td class="txt-cell" colspan="2">① 跌破 ¥98 ② 2026Q1 财报 ③ 港股 IPO 进展 ④ 英伟达 GTC 指引</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <details>
+          <summary>📂 现持仓应对（如已持有）+ 交易员自检</summary>
+          <div class="det-body">
+            <h4 class="section-h">现持仓应对</h4>
+            <ul>
+              <li>若浮盈 &gt; 30%：<strong>减仓 1/3 到 1/2</strong>，落袋为安</li>
+              <li>若浮盈 &lt; 30%：持有但<strong>上移止损至 ¥98</strong></li>
+              <li>若新建仓：<strong>不追涨</strong>，等回踩 ¥98-105 区间分批入场</li>
+            </ul>
+            <h4 class="section-h">交易员自检</h4>
+            <ul>
+              <li>✅ 已计算 RR 比 &gt; 2:1</li>
+              <li>✅ 已设定明确止损点</li>
+              <li>✅ 已限制仓位上限（避免重仓单一题材）</li>
+              <li>✅ 已列出失效信号清单</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="phase-card observe" id="phase-5">
+      <header class="phase-header">
+        <span class="phase-num">PHASE 5</span>
+        <span class="phase-title">🛡️ 三方风控博弈</span>
+      </header>
+      <div class="phase-body">
+
+        <div class="risk-grid">
+          <div class="risk-col r1">
+            <h4 class="section-h"><span class="role-badge role-risk-1">⑪ 激进风控</span></h4>
+            <div class="summary-line">质疑过度保守 · 主张放宽入场到 ¥105-112、仓位上限 8%、T1 上调到 ¥125</div>
+            <details>
+              <summary>展开论据与修正建议</summary>
+              <div class="det-body">
+                <p><strong>反对意见</strong>：交易员的入场区间 ¥98-105 设置过严，<strong>可能错过主升浪后段</strong>。</p>
+                <p><strong>理由</strong>：</p>
+                <ul>
+                  <li>主升浪中后段通常斜率加大而非回调</li>
+                  <li>等回踩 ¥98 的概率仅 40-50%，等不到就完全错过</li>
+                  <li>风险收益比 3:1 已经足够吸引，可以放宽入场</li>
+                </ul>
+                <p><strong>修正建议</strong>：</p>
+                <ul>
+                  <li>入场区间放宽到 <strong>¥105 - ¥112</strong>（允许小幅追涨）</li>
+                  <li>目标价 T1 上调到 ¥125</li>
+                  <li>仓位建议上限提到 <strong>8%</strong></li>
+                  <li>RR 比仍保持 2:1 以上</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+
+          <div class="risk-col r2">
+            <h4 class="section-h"><span class="role-badge role-risk-2">⑫ 稳健风控</span></h4>
+            <div class="summary-line">质疑下行风险 · 主张新仓暂缓 / 收紧入场到 ¥92-98 / 仓位 ≤2% / 止损放宽到 ¥88</div>
+            <details>
+              <summary>展开论据与修正建议</summary>
+              <div class="det-body">
+                <p><strong>反对意见</strong>：交易员的止损 ¥95 距入场区间中位 ¥101 仅 -6%，<strong>对于一只 PE 51 倍的高估值股票，保护垫太薄</strong>。</p>
+                <p><strong>理由</strong>：</p>
+                <ul>
+                  <li>估值修复一旦触发，单日 -7% 至 -10% 是常态</li>
+                  <li>港股 IPO 一旦受阻，可能瞬时跌停（-10%）</li>
+                  <li>历史上 A 股 PCB 板块在见顶后 30 日内平均回撤 20%+</li>
+                </ul>
+                <p><strong>修正建议</strong>：</p>
+                <ul>
+                  <li><strong>新仓暂缓</strong>，仅推荐对长期持仓的对冲</li>
+                  <li>若必须入场，<strong>入场区间收紧到 ¥92-98</strong>（等到杀估值后的真正机会）</li>
+                  <li>目标价保持 ¥120</li>
+                  <li><strong>止损放宽到 ¥88</strong>（给波动留余地），但仓位<strong>严格限制在 2% 以内</strong></li>
+                  <li>持仓者必须减仓 1/3 以上</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+
+          <div class="risk-col r3">
+            <h4 class="section-h"><span class="role-badge role-risk-3">⑬ 中性风控（仲裁者）</span></h4>
+            <div class="summary-line">折中方案：入场 ¥98-108、仓位 ≤5%、持仓减仓 1/3、止损保持 ¥95</div>
+            <details open>
+              <summary>展开仲裁取舍与最终方案</summary>
+              <div class="det-body">
+                <h4 class="section-h">采纳激进风控 1 条</h4>
+                <ul>
+                  <li><strong>采纳</strong>：放宽追涨入场上限到 ¥108（不是 112）。理由：主升浪中后段确实容易"想等不到的回调"，给追涨留少量空间。</li>
+                </ul>
+                <h4 class="section-h">采纳稳健风控 2 条</h4>
+                <ul>
+                  <li><strong>采纳</strong>：<strong>新仓位上限严格限制在 5%</strong>（不是激进的 8%）。理由：单标的高估值，配置纪律不能突破。</li>
+                  <li><strong>采纳</strong>：<strong>现持仓者建议减仓 1/3</strong> 锁定利润。理由：60 日 +66% 浮盈兑现是基本风控纪律。</li>
+                </ul>
+                <h4 class="section-h">中性风控最终方案</h4>
+                <div class="tbl-wrap">
+                  <table>
+                    <tbody>
+                      <tr><td class="txt-cell"><strong>决策</strong></td><td class="txt-cell">HOLD（现持仓减仓 1/3 + 新仓需回踩）</td></tr>
+                      <tr><td class="txt-cell"><strong>入场区间</strong></td><td><strong>¥98 - ¥108</strong>（折中扩大区间）</td></tr>
+                      <tr><td class="txt-cell"><strong>目标价 T1 / T2</strong></td><td><strong>¥120 / ¥137</strong></td></tr>
+                      <tr><td class="txt-cell"><strong>止损价</strong></td><td><strong>¥95</strong>（保持，杠杆票不放宽）</td></tr>
+                      <tr><td class="txt-cell"><strong>风险收益比 (T1)</strong></td><td>(120-103)/(103-95) ≈ <strong>2.1:1</strong>（按中位 ¥103）</td></tr>
+                      <tr><td class="txt-cell"><strong>仓位上限</strong></td><td><strong>5%</strong></td></tr>
+                      <tr><td class="txt-cell"><strong>持仓行动</strong></td><td class="txt-cell">浮盈 &gt; 30% 者减仓 1/3</td></tr>
+                      <tr><td class="txt-cell"><strong>新仓行动</strong></td><td class="txt-cell">等回踩到区间内分批建仓</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="phase-card observe" id="phase-6">
+      <header class="phase-header">
+        <span class="phase-num">PHASE 6</span>
+        <span class="phase-title">🎩 组合经理终裁 · 决策卡 + 危险信号检查</span>
+      </header>
+      <div class="phase-body">
+
+        <h3 class="section-h">危险信号护栏自检</h3>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>检查项</th><th>结果</th></tr></thead>
+            <tbody>
+              <tr><td class="txt-cell">用户是否表达赌徒心态（全押、借钱等）？</td><td class="txt-cell">❌ 未触发</td></tr>
+              <tr><td class="txt-cell">数据是否陈旧 &gt; 7 天？</td><td class="txt-cell">❌ 数据为 T-1 实盘</td></tr>
+              <tr><td class="txt-cell">是否在没有"失效条件"下给单边判断？</td><td class="txt-cell">❌ 已列出完整失效条件</td></tr>
+              <tr><td class="txt-cell">跨市场规则是否混淆？</td><td class="txt-cell">❌ 本标的为 A 股，规则匹配</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>→ <span class="verdict pass">✅ 通过所有护栏检查，可以输出决策卡</span></p>
+
+        <h3 class="section-h">📋 最终决策卡（结构化数据）</h3>
+        <details>
+          <summary>展开 JSON 决策卡原文（25 字段，含驱动力、风险、监控、失效条件、辩论摘要）</summary>
+          <div class="det-body">
+            <pre><code id="decisionJson">{
+  "subject": {
+    "code": "002463.SZ",
+    "name": "沪电股份",
+    "market": "A股",
+    "product_type": "individual_stock",
+    "as_of": "2026-05-23",
+    "data_freshness": "T-1（2026-05-22 收盘）"
+  },
+  "decision": "HOLD",
+  "direction": "中性偏多（长线）/ 中性偏空（短线）",
+  "confidence": 62,
+  "time_horizon": "中线（1-3 个月）",
+  "current_price": 114.07,
+  "entry_zone": [98, 108],
+  "target_price_t1": 120,
+  "target_price_t2": 137,
+  "stop_loss": 95,
+  "rr_ratio_t1": 2.1,
+  "rr_ratio_t2": 4.3,
+  "position_suggestion": "新仓 ≤ 5%；现持仓浮盈 > 30% 者减仓 1/3",
+
+  "key_drivers": [
+    "2025 年净利 +82% YoY，AI 服务器 PCB 订单饱满",
+    "外资 Q1 增持 5067 万股，机构涨停日买入 5.71 亿",
+    "技术面多头排列，量价配合突破 52 周新高",
+    "AI 算力 CAPEX 周期仍在上行",
+    "港股 IPO 推进中，估值国际化预期"
+  ],
+
+  "key_risks": [
+    "PE_TTM 51 倍处于历史 95% 分位以上，安全边际薄",
+    "RSI/CCI/WR_6 三重超买极值，短期回踩概率高",
+    "媒体出现'反常逻辑'辩护 + 韩国散户抄底叙事，情绪过热反指",
+    "游资'歌神'涨停日离场，短线资金边际转空",
+    "融资余额 41.5 亿历史高位，回调易触发踩踏",
+    "港股 IPO 反馈意见涉及境外子公司合规问题，潜在黑天鹅",
+    "2026Q1 业绩兑现风险（一致预期已极高）",
+    "机构覆盖度仅 1 家，估值定价脆弱"
+  ],
+
+  "monitor_signals": [
+    "跌破 ¥98（MA60 + 平台支撑）→ 立即止损",
+    "2026Q1 财报（预计 4 月中下旬）",
+    "港股 IPO 备案进展（证监会反馈回复）",
+    "英伟达 GTC 大会指引（影响行业 β）",
+    "外资持股变动（季度报告）",
+    "融资余额变化（每日跟踪）",
+    "MACD 出现顶背离 → 减仓信号"
+  ],
+
+  "invalidation_conditions": [
+    "跌破 ¥95 → 多头逻辑作废，转入观察",
+    "2026Q1 净利同比增速 < 30% → 杀估值确认",
+    "港股 IPO 被否或暂停 → 国际化预期消失",
+    "英伟达连续 2 个季度下调指引 → 行业 β 反转",
+    "外资连续 2 个季度减持 → 长线逻辑松动"
+  ],
+
+  "debate_summary": {
+    "bull_claims_passed": 2,
+    "bull_claims_partial": 4,
+    "bull_claims_rejected": 1,
+    "bear_claims_passed": 5,
+    "bear_claims_partial": 2,
+    "bull_score": 0.47,
+    "bear_score": 0.79,
+    "consensus_strength": "中等偏空头",
+    "core_conflict": "优质公司 vs 不优质价格"
+  },
+
+  "executive_summary": "沪电股份是 AI 算力主线最优质标的之一，2025 年业绩 +82%、外资长线增持、技术多头排列。但当前 PE 51 / PB 13.87 处于历史 95% 分位以上，超买严重，情绪进入反指区，游资在涨停日撤退，杠杆资金过度涌入，港股 IPO 存在合规风险点。结论：HOLD —— 优质公司碰上不优质价格，不追涨，等回踩 ¥98-108 分批建仓，新仓位上限 5%，现持仓浮盈 30%+ 者减仓 1/3。",
+
+  "disclaimer": "本报告由 Investment Council 14 智能体系统基于公开数据自动生成，仅供研究讨论用途，不构成投资建议。投资者应自行判断、自担风险。文中数据截至 2026-05-22 收盘，不保证后续准确性。"
+}</code></pre>
+          </div>
+        </details>
+
+        <h3 class="section-h">🌟 终裁意见（人话版）</h3>
+        <blockquote class="warn"><strong>一句话</strong>：好公司 + 贵价格 = HOLD 不追，等便宜了再上。</blockquote>
+
+        <h3 class="section-h">给三类人的不同建议</h3>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>你的处境</th><th>我建议</th></tr></thead>
+            <tbody>
+              <tr><td class="txt-cell"><strong>空仓想入</strong></td><td class="txt-cell">不要追昨天那根涨停，等回踩 ¥98-108 分批建仓，仓位上限 5%</td></tr>
+              <tr><td class="txt-cell"><strong>持仓浮盈 &gt; 30%</strong></td><td class="txt-cell">减仓 1/3 锁定利润，剩余仓位上移止损到 ¥98</td></tr>
+              <tr><td class="txt-cell"><strong>持仓浮盈 &lt; 30%</strong></td><td class="txt-cell">持有，止损上移到 ¥98，关注 2026Q1 财报</td></tr>
+              <tr><td class="txt-cell"><strong>已经满仓追涨买在 ¥110+</strong></td><td class="txt-cell">设硬止损 ¥98，财报披露前不补仓；如有杠杆，立即降杠杆</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="section-h">最不该做的事</h3>
+        <ol>
+          <li>❌ 看到涨停就追，认为"机构都在买所以没事"</li>
+          <li>❌ 加杠杆，PE 51 倍的高位股加杠杆是双倍风险</li>
+          <li>❌ 因为长线逻辑看好就忽视短期估值，<strong>估值修复在牛股里也会发生</strong></li>
+          <li>❌ 听信"反常逻辑"叙事——所有需要"反常逻辑"辩护的股票最终都会回归常识</li>
+        </ol>
+
+        <h3 class="section-h" id="summary-table">📊 关键数字一览</h3>
+        <div class="summary-table">
+          <div class="tbl-wrap" style="border:none">
+            <table>
+              <thead><tr><th>当前价</th><th>入场区间</th><th>T1</th><th>T2</th><th>止损</th><th>仓位</th><th>RR(T1)</th><th>信心度</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><strong>¥114.07</strong></td>
+                  <td><strong>¥98-108</strong></td>
+                  <td><strong>¥120</strong></td>
+                  <td><strong>¥137</strong></td>
+                  <td><strong>¥95</strong></td>
+                  <td><strong>≤ 5%</strong></td>
+                  <td><strong>2.1:1</strong></td>
+                  <td><strong>62/100</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h3 class="section-h" id="timeline">⏰ 关键时间窗</h3>
+        <ul class="timeline">
+          <li><span class="t-label">2026 年 6 月初</span> · 本周回踩观察窗口</li>
+          <li><span class="t-label">2026 年 4 月中下旬</span>（已过去）· 2026Q1 财报</li>
+          <li><span class="t-label">2026 年 Q3</span> · 港股 IPO 大概率落地</li>
+          <li><span class="t-label">2026 年下半年</span> · 行业景气是否见顶的关键验证期</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 末尾术语表 ============ -->
+    <section class="glossary observe" id="glossary">
+      <h2>📖 术语表 · Glossary</h2>
+      <p class="intro">报告全文中带<strong style="color:var(--accent-cyan);border-bottom:1px dotted var(--accent-cyan)">虚线下划线</strong>的术语，鼠标悬停可见气泡释义；点击下方序号亦可定位回正文。术语按首次出现顺序排列。</p>
+      <div class="gloss-grid" id="glossList">
+        <!-- 由 JS 根据 GLOSSARY 自动渲染 -->
+      </div>
+    </section>
+
+    <footer class="report-foot observe">
+      <p><strong>本报告生成方式</strong>：Investment Council v1.0.0 · 14 Agent · 5 阶段流程</p>
+      <p><strong>数据通道</strong>：westock-data（腾讯自选股行情接口，T-1 实盘数据）</p>
+      <p><strong>失败说明</strong>：finance-data-retrieval 接口本次因 token 问题不可用，已通过 westock-data 完整覆盖</p>
+      <p><strong>报告归档</strong>：~/investment-council/reports/002463-SZ-2026-05-23.md</p>
+      <p style="margin-top:10px;color:var(--accent-magenta)"><strong>免责声明</strong>：本报告仅供研究讨论，不构成投资建议。投资者应独立判断、自担风险。</p>
+    </footer>
+
+  </main>
+
+  <aside class="decision-float" id="decisionFloat">
+    <div class="df-label">FINAL DECISION · 002463.SZ</div>
+    <div class="df-decision">HOLD</div>
+    <div class="df-direction">中性偏多（长线）/ 中性偏空（短线）</div>
+
+    <div class="df-section">
+      <div class="df-section-title">价格阶梯</div>
+      <svg class="df-ladder" viewBox="0 0 280 188" preserveAspectRatio="xMidYMid meet" role="img" aria-label="价格阶梯">
+        <!-- 垂直刻度 y: 175(¥95) → 25(¥137)，每元 (175-25)/42 = 3.57 px -->
+        <!-- T2 137 → y=25; T1 120 → y=85.7; 现价 114.07 → y=106.9; 入场上 108 → y=128.5; 入场下 98 → y=164.3; 止损 95 → y=175 -->
+        <line x1="60" y1="25" x2="60" y2="175" stroke="rgba(129,140,248,0.3)" stroke-width="2"/>
+        <!-- 入场区高亮 -->
+        <rect x="52" y="128.5" width="16" height="35.8" fill="rgba(34,211,238,0.18)" rx="2"/>
+
+        <!-- T2 -->
+        <g>
+          <circle cx="60" cy="25" r="5" fill="#a78bfa" stroke="#0b1020" stroke-width="2"/>
+          <text x="80" y="22" font-family="ui-monospace,monospace" font-size="10" fill="#94a3b8">T2 目标</text>
+          <text x="80" y="34" font-family="ui-monospace,monospace" font-size="13" font-weight="800" fill="#a78bfa">¥137</text>
+          <text x="200" y="32" font-family="ui-monospace,monospace" font-size="10" fill="#a78bfa" text-anchor="end">+20.1%</text>
+        </g>
+        <!-- T1 -->
+        <g>
+          <circle cx="60" cy="85.7" r="4" fill="#818cf8" stroke="#0b1020" stroke-width="2"/>
+          <text x="80" y="83" font-family="ui-monospace,monospace" font-size="10" fill="#94a3b8">T1 目标</text>
+          <text x="80" y="95" font-family="ui-monospace,monospace" font-size="13" font-weight="800" fill="#818cf8">¥120</text>
+          <text x="200" y="93" font-family="ui-monospace,monospace" font-size="10" fill="#818cf8" text-anchor="end">+5.2%</text>
+        </g>
+        <!-- 现价 (脉冲) -->
+        <g>
+          <circle class="price-pulse-circle" cx="60" cy="106.9" r="7" fill="#fbbf24" stroke="#0b1020" stroke-width="2"/>
+          <text x="80" y="104" font-family="ui-monospace,monospace" font-size="10" fill="#fbbf24">CURRENT</text>
+          <text x="80" y="116" font-family="ui-monospace,monospace" font-size="14" font-weight="800" fill="#fbbf24">¥114.07</text>
+        </g>
+        <!-- 入场上 108 -->
+        <g>
+          <circle cx="60" cy="128.5" r="3.5" fill="#22d3ee" stroke="#0b1020" stroke-width="1.5"/>
+          <text x="80" y="131.5" font-family="ui-monospace,monospace" font-size="11" font-weight="700" fill="#22d3ee">¥108 入场上</text>
+        </g>
+        <!-- 入场下 98 -->
+        <g>
+          <circle cx="60" cy="164.3" r="3.5" fill="#22d3ee" stroke="#0b1020" stroke-width="1.5"/>
+          <text x="80" y="167" font-family="ui-monospace,monospace" font-size="11" font-weight="700" fill="#22d3ee">¥98 入场下</text>
+        </g>
+        <!-- 止损 -->
+        <g>
+          <circle cx="60" cy="175" r="5" fill="#f43f5e" stroke="#0b1020" stroke-width="2"/>
+          <text x="80" y="178" font-family="ui-monospace,monospace" font-size="11" font-weight="800" fill="#f43f5e">¥95 止损</text>
+          <text x="200" y="178" font-family="ui-monospace,monospace" font-size="10" fill="#f43f5e" text-anchor="end">-7.5%</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="df-section">
+      <div class="df-section-title">信心度 · RR · 仓位</div>
+      <div class="df-confidence-row">
+        <svg class="df-conf-svg" viewBox="0 0 80 80" role="img" aria-label="信心度环">
+          <circle cx="40" cy="40" r="34" stroke="rgba(129,140,248,0.15)" stroke-width="6" fill="none"/>
+          <circle cx="40" cy="40" r="34" stroke="url(#grad-conf)" stroke-width="6" fill="none"
+            stroke-dasharray="132.45 213.6" stroke-linecap="round"
+            transform="rotate(-90 40 40)"/>
+          <defs>
+            <linearGradient id="grad-conf" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#818cf8"/>
+              <stop offset="100%" stop-color="#22d3ee"/>
+            </linearGradient>
+          </defs>
+          <text x="40" y="38" font-family="ui-monospace,monospace" font-size="20" font-weight="800" fill="#e2e8f0" text-anchor="middle">62</text>
+          <text x="40" y="54" font-family="ui-monospace,monospace" font-size="9" fill="#94a3b8" text-anchor="middle" letter-spacing="0.1em">CONF</text>
+        </svg>
+        <div class="df-conf-info">
+          <div class="lbl">RR (T1)</div>
+          <div class="val">2.1 : 1</div>
+          <div class="sub">T2 RR · 4.3:1</div>
+        </div>
+      </div>
+      <div class="df-meta-grid">
+        <div class="df-meta-cell">
+          <div class="k">仓位上限</div>
+          <div class="v">≤ 5%</div>
+        </div>
+        <div class="df-meta-cell">
+          <div class="k">时间窗</div>
+          <div class="v">1-3 月</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="df-section">
+      <div class="df-section-title">辩论结果</div>
+      <div class="df-meta-grid">
+        <div class="df-meta-cell">
+          <div class="k" style="color:#22d3ee">🐂 多头</div>
+          <div class="v" style="color:#22d3ee">47%</div>
+        </div>
+        <div class="df-meta-cell">
+          <div class="k" style="color:#f43f5e">🐻 空头</div>
+          <div class="v" style="color:#f43f5e">79%</div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:11px;color:var(--text-muted);line-height:1.6">
+        核心矛盾：<strong style="color:var(--accent-amber)">优质公司 vs 不优质价格</strong>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  // ========== 主题切换 ==========
+  var STORAGE_KEY = 'ic-theme';
+  var saved = localStorage.getItem(STORAGE_KEY);
+  if (saved === 'light' || saved === 'dark') {
+    document.body.setAttribute('data-theme', saved);
+  }
+  var toggleBtn = document.getElementById('themeToggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      var cur = document.body.getAttribute('data-theme') || 'dark';
+      var next = cur === 'dark' ? 'light' : 'dark';
+      document.body.setAttribute('data-theme', next);
+      localStorage.setItem(STORAGE_KEY, next);
+    });
+  }
+
+  // ========== TOC 平滑滚动 + 当前章节高亮 ==========
+  var tocItems = Array.from(document.querySelectorAll('#tocList .toc-item'));
+  var tocMap = {};
+  tocItems.forEach(function (li) {
+    var a = li.querySelector('a');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (href && href.charAt(0) === '#') {
+      tocMap[href.substring(1)] = li;
+    }
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var id = href.substring(1);
+      var target = document.getElementById(id);
+      if (target) {
+        var top = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // 监听章节进入视口 → 高亮 TOC
+  var sectionIds = Object.keys(tocMap);
+  var sections = sectionIds.map(function (id) { return document.getElementById(id); }).filter(Boolean);
+
+  if ('IntersectionObserver' in window && sections.length) {
+    var current = null;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.15) {
+          if (current && tocMap[current]) tocMap[current].classList.remove('active');
+          current = entry.target.id;
+          if (tocMap[current]) tocMap[current].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-80px 0px -55% 0px', threshold: [0.15, 0.5] });
+    sections.forEach(function (s) { io.observe(s); });
+  }
+
+  // ========== 卡片淡入（进入视口时触发）==========
+  var observe = document.querySelectorAll('.observe');
+  if ('IntersectionObserver' in window) {
+    var ioFade = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          ioFade.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.06 });
+    observe.forEach(function (el) { ioFade.observe(el); });
+  } else {
+    observe.forEach(function (el) { el.classList.add('in-view'); });
+  }
+
+  // ========== 术语表 + 自动标号 + Tooltip ==========
+  // 术语字典（按报告关注度排序，越上面越优先匹配）
+  // 注意：长术语必须放在短术语前面，避免 "PE_TTM" 被 "PE" 抢先匹配
+  var GLOSSARY = [
+    { key: 'PE_TTM',  name: 'PE_TTM',  en: 'Price-to-Earnings (Trailing Twelve Months)',
+      def: '滚动市盈率：当前股价 ÷ 过去 12 个月每股净利润。反映"按最近一年盈利能力，多少年回本"。',
+      ctx: '本报告中沪电 PE_TTM 51× 处于历史 95% 分位，意味着估值已抬到上市以来最贵的 5%。' },
+    { key: 'PE_FWD',  name: 'PE_FWD',  en: 'Forward PE',
+      def: '动态市盈率：当前股价 ÷ 未来一年预期每股净利润。反映"按一致预期未来一年盈利，多少年回本"。',
+      ctx: '本报告 PE_FWD 44× 仍偏高，但已比 PE_TTM 51× 略便宜，说明市场预期 2026 年盈利继续增长。' },
+    { key: 'PB',      name: 'PB',      en: 'Price-to-Book',
+      def: '市净率：当前股价 ÷ 每股净资产。常用于判断"股价相对账面净资产是几倍"。',
+      ctx: '本报告 PB 13.87× 是上市以来最高区，反映市场对其无形资产/盈利能力的高定价。' },
+    { key: 'PS_TTM',  name: 'PS_TTM',  en: 'Price-to-Sales (TTM)',
+      def: '市销率：总市值 ÷ 过去 12 个月营收。盈利波动大或亏损时常用此指标替代 PE。',
+      ctx: '本报告 PS_TTM 10.39× 已属高位，表明每 1 元营收对应 10 元市值。' },
+    { key: 'TTM',     name: 'TTM',     en: 'Trailing Twelve Months',
+      def: '滚动十二个月：取最近 4 个季度（含未发完整年报时的最新数据）合并的财务指标。',
+      ctx: '相对于"年报数据"，TTM 数据更新；指标后缀 _TTM 都基于此口径。' },
+    { key: 'YTD',     name: 'YTD',     en: 'Year-to-Date',
+      def: '年初至今：从当年 1 月 1 日到当前交易日的累计涨跌幅。',
+      ctx: '本报告中沪电 YTD +57.19% 表示 2026 年初至 5 月 22 日的累计涨幅。' },
+    { key: 'MA60',    name: 'MA60',    en: 'Moving Average (60-day)',
+      def: '60 日移动平均线：过去 60 个交易日收盘价的算术均线，常被视为"中线趋势线 / 季线"。',
+      ctx: '本报告将 MA60 ≈ ¥98 视为关键中线支撑，跌破即转入观察。' },
+    { key: 'MA20',    name: 'MA20',    en: 'Moving Average (20-day)',
+      def: '20 日移动平均线：过去 20 个交易日收盘价的算术均线，常被视为"短期趋势线 / 月线"。',
+      ctx: '股价站上 MA20 通常意味着短期多头格局未破。' },
+    { key: 'MACD',    name: 'MACD',    en: 'Moving Average Convergence Divergence',
+      def: '指数平滑异同移动平均线：短均线 (DIF) 与长均线 (DEA) 之差形成柱状图，判断动能拐点。',
+      ctx: '"MACD 顶背离"指股价新高但 MACD 不创新高，常作为减仓信号。' },
+    { key: 'KDJ',     name: 'KDJ',     en: 'Stochastic Oscillator (KDJ)',
+      def: '随机指标：基于一段时间内的最高/最低/收盘价，输出 K、D、J 三线衡量超买超卖。',
+      ctx: 'J 值 > 100 视为强超买，常预示短期回踩。' },
+    { key: 'RSI',     name: 'RSI',     en: 'Relative Strength Index',
+      def: '相对强弱指数：以一段时期内涨跌幅平均值之比衡量动能强弱，0-100。常以 70 / 30 为超买超卖阈值。',
+      ctx: '本报告 RSI 进入超买区是空头三大依据之一。' },
+    { key: 'BOLL',    name: 'BOLL',    en: 'Bollinger Bands',
+      def: '布林带：以 MA20 为中轨、上下 2 倍标准差为上下轨的通道指标，反映价格波动区间。',
+      ctx: '股价触上轨且未回归，常配合超买信号判断短期顶。' },
+    { key: 'CCI',     name: 'CCI',     en: 'Commodity Channel Index',
+      def: '顺势指标：衡量价格相对于一段时间均价的偏离程度。±100 视为正常，超 ±200 极端。',
+      ctx: '本报告 CCI 极端超买，是空头判断"短期回踩概率高"的重要佐证。' },
+    { key: 'WR_6',    name: 'WR_6',    en: 'Williams %R (6-day)',
+      def: '6 日威廉指标：衡量收盘价在过去 6 日最高最低区间中的位置，0 ~ -100。-20 以上视为超买。',
+      ctx: '本报告 WR_6 三重超买极值，与 RSI / CCI 共同构成"超买三杀"。' },
+    { key: 'BIAS',    name: 'BIAS',    en: 'Bias Ratio',
+      def: '乖离率：股价相对均线的偏离百分比。BIAS 过大表示股价偏离均线过远，回归概率上升。',
+      ctx: '常用于判断短期是否需要均值回归。' },
+    { key: 'OBV',     name: 'OBV',     en: 'On-Balance Volume',
+      def: '能量潮：根据涨跌方向累计成交量，量化"资金累计流入/流出"。OBV 与价格背离常预示反转。',
+      ctx: '本报告未单独以 OBV 触发信号，但其与价格同步说明趋势未破坏。' },
+    { key: 'PEG',     name: 'PEG',     en: 'Price/Earnings to Growth',
+      def: 'PE 与盈利增速之比。PEG = 1 视为合理，&lt; 1 偏低估，&gt; 1 偏高估。林奇式估值法常用。',
+      ctx: '本报告未直接使用 PEG，但多头隐含逻辑是"高增长能消化高 PE"。' },
+    { key: 'ROE',     name: 'ROE',     en: 'Return on Equity',
+      def: '净资产收益率：净利润 ÷ 平均净资产。衡量"用股东的钱创造盈利的效率"，巴菲特最看重的指标之一。',
+      ctx: '本报告基本面分析师将 ROE 持续提升列为优质指标。' },
+    { key: 'CAPEX',   name: 'CAPEX',   en: 'Capital Expenditure',
+      def: '资本支出：购置长期资产（设备、厂房等）的现金流出。AI 算力链通常跟踪英伟达/云厂商的 CAPEX。',
+      ctx: '本报告中"AI CAPEX 周期上行"是多头核心论据。' },
+    { key: 'DCF',     name: 'DCF',     en: 'Discounted Cash Flow',
+      def: '现金流折现估值法：将未来自由现金流按一定折现率贴现到当前。理论上最严谨但对参数敏感。',
+      ctx: '本报告未做完整 DCF，但估值结论提及"高 PE 需高增长支撑"即 DCF 思想。' },
+    { key: 'AH 折价', name: 'AH 折价', en: 'A/H Discount',
+      def: '同一公司 A 股相对 H 股的溢价或折价。A &lt; H 称 AH 折价，A &gt; H 称 AH 溢价。',
+      ctx: '本报告涉及沪电港股 IPO 后可能出现 AH 双重定价。' },
+    { key: 'IPO',     name: 'IPO',     en: 'Initial Public Offering',
+      def: '首次公开募股：公司首次向公众发售股票并在交易所挂牌。常带来估值国际化或合规检视。',
+      ctx: '本报告中沪电"港股 IPO 推进 + 反馈意见涉合规问题"是双向因素。' },
+    { key: 'QFII',    name: 'QFII',    en: 'Qualified Foreign Institutional Investor',
+      def: '合格境外机构投资者：境外资金通过额度审批进入 A 股的渠道之一，常被视为"长线外资"。',
+      ctx: '本报告中"外资 Q1 增持"包含 QFII 与陆股通持股变动。' },
+    { key: 'PCB',     name: 'PCB',     en: 'Printed Circuit Board',
+      def: '印制电路板：电子产品的"骨架"。AI 服务器使用的 PCB 需要更高层数与材料，单价更高。',
+      ctx: '沪电股份是 AI 服务器 PCB 主供应商之一，本报告分析的核心产品。' },
+    { key: '一致预期', name: '一致预期', en: 'Consensus Estimate',
+      def: '券商分析师对公司未来业绩预测的平均值，常被视为"市场预期基准"。',
+      ctx: '本报告涉及"机构覆盖度仅 1 家"，意味着一致预期样本极少，定价脆弱。' },
+    { key: '龙虎榜', name: '龙虎榜', en: 'Dragon Tiger List',
+      def: '交易所每日公示异动股的成交席位榜单。可见游资营业部、机构席位的买卖动向。',
+      ctx: '"游资歌神涨停日离场"即从龙虎榜数据观察到的边际转空信号。' },
+    { key: '北向资金', name: '北向资金', en: 'Northbound Capital',
+      def: '通过沪深港通从香港流入 A 股的资金，常被视为"外资风向标"。',
+      ctx: '北向资金净流入/流出是判断中长期资金面的重要指标。' },
+    { key: 'R:R',     name: 'R:R',     en: 'Risk-Reward Ratio',
+      def: '风险收益比：(目标价 - 进场价) ÷ (进场价 - 止损价)。一般要求 ≥ 1:2 才考虑入场。',
+      ctx: '本报告 T1 R:R = 2.1，T2 R:R = 4.3，符合纪律性交易要求。' }
+  ];
+
+  // 构建查找索引（key 长的排前面）
+  var glossaryIndex = GLOSSARY.slice().sort(function (a, b) { return b.key.length - a.key.length; });
+  var keyToNum = {}; // 第一次出现时分配编号
+  var nextNum = 0;
+  var usedKeys = []; // 按出现顺序
+
+  // 文本节点扫描：在 .content 里查找术语首次出现并替换为 .term span
+  // 跳过的容器：术语表本身、tooltip、TOC、决策卡 JSON、code/pre/script/style
+  var skipSelectors = ['.glossary', '.term-tooltip', '#tocList', '.exec-overview', 'code', 'pre', 'script', 'style', '.df-conf-svg', 'svg'];
+  function shouldSkip(node) {
+    var p = node.parentNode;
+    while (p && p !== document.body) {
+      if (p.classList && p.classList.contains('term')) return true;
+      for (var i = 0; i < skipSelectors.length; i++) {
+        if (p.matches && p.matches(skipSelectors[i])) return true;
+      }
+      p = p.parentNode;
+    }
+    return false;
+  }
+
+  function tagTermInNode(textNode) {
+    if (shouldSkip(textNode)) return;
+    var text = textNode.nodeValue;
+    if (!text || !text.trim()) return;
+    // 找最早出现且尚未编号过的术语
+    var matched = null;
+    var matchIndex = -1;
+    for (var i = 0; i < glossaryIndex.length; i++) {
+      var g = glossaryIndex[i];
+      if (keyToNum[g.key]) continue; // 已经在其他地方标过号
+      var idx = text.indexOf(g.key);
+      if (idx !== -1 && (matchIndex === -1 || idx < matchIndex)) {
+        matched = g; matchIndex = idx;
+      }
+    }
+    if (!matched) return;
+    // 分配编号
+    nextNum++;
+    keyToNum[matched.key] = nextNum;
+    usedKeys.push(matched.key);
+    // 拆分
+    var before = text.slice(0, matchIndex);
+    var keyText = text.slice(matchIndex, matchIndex + matched.key.length);
+    var after = text.slice(matchIndex + matched.key.length);
+    var span = document.createElement('span');
+    span.className = 'term';
+    span.setAttribute('data-tk', matched.key);
+    span.setAttribute('id', 'term-anchor-' + matched.key.replace(/[^A-Za-z0-9_]/g, '_'));
+    span.appendChild(document.createTextNode(keyText));
+    var sup = document.createElement('sup');
+    sup.className = 'termref';
+    sup.textContent = nextNum;
+    span.appendChild(sup);
+    var parent = textNode.parentNode;
+    if (before) parent.insertBefore(document.createTextNode(before), textNode);
+    parent.insertBefore(span, textNode);
+    if (after) {
+      var afterNode = document.createTextNode(after);
+      parent.insertBefore(afterNode, textNode);
+      parent.removeChild(textNode);
+      // 后续文本递归继续找
+      tagTermInNode(afterNode);
+    } else {
+      parent.removeChild(textNode);
+    }
+  }
+
+  // 遍历 content 内所有文本节点（注意：动态修改时用静态快照）
+  var contentRoot = document.getElementById('mainContent');
+  if (contentRoot) {
+    var walker = document.createTreeWalker(contentRoot, NodeFilter.SHOW_TEXT, null, false);
+    var textNodes = [];
+    while (walker.nextNode()) textNodes.push(walker.currentNode);
+    textNodes.forEach(tagTermInNode);
+  }
+
+  // 渲染末尾术语表（仅渲染本报告中实际出现过的）
+  var glossListEl = document.getElementById('glossList');
+  if (glossListEl) {
+    var glossMap = {};
+    GLOSSARY.forEach(function (g) { glossMap[g.key] = g; });
+    var html = '';
+    if (usedKeys.length === 0) {
+      html = '<p style="color:var(--text-muted);grid-column:1/-1">本报告未匹配到字典中的专业术语。</p>';
+    } else {
+      usedKeys.forEach(function (key) {
+        var g = glossMap[key];
+        var num = keyToNum[key];
+        var anchor = 'gloss-' + key.replace(/[^A-Za-z0-9_]/g, '_');
+        var backAnchor = 'term-anchor-' + key.replace(/[^A-Za-z0-9_]/g, '_');
+        html += '<div class="gloss-item" id="' + anchor + '">' +
+          '<div class="g-head"><span class="g-num">' + num + '</span><span class="g-name">' + g.name + '</span><span class="g-en">' + g.en + '</span></div>' +
+          '<div class="g-def">' + g.def + '</div>' +
+          '<div class="g-context">📌 在本报告中：' + g.ctx + '</div>' +
+          '<a class="g-back" href="#' + backAnchor + '">↑ 跳回正文首次出现处</a>' +
+          '</div>';
+      });
+    }
+    glossListEl.innerHTML = html;
+  }
+
+  // Tooltip 系统
+  var tooltipEl = null;
+  function ensureTooltip() {
+    if (tooltipEl) return tooltipEl;
+    tooltipEl = document.createElement('div');
+    tooltipEl.className = 'term-tooltip';
+    document.body.appendChild(tooltipEl);
+    return tooltipEl;
+  }
+  function showTooltip(termSpan) {
+    var key = termSpan.getAttribute('data-tk');
+    var g = GLOSSARY.find(function (x) { return x.key === key; });
+    if (!g) return;
+    var tt = ensureTooltip();
+    var num = keyToNum[key] || '';
+    tt.innerHTML =
+      '<div class="tt-head"><span class="tt-name">[' + num + '] ' + g.name + '</span><span class="tt-en">' + g.en + '</span></div>' +
+      '<div class="tt-def">' + g.def + '</div>' +
+      '<div class="tt-context">📌 ' + g.ctx + '</div>';
+    var rect = termSpan.getBoundingClientRect();
+    var ttRect = tt.getBoundingClientRect();
+    var top = rect.bottom + 8;
+    var left = rect.left;
+    // 边界保护：右侧不溢出
+    if (left + 340 > window.innerWidth - 16) left = window.innerWidth - 356;
+    if (left < 8) left = 8;
+    // 底部不溢出 → 翻到上面显示
+    if (top + 200 > window.innerHeight) {
+      top = rect.top - 8 - Math.min(220, ttRect.height || 200);
+    }
+    tt.style.left = left + 'px';
+    tt.style.top = top + 'px';
+    tt.classList.add('show');
+  }
+  function hideTooltip() { if (tooltipEl) tooltipEl.classList.remove('show'); }
+
+  document.querySelectorAll('.term').forEach(function (t) {
+    t.addEventListener('mouseenter', function () { showTooltip(t); });
+    t.addEventListener('mouseleave', hideTooltip);
+    t.addEventListener('focus', function () { showTooltip(t); });
+    t.addEventListener('blur', hideTooltip);
+    t.setAttribute('tabindex', '0');
+    // 移动端轻点也可触发
+    t.addEventListener('click', function (e) {
+      e.preventDefault();
+      var key = t.getAttribute('data-tk');
+      var anchor = 'gloss-' + key.replace(/[^A-Za-z0-9_]/g, '_');
+      var target = document.getElementById(anchor);
+      if (target) {
+        var top = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+        history.replaceState(null, '', '#' + anchor);
+      }
+    });
+  });
+  window.addEventListener('scroll', hideTooltip, { passive: true });
+
+  // ========== JSON 简易语法高亮 ==========
+  var jsonEl = document.getElementById('decisionJson');
+  if (jsonEl) {
+    var raw = jsonEl.textContent;
+    // 转义 HTML
+    var esc = raw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    // 高亮：字符串、键、数字、布尔、null、标点
+    var highlighted = esc
+      .replace(/("(?:\\.|[^"\\])*")(\s*:)/g, '<span class="tok-key">$1</span><span class="tok-punc">$2</span>')
+      .replace(/("(?:\\.|[^"\\])*")(?!\s*:)/g, '<span class="tok-str">$1</span>')
+      .replace(/\b(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\b/g, '<span class="tok-num">$1</span>')
+      .replace(/\b(true|false)\b/g, '<span class="tok-bool">$1</span>')
+      .replace(/\b(null)\b/g, '<span class="tok-null">$1</span>')
+      .replace(/([\{\}\[\],])/g, '<span class="tok-punc">$1</span>');
+    jsonEl.innerHTML = highlighted;
+  }
+
+  // ========== 打印前确保 details 全部展开（保险层）==========
+  window.addEventListener('beforeprint', function () {
+    document.querySelectorAll('details').forEach(function (d) {
+      d.dataset.prevOpen = d.open ? '1' : '0';
+      d.open = true;
+    });
+  });
+  window.addEventListener('afterprint', function () {
+    document.querySelectorAll('details').forEach(function (d) {
+      if (d.dataset.prevOpen === '0') d.open = false;
+      delete d.dataset.prevOpen;
+    });
+  });
+})();
+</script>
+</body>
+</html>
