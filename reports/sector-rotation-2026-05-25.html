@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A 股板块轮动研判 · 滞涨布局机会 · 2026-05-25</title>
+<style>
+:root{--bg:#0b1020;--e1:#111933;--e2:#161e3d;--e3:#1f2748;--tint:rgba(129,140,248,.04);--bs:rgba(129,140,248,.12);--bm:rgba(129,140,248,.22);--bx:rgba(129,140,248,.45);--tp:#e2e8f0;--tb:#cbd5e1;--tm:#94a3b8;--ai:#818cf8;--ac:#22d3ee;--am:#f43f5e;--av:#a78bfa;--an:#34d399;--aa:#fbbf24;--sh:0 12px 32px -16px rgba(0,0,0,.6);--shf:0 32px 64px -24px rgba(0,0,0,.7);--rs:6px;--rm:10px;--rl:14px;--fs:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;--fm:ui-monospace,"SF Mono",monospace}
+[data-theme=light]{--bg:#f8fafc;--e1:#fff;--e2:#f1f5f9;--e3:#e2e8f0;--tint:rgba(99,102,241,.04);--bs:rgba(99,102,241,.14);--bm:rgba(99,102,241,.24);--bx:rgba(99,102,241,.5);--tp:#0f172a;--tb:#1e293b;--tm:#475569;--ai:#6366f1;--ac:#0891b2;--am:#e11d48;--av:#7c3aed}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font:16px/1.7 var(--fs);color:var(--tb);background:var(--bg);background-image:radial-gradient(ellipse 1200px 600px at 20% -10%,rgba(99,102,241,.08),transparent 60%),radial-gradient(ellipse 1000px 500px at 90% 20%,rgba(34,211,238,.05),transparent 70%);background-attachment:fixed;min-height:100vh;-webkit-font-smoothing:antialiased}
+.num,code,table td:not(.tx){font-family:var(--fm);font-variant-numeric:tabular-nums}
+a{color:var(--ac);text-decoration:none}a:hover{color:var(--av)}
+.top{position:sticky;top:0;z-index:100;height:56px;display:flex;align-items:center;gap:16px;padding:0 20px;background:rgba(11,16,32,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--bs)}
+[data-theme=light] .top{background:rgba(248,250,252,.85)}
+.tl{display:flex;align-items:center;gap:14px;flex:1;flex-wrap:wrap}
+.tr{display:flex;align-items:center;gap:12px}
+.bm{padding:4px 10px;background:linear-gradient(135deg,var(--ai),#6366f1);color:#fff;border-radius:var(--rs);font-weight:700;font-size:12px;letter-spacing:.08em}
+.tn{font-size:14px;color:var(--tp);font-weight:500}
+.mp{padding:3px 10px;background:var(--e2);border:1px solid var(--bs);border-radius:999px;font-size:11px;color:var(--tm)}
+.mp b{color:var(--ac);font-family:var(--fm);font-weight:700}
+.tt{width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--bm);background:var(--e1);color:var(--tm);border-radius:var(--rs);cursor:pointer}
+.tt:hover{color:var(--ai)}
+.tt svg{width:16px;height:16px}
+.tt .sun{display:none}
+[data-theme=light] .tt .moon{display:none}
+[data-theme=light] .tt .sun{display:block}
+.bh{font-size:12px;color:var(--tm);padding:4px 10px;border:1px solid var(--bs);border-radius:var(--rs)}
+.bh:hover{color:var(--ac);border-color:var(--bm)}
+.lay{display:grid;grid-template-columns:240px minmax(0,1fr);max-width:1380px;margin:0 auto;padding:24px;gap:24px;align-items:flex-start}
+@media (max-width:900px){.lay{grid-template-columns:1fr;padding:16px}.toc{display:none}}
+.toc{position:sticky;top:80px;height:calc(100vh - 104px);overflow-y:auto;padding:18px 14px;background:linear-gradient(180deg,var(--e1),var(--e2));border:1px solid var(--bs);border-radius:var(--rl)}
+.toc::-webkit-scrollbar{width:4px}
+.toc::-webkit-scrollbar-thumb{background:var(--bm);border-radius:2px}
+.tcb{padding:6px 8px 14px;margin-bottom:6px;border-bottom:1px dashed var(--bs);font-size:11px;color:var(--tm);letter-spacing:.16em;font-weight:600}
+.tcl{list-style:none}
+.tcl a{display:block;padding:6px 10px 6px 14px;margin:2px 0;border-left:2px solid transparent;color:var(--tm);font-size:12.5px;border-radius:0 6px 6px 0}
+.tcl .l1 a{font-weight:600;color:var(--tb);padding-left:10px;margin-top:8px;font-size:13px}
+.tcl .l2 a{padding-left:22px}
+.tcl a:hover{background:var(--tint);color:var(--tp)}
+.tcl .active>a{border-left-color:var(--ac);background:linear-gradient(90deg,rgba(34,211,238,.1),transparent);color:var(--ac);font-weight:600}
+.eo{padding:30px 32px;margin-bottom:24px;background:linear-gradient(140deg,var(--e1),var(--e2),var(--e1));border:1px solid var(--bm);border-radius:var(--rl);box-shadow:var(--shf)}
+.eob{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px dashed var(--bs);flex-wrap:wrap}
+.eob .bd{padding:5px 12px;font-size:11px;letter-spacing:.22em;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--ai),var(--av));border-radius:4px}
+.eob .tt2{font-size:23px;font-weight:800;color:var(--tp)}
+.eob .st{margin-left:auto;font-size:12.5px;color:var(--tm)}
+.el{font-size:11.5px;letter-spacing:.2em;font-weight:700;color:var(--ac);margin:22px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--bs)}
+.el:first-of-type{margin-top:0}
+.es{font-size:15.5px;line-height:1.85}
+.es p{margin-bottom:12px}
+.em{color:var(--am);font-weight:700}
+.ep{color:var(--an);font-weight:700}
+.en{color:var(--aa);font-weight:700}
+.ec{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+@media (max-width:1100px){.ec{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:680px){.ec{grid-template-columns:repeat(2,1fr)}}
+.ecd{position:relative;padding:14px;background:var(--e2);border:1px solid var(--bs);border-radius:var(--rm);overflow:hidden;display:block;color:inherit;transition:all 180ms ease}
+.ecd::before{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:var(--ca,var(--ai))}
+.ecd:hover{transform:translateY(-2px);border-color:var(--bm);box-shadow:var(--sh)}
+.ecd.cy{--ca:var(--ac)}.ecd.br{--ca:var(--am)}.ecd.bl{--ca:var(--an)}.ecd.ir{--ca:var(--av)}.ecd.am{--ca:var(--aa)}
+.ech{display:flex;justify-content:space-between;margin-bottom:10px}
+.ecn{font-size:13px;font-weight:700;color:var(--tp)}
+.ev{font-family:var(--fm);font-size:11px;font-weight:700;padding:2px 7px;background:var(--e3);color:var(--ca);border:1px solid var(--ca);border-radius:3px}
+.esc{font-family:var(--fm);font-size:24px;font-weight:800;color:var(--tp);line-height:1;margin-bottom:6px}
+.esc small{font-size:13px;color:var(--tm);font-weight:500;margin-left:4px}
+.ek{font-size:12.5px;color:var(--tm);line-height:1.55}
+.ek b{color:var(--tb);font-weight:600}
+.ej{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;padding-top:14px;border-top:1px dashed var(--bs)}
+.ej .lb{font-size:11px;letter-spacing:.16em;color:var(--tm);font-weight:600;align-self:center}
+.ej a{padding:5px 11px;font-size:12px;color:var(--tb);background:var(--e3);border:1px solid var(--bs);border-radius:999px}
+.ej a:hover{color:var(--ac);border-color:var(--bx)}
+.sc{background:var(--e1);border:1px solid var(--bs);border-radius:var(--rl);margin-bottom:22px;overflow:hidden;box-shadow:var(--sh)}
+.sch{display:flex;align-items:center;gap:14px;padding:18px 24px 16px;border-bottom:1px solid var(--bs);background:linear-gradient(135deg,var(--e2),var(--e1));position:relative}
+.sch::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--ai),var(--ac))}
+.scn{font-family:var(--fm);font-weight:800;font-size:11px;letter-spacing:.18em;padding:3px 9px;background:var(--e3);color:var(--ai);border:1px solid var(--bm);border-radius:4px}
+.sct{font-size:18px;font-weight:700;color:var(--tp)}
+.scb{padding:22px 24px}
+h2.sh,h3.sh{color:var(--tp);font-weight:700;margin-top:18px;margin-bottom:10px}
+h2.sh{font-size:17px}
+h3.sh{font-size:15.5px}
+p{margin-bottom:10px;color:var(--tb)}
+ul,ol{margin-left:22px;margin-bottom:12px}
+li{margin-bottom:6px}
+ul li::marker{color:var(--ai)}
+strong,b{color:var(--tp);font-weight:700}
+blockquote{margin:14px 0;padding:12px 18px;background:var(--tint);border-left:3px solid var(--ac);border-radius:0 6px 6px 0;font-size:14px}
+blockquote.warn{border-left-color:var(--am);background:rgba(244,63,94,.05)}
+blockquote.good{border-left-color:var(--an);background:rgba(52,211,153,.05)}
+blockquote.note{border-left-color:var(--aa);background:rgba(251,191,36,.05)}
+blockquote strong{color:var(--ac)}
+blockquote.warn strong{color:var(--am)}
+blockquote.good strong{color:var(--an)}
+blockquote.note strong{color:var(--aa)}
+.tw{margin:14px 0;overflow-x:auto;border:1px solid var(--bs);border-radius:var(--rm);background:var(--e2)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+thead th{padding:10px 14px;background:var(--e3);color:var(--tp);font-weight:700;text-align:left;border-bottom:1px solid var(--bm);font-size:12.5px;white-space:nowrap}
+tbody td{padding:9px 14px;border-bottom:1px solid var(--bs)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--tint)}
+td.tx{font-family:var(--fs)}
+td.pos{color:var(--am);font-weight:700}
+td.neg{color:var(--an);font-weight:700}
+.kg{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:14px 0}
+.k{padding:14px 16px;background:var(--e2);border:1px solid var(--bs);border-radius:var(--rm);position:relative;overflow:hidden}
+.k::before{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:var(--ka,var(--ai))}
+.k.pos{--ka:var(--am)}.k.pos .kv{color:var(--am)}
+.k.neg{--ka:var(--an)}.k.neg .kv{color:var(--an)}
+.k.warn{--ka:var(--aa)}.k.warn .kv{color:var(--aa)}
+.k.cool{--ka:var(--ac)}.k.cool .kv{color:var(--ac)}
+.kl{font-size:11px;letter-spacing:.12em;color:var(--tm);font-weight:600;margin-bottom:6px}
+.kv{font-family:var(--fm);font-size:22px;font-weight:800;color:var(--tp);line-height:1;margin-bottom:6px}
+.ks{font-size:11.5px;color:var(--tm);line-height:1.5}
+.hm{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:6px;margin:16px 0}
+.hc{position:relative;padding:10px 12px;border-radius:var(--rs);background:var(--e2);border:1px solid var(--bs);overflow:hidden}
+.hc::before{content:"";position:absolute;left:0;top:0;height:100%;background:var(--hcc);opacity:.18;width:var(--hcw,0%)}
+.hc .hn{position:relative;font-size:13px;font-weight:600;color:var(--tp);margin-bottom:3px;display:flex;justify-content:space-between}
+.hc .hp{position:relative;font-family:var(--fm);font-size:14px;font-weight:800;color:var(--hcc)}
+.tvh{--hcc:#f43f5e}.tih{--hcc:#fb7185}.tiw{--hcc:#fbbf24}.tic{--hcc:#94a3b8}.tid{--hcc:#34d399}.tif{--hcc:#10b981}
+.cd{position:relative;background:linear-gradient(160deg,var(--e1),var(--e2));border:1px solid var(--bm);border-radius:var(--rl);margin:18px 0;padding:22px 24px;box-shadow:var(--sh);overflow:hidden}
+.cd::before{content:"";position:absolute;left:0;top:0;width:4px;height:100%;background:var(--cdc,var(--ai))}
+.cd.c1{--cdc:var(--ac)}.cd.c2{--cdc:var(--am)}.cd.c3{--cdc:var(--an)}.cd.c4{--cdc:var(--av)}.cd.c5{--cdc:var(--aa)}
+.cdh{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:14px;padding-bottom:14px;border-bottom:1px dashed var(--bs)}
+.cdr{flex-shrink:0;width:48px;height:48px;display:inline-flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:22px;font-weight:800;color:#fff;background:var(--cdc);border-radius:var(--rm)}
+.cdi{flex:1;min-width:0}
+.cdn{font-size:22px;font-weight:800;color:var(--tp);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.cdt{font-family:var(--fm);font-size:10px;padding:2px 7px;background:var(--e3);color:var(--cdc);border:1px solid var(--cdc);border-radius:3px;font-weight:700}
+.cdg{font-size:13.5px;color:var(--tm);margin-top:4px;line-height:1.6}
+.cds{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+.cdsr{display:flex;align-items:baseline;gap:6px;font-size:12px;color:var(--tm)}
+.cdsr b{font-family:var(--fm);font-size:14px;color:var(--cdc);font-weight:700}
+.cgd{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:780px){.cgd{grid-template-columns:1fr}}
+.cb{padding:14px 16px;background:var(--e2);border:1px solid var(--bs);border-radius:var(--rm)}
+.cb .bt{font-size:11.5px;letter-spacing:.18em;font-weight:700;color:var(--cdc);margin-bottom:10px}
+.cb ul{margin-left:18px;margin-bottom:0}
+.cb li{font-size:13.5px;line-height:1.7;margin-bottom:6px}
+.cb.fw{grid-column:1/-1}
+.term{cursor:help;border-bottom:1px dotted var(--ac);padding-bottom:1px}
+.term:hover{color:var(--ac)}
+.term sup{font-family:var(--fm);font-size:.7em;color:var(--ac);margin-left:1px;font-weight:600}
+.tip{position:fixed;z-index:9999;max-width:340px;padding:12px 14px;background:var(--e3);border:1px solid var(--bx);border-radius:var(--rm);box-shadow:var(--shf);opacity:0;transform:translateY(-4px);pointer-events:none;transition:opacity 160ms,transform 160ms;font-size:13px;line-height:1.6}
+.tip.show{opacity:1;transform:translateY(0)}
+.tip .th{display:flex;align-items:baseline;gap:8px;margin-bottom:6px;padding-bottom:6px;border-bottom:1px dashed var(--bs)}
+.tip .tname{font-weight:800;color:var(--ac);font-size:14px}
+.tip .ten{font-family:var(--fm);font-size:11px;color:var(--tm)}
+.tip .tdef{color:var(--tb);margin-bottom:6px}
+.tip .tcx{font-size:12px;color:var(--tm);font-style:italic;padding-top:6px;border-top:1px dashed var(--bs)}
+.gl{padding:24px 28px;background:linear-gradient(160deg,var(--e1),var(--e2));border:1px solid var(--bs);border-radius:var(--rl);margin-bottom:22px}
+.gl h2{font-size:20px;font-weight:800;color:var(--tp);margin-bottom:6px}
+.gl .gin{font-size:13.5px;color:var(--tm);margin-bottom:18px;padding-bottom:14px;border-bottom:1px dashed var(--bs)}
+.glg{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.gi{padding:14px 16px;background:var(--e2);border:1px solid var(--bs);border-radius:var(--rm);scroll-margin-top:80px}
+.gi:target{border-color:var(--ac);box-shadow:0 0 0 1px var(--ac)}
+.gih{display:flex;align-items:baseline;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.gn{font-family:var(--fm);font-size:11px;font-weight:700;color:var(--ai);background:var(--e3);padding:2px 6px;border-radius:3px}
+.gnm{font-size:15px;font-weight:800;color:var(--tp)}
+.gen{font-family:var(--fm);font-size:12px;color:var(--tm)}
+.gdf{font-size:13.5px;line-height:1.65;margin-bottom:6px}
+.gcx{font-size:12.5px;color:var(--tm);font-style:italic;padding-top:8px;border-top:1px dashed var(--bs)}
+.rf{padding:20px 24px;background:var(--e1);border:1px solid var(--bs);border-radius:var(--rl);margin-bottom:24px;color:var(--tm);font-size:12.5px;line-height:1.8}
+.rf strong{color:var(--tb);font-weight:700}
+.ob{opacity:0;transform:translateY(8px);transition:opacity 480ms,transform 480ms}
+.ob.iv{opacity:1;transform:none}
+@media print{body{font-size:11pt;background:#fff;color:#000}.top,.toc,.tt{display:none!important}.lay{grid-template-columns:1fr!important;padding:0!important}.tip{display:none!important}.cd,.sc{page-break-inside:avoid;box-shadow:none}}
+</style>
+</head>
+<body data-theme="dark">
+
+<header class="top">
+  <div class="tl">
+    <span class="bm">IC · SECTOR</span>
+    <span class="tn">A 股板块轮动研判</span>
+    <span class="mp">数据 · <b>申万一级 31 行业</b></span>
+    <span class="mp">候选 · <b>5 板块</b></span>
+  </div>
+  <div class="tr">
+    <a href="../index.html" class="bh">← 归档首页</a>
+    <button class="tt" id="themeToggle"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+  </div>
+</header>
+
+<div class="lay">
+  <aside class="toc">
+    <div class="tcb">SECTOR ROTATION</div>
+    <ul class="tcl" id="tocList">
+      <li class="l1"><a href="#overview">🎯 决策总览</a></li>
+      <li class="l1"><a href="#market">📊 市场全景</a></li>
+      <li class="l2"><a href="#indices">主流指数风格</a></li>
+      <li class="l2"><a href="#heatmap">31 行业涨幅</a></li>
+      <li class="l2"><a href="#flow">机构资金验证</a></li>
+      <li class="l2"><a href="#macro">宏观底色</a></li>
+      <li class="l1"><a href="#candidates">🟢 五大候选</a></li>
+      <li class="l2"><a href="#cand-1">① 医药生物</a></li>
+      <li class="l2"><a href="#cand-2">② 食品饮料</a></li>
+      <li class="l2"><a href="#cand-3">③ 银行</a></li>
+      <li class="l2"><a href="#cand-4">④ 公用事业</a></li>
+      <li class="l2"><a href="#cand-5">⑤ 农业</a></li>
+      <li class="l1"><a href="#avoid">⚠️ 不推荐板块</a></li>
+      <li class="l1"><a href="#discipline">🛡️ 操作纪律</a></li>
+      <li class="l1"><a href="#glossary">📖 术语表</a></li>
+    </ul>
+  </aside>
+
+  <main class="content" id="mainContent">
+    <section class="eo ob" id="overview">
+      <div class="eob">
+        <span class="bd">SECTOR ROTATION RESEARCH</span>
+        <span class="tt2">A 股板块轮动 · 滞涨布局机会</span>
+        <span class="st">2026-05-25 · 数据驱动</span>
+      </div>
+      <div class="el">▎执行摘要 · 三段话讲清整份研判</div>
+      <div class="es">
+        <p><strong>结论先行：</strong>用 <strong>westock-data</strong> 真实数据扫描申万一级 31 个行业，过去一年 <span class="em">通信 +189% / 电子 +127% / 有色 +91%</span> 已涨过头，5/25 当日机构龙虎榜<strong>净卖出 TOP 全是 PCB / 半导体股</strong>（鹏鼎 -8.1 亿、博迁 -14.7 亿）。本轮筛选出 <span class="ep">5 个 YTD 滞涨甚至下跌的板块</span>作为提前布局候选：<strong>医药生物 / 食品饮料 / 银行 / 公用事业 / 农业</strong>，置信度 <span class="en">中等</span>，建议<strong>左侧分批建仓</strong>而非一次押注。</p>
+        <p><strong>核心矛盾：</strong>大盘已极端分化——<span class="em">科创 50 PE 179.7× / 创业板 73.4×</span> 双双泡沫，但 <span class="ep">沪深 300 PE 14.6× / 银行 PB 0.49×</span> 蓝筹深度低估。要么科创补跌、要么蓝筹补涨——<strong>两条路径都对滞涨板块有利</strong>。宏观侧 <strong>CPI +1.2% / PPI -1.1% / PMI 50.3</strong> 是"温和通胀 + 复苏初期 + 利率下行空间"的组合，正是<strong>红利股 + 顺周期消费</strong>最舒服的环境。机构资金面已给出答案：5/25 机构榜 14 只大额净卖出股中 12 只是科技 / PCB，<strong>聪明钱出货、散户接棒</strong>。</p>
+        <p><strong>落地怎么做：</strong>已持有半导体 / PCB / CPO 类标的者，<span class="em">浮盈 30%+ 减仓 1/3</span>，资金分批转移到下方 <strong>2-3 个候选</strong>。空仓者按 <span class="ep">医药 / 食品饮料 / 银行</span> 优先级分批左侧建仓。<strong>仓位铁律：单板块上限 15-20%，5 候选合计不超 60%，留 30%+ 现金</strong>。失效条件任一触发即重评估：① 上证跌破 4000 ② 持仓 -15% ③ 候选板块出现新利空（医药新一轮集采 / 白酒批价深度下行）。</p>
+      </div>
+      <div class="el">▎五大候选 · 速览（点击跳转）</div>
+      <div class="ec">
+        <a class="ecd cy" href="#cand-1"><div class="ech"><span class="ecn">医药生物</span><span class="ev">A</span></div><div class="esc">-5.3<small>% YTD</small></div><div class="ek">PE <b>32.7×</b> 历史 10% 分位 · <b>AI 制药 + 创新药出海</b>新逻辑</div></a>
+        <a class="ecd br" href="#cand-2"><div class="ech"><span class="ecn">食品饮料</span><span class="ev">A</span></div><div class="esc">-10.2<small>% YTD</small></div><div class="ek">PE <b>20.7×</b> · 公募白酒持仓 <b>16% → 4%</b>，杀仓动能不足</div></a>
+        <a class="ecd am" href="#cand-3"><div class="ech"><span class="ecn">银行</span><span class="ev">B+</span></div><div class="esc">-7.4<small>% YTD</small></div><div class="ek">PB <b>0.49×</b> 极度低估 · 股息 <b>5-6%</b>，yield gap 持续放大</div></a>
+        <a class="ecd ir" href="#cand-4"><div class="ech"><span class="ecn">公用事业</span><span class="ev">B+</span></div><div class="esc">+0.9<small>% YTD</small></div><div class="ek"><b>AI 算力 = 电力</b>新逻辑 · 季节性催化 · 红利+成长稀缺</div></a>
+        <a class="ecd bl" href="#cand-5"><div class="ech"><span class="ecn">农业 / 猪</span><span class="ev">B</span></div><div class="esc">-14.6<small>% YTD</small></div><div class="ek">能繁母猪连续去化 · 龙头回到 <b>2020 水平</b> · 高赔率低胜率</div></a>
+      </div>
+      <div class="ej">
+        <span class="lb">跳转章节 ›</span>
+        <a href="#market">市场全景</a><a href="#heatmap">31 行业涨幅</a><a href="#flow">机构资金</a>
+        <a href="#candidates">5 候选详解</a><a href="#avoid">不推荐</a><a href="#discipline">操作纪律</a><a href="#glossary">📖 术语表</a>
+      </div>
+    </section>
+
+    <section class="sc ob" id="market">
+      <header class="sch"><span class="scn">PART 1</span><span class="sct">📊 市场全景 · 数据视角的极端分化</span></header>
+      <div class="scb">
+        <h3 class="sh" id="indices">主流指数风格分化已极端</h3>
+        <div class="kg">
+          <div class="k cool"><div class="kl">沪深 300 · YTD</div><div class="kv">+6.30%</div><div class="ks"><span class="term" data-tk="PE">PE</span> 14.64× · 偏低估</div></div>
+          <div class="k neg"><div class="kl">上证指数 · YTD</div><div class="kv">+4.63%</div><div class="ks">PE 18.30× · 健康</div></div>
+          <div class="k warn"><div class="kl">中证 500 · YTD</div><div class="kv">+16.59%</div><div class="ks">PE 38× · 偏高</div></div>
+          <div class="k pos"><div class="kl">创业板指 · YTD</div><div class="kv">+25.54%</div><div class="ks">PE 73.36× · <strong>泡沫</strong></div></div>
+          <div class="k pos"><div class="kl">科创 50 · YTD</div><div class="kv">+41.05%</div><div class="ks">PE 179.69× · <strong>极度泡沫</strong></div></div>
+          <div class="k warn"><div class="kl">深证成指 · YTD</div><div class="kv">+17.24%</div><div class="ks">PE 53.24× · 高估</div></div>
+        </div>
+        <blockquote class="warn"><strong>核心信号</strong>　科创 50 与沪深 300 之间存在 <strong>12 倍 PE 鸿沟</strong>。这种极端结构通常以两种方式收敛：科创补跌或蓝筹补涨。<strong>不论哪条路径，都对当前低估的滞涨板块有利</strong>。</blockquote>
+
+        <h3 class="sh" id="heatmap">申万一级 31 行业 · 250 日涨幅热度图</h3>
+        <p style="font-size:13px;color:var(--tm)">数据：申万一级 250 日（≈年线）涨幅。<span style="color:var(--am)">红</span> = 涨过头 / <span style="color:var(--an)">绿</span> = 滞涨。</p>
+        <div class="hm" id="heatmap-grid"></div>
+
+        <h3 class="sh" id="flow">机构资金验证 · 5/25 龙虎榜机构净卖出 TOP</h3>
+        <blockquote class="warn"><strong>触目惊心的对比</strong>　机构榜 14 只大额净卖出股，<strong>12 只是 PCB / 半导体 / 电子龙头</strong>。同一交易日散户/游资热门榜前 8 名仍是半导体、CPO、PCB 概念。<span style="color:var(--am)">机构在出货，散户在接棒</span>——经典顶部信号。</blockquote>
+        <div class="tw"><table><thead><tr><th>股票</th><th>板块</th><th>涨跌幅</th><th>机构净流向</th></tr></thead><tbody>
+          <tr><td class="tx">博迁新材</td><td class="tx">电子元件</td><td class="pos">+8.85%</td><td class="neg">-14.71 亿</td></tr>
+          <tr><td class="tx">鹏鼎控股</td><td class="tx">PCB 龙头</td><td class="pos">+10.00%</td><td class="neg">-8.14 亿</td></tr>
+          <tr><td class="tx">鼎泰高科</td><td class="tx">PCB / 工具</td><td class="pos">+5.43%</td><td class="neg">-3.33 亿</td></tr>
+          <tr><td class="tx">多氟多</td><td class="tx">锂电材料</td><td class="neg">-10.00%</td><td class="neg">-2.86 亿</td></tr>
+          <tr><td class="tx">风华高科</td><td class="tx">电子元件 / MLCC</td><td class="pos">+9.99%</td><td class="neg">-2.00 亿</td></tr>
+          <tr><td class="tx">雅克科技</td><td class="tx">半导体材料</td><td class="pos">+10.00%</td><td class="neg">-1.79 亿</td></tr>
+          <tr><td class="tx">天际股份</td><td class="tx">锂电材料</td><td class="neg">-9.99%</td><td class="neg">-1.36 亿</td></tr>
+        </tbody></table></div>
+
+        <h3 class="sh" id="macro">宏观底色 · 支持轮动的组合</h3>
+        <div class="kg">
+          <div class="k cool"><div class="kl"><span class="term" data-tk="CPI">CPI</span> · YoY</div><div class="kv">+1.2%</div><div class="ks">温和通胀，央行有降息空间</div></div>
+          <div class="k neg"><div class="kl"><span class="term" data-tk="PPI">PPI</span> · YoY</div><div class="kv">-1.1%</div><div class="ks">仍在通缩区，化工 +54.5%</div></div>
+          <div class="k warn"><div class="kl"><span class="term" data-tk="PMI">PMI</span> 制造业</div><div class="kv">50.3</div><div class="ks">刚踩荣枯线，复苏初期</div></div>
+          <div class="k pos"><div class="kl">工业利润 · 累计 YoY</div><div class="kv">+15.5%</div><div class="ks">化工 +54.5% / 食品 +7.4% / 医药 -9.6%</div></div>
+          <div class="k cool"><div class="kl">通讯器材社零</div><div class="kv">+17.7%</div><div class="ks">下游需求强劲</div></div>
+          <div class="k"><div class="kl">化妆品社零</div><div class="kv">+5.6%</div><div class="ks">弱复苏</div></div>
+        </div>
+        <blockquote class="good"><strong>宏观四问四答</strong>　① 利率方向？<strong>下行</strong>（CPI 温和、PMI 刚回 50）→ 利好红利 / 银行 ② 通胀分化？<strong>上游通缩、下游温和</strong> → 利好下游消费 ③ 复苏阶段？<strong>初期</strong> → 顺周期建材 / 化工已动，下游消费 / 医药 / 农业还在底部 ④ 流动性？<strong>充裕但聚集</strong> → 钱有但都跑科技端，需要催化剂引导回流蓝筹</blockquote>
+      </div>
+    </section>
+
+    <section class="sc ob" id="candidates">
+      <header class="sch"><span class="scn">PART 2</span><span class="sct">🟢 五大候选板块 · 详细论证</span></header>
+      <div class="scb">
+        <p><strong>筛选标准（四象限）</strong>　① YTD 滞涨或下跌 ② 估值处于历史合理区下方 ③ 有明确基本面拐点或政策催化 ④ 资金面出现边际改善信号</p>
+
+        <article class="cd c1" id="cand-1">
+          <div class="cdh"><div class="cdr">①</div><div class="cdi"><div class="cdn">医药生物 <span class="cdt">优先级 A</span></div><div class="cdg">三年大熊市末段 · AI 制药 + 创新药出海双新逻辑替换"集采压价"旧叙事</div></div>
+          <div class="cds"><div class="cdsr">YTD <b>-5.34%</b></div><div class="cdsr">PE <b>32.75×</b></div><div class="cdsr">60 日 <b>-7.75%</b></div></div></div>
+          <div class="cgd">
+            <div class="cb"><div class="bt">🟢 多头论据</div><ul>
+              <li><strong>三年大熊市末段</strong>：从 2021 顶部跌至今超 4 年，中证医药估值分位数处于历史 <strong>10% 以下</strong></li>
+              <li><strong>新逻辑替换</strong>：<span class="term" data-tk="AI制药">AI 制药</span> + <span class="term" data-tk="创新药BD">创新药 BD</span> 出海替换"集采"叙事，是 2026 年医药最大变量</li>
+              <li><strong>双属性</strong>：人口老龄化（防御）+ 创新药 BD 交易爆发（进攻）</li>
+              <li><strong>资金已悄悄进场</strong>：医药 ETF 份额规模 2026 净增 30%+</li>
+            </ul></div>
+            <div class="cb"><div class="bt">🔴 风险点</div><ul>
+              <li><strong>集采常态化</strong>压制仿制药估值</li>
+              <li>美国关税对 <span class="term" data-tk="CXO">CXO</span> 出口端有不确定性</li>
+              <li>板块工业利润 -9.6%，基本面仍弱（已 price in）</li>
+              <li>新集采若触及创新药支付政策，<strong>新逻辑会被打断</strong></li>
+            </ul></div>
+            <div class="cb fw"><div class="bt">📌 布局思路（仅讨论非建议）</div><ul>
+              <li><strong>子方向偏好</strong>：创新药 &gt; CXO &gt; 医疗器械 &gt; 中药 &gt; 仿制药</li>
+              <li><strong>跟踪</strong>：港股 18A 大额 BD 交易、PD-1 / ADC / GLP-1 临床数据读出、医药 ETF 份额</li>
+              <li><strong>失效条件</strong>：进一步集采扩面 / 创新药支付政策反复 / 美国关税升级 / 板块跌破 2024 低点</li>
+            </ul></div>
+          </div>
+        </article>
+
+        <article class="cd c2" id="cand-2">
+          <div class="cdh"><div class="cdr">②</div><div class="cdi"><div class="cdn">食品饮料 <span class="cdt">优先级 A</span></div><div class="cdg">深度错杀 · 公募白酒持仓从 16% 降至 4%，杀仓动能不足 · 等待消费复苏二阶导</div></div>
+          <div class="cds"><div class="cdsr">YTD <b>-10.24%</b></div><div class="cdsr">PE <b>20.75×</b></div><div class="cdsr">60 日 <b>-11.06%</b></div></div></div>
+          <div class="cgd">
+            <div class="cb"><div class="bt">🟢 多头论据</div><ul>
+              <li><strong>深度错杀</strong>：5 年熊市，茅台从 2600 跌到 1500-1600，板块 PE 回到 2014-2016 水平</li>
+              <li><strong>消费复苏二阶导</strong>：CPI 食品 -1.6% 仍弱，但下半年低基数 + 政策刺激</li>
+              <li><strong>股息属性</strong>：高端白酒龙头股息率 3-4%</li>
+              <li><strong>机构持仓深度释放</strong>：公募白酒持仓从 2021 高点 <strong>16% 降至 4%</strong>，杀仓动能严重不足</li>
+              <li><strong>食品工业增加值 +8.4% / 利润 +7.4%</strong>，基本面没那么糟</li>
+            </ul></div>
+            <div class="cb"><div class="bt">🔴 风险点</div><ul>
+              <li><strong>消费复苏不达预期</strong> → 库存周期再次延长</li>
+              <li>白酒商务消费场景结构性收缩（无法逆转）</li>
+              <li>政策黑天鹅：反腐扩大冲击商务消费</li>
+              <li><strong>批价继续下行</strong>是最危险的领先信号</li>
+            </ul></div>
+            <div class="cb fw"><div class="bt">📌 布局思路（仅讨论非建议）</div><ul>
+              <li><strong>子方向偏好</strong>：高端白酒（茅台 / 五粮液） &gt; 啤酒 &gt; 调味品 &gt; 乳制品</li>
+              <li><strong>跟踪</strong>：春节 / 中秋动销、批发价（每周更新）、餐饮收入 YoY</li>
+              <li><strong>失效条件</strong>：批价持续下行 / 春节动销不及预期 / 库存继续上行 / 茅台破 1400</li>
+            </ul></div>
+          </div>
+        </article>
+
+        <article class="cd c3" id="cand-3">
+          <div class="cdh"><div class="cdr">③</div><div class="cdi"><div class="cdn">银行 <span class="cdt">优先级 B+</span></div><div class="cdg">PB 0.49× 极度低估 · 股息 5-6% · 利率下行环境最好的红利资产</div></div>
+          <div class="cds"><div class="cdsr">YTD <b>-7.37%</b></div><div class="cdsr">PE <b>5.92×</b></div><div class="cdsr">PB <b>0.49×</b></div></div></div>
+          <div class="cgd">
+            <div class="cb"><div class="bt">🟢 多头论据</div><ul>
+              <li><strong>降息周期受益悖论</strong>：净息差短期承压是利空，但<strong>信用风险下行 + 不良资产生成压力减小</strong>是更大的利好</li>
+              <li><strong>红利股是利率下行最优资产</strong>：10 年国债收益率继续下行，<strong>5-6% 股息率 vs 利率的 yield gap 持续放大</strong></li>
+              <li><strong>PB 0.49×</strong> 隐含 51% 净资产是"假账"假设，但实际不良率持续好转</li>
+              <li><strong>保险 / 养老金</strong>持续买入大行，最稳健的钱在流入</li>
+            </ul></div>
+            <div class="cb"><div class="bt">🔴 风险点</div><ul>
+              <li><strong>房地产风险</strong>继续暴露（信贷拨备压力）</li>
+              <li><strong>净息差跌破 1.5%</strong> → 业绩坍塌</li>
+              <li>地方债务化解可能要银行让利</li>
+              <li>红利属性高度依赖宏观利率，<strong>利率反转</strong>则逻辑被打掉</li>
+            </ul></div>
+            <div class="cb fw"><div class="bt">📌 布局思路（仅讨论非建议）</div><ul>
+              <li><strong>子方向偏好</strong>：国有大行（工建农中） &gt; 招行 / 宁波等优质股份行 &gt; 区域优质城商行</li>
+              <li><strong>跟踪</strong>：每季度净息差、不良率、拨备覆盖率、地产对公贷款敞口</li>
+              <li><strong>失效条件</strong>：净息差跌破 1.5% / 不良率反弹超 1.6% / 大行破净加深 / 10 年国债收益率反转向上</li>
+            </ul></div>
+          </div>
+        </article>
+
+        <article class="cd c4" id="cand-4">
+          <div class="cdh"><div class="cdr">④</div><div class="cdi"><div class="cdn">公用事业 / 电力 <span class="cdt">优先级 B+</span></div><div class="cdg">"AI 算力 = 电力"是科技板块的"卖铲人 2.0"逻辑 · 红利+成长稀缺品种</div></div>
+          <div class="cds"><div class="cdsr">YTD <b>+0.85%</b></div><div class="cdsr">PE <b>15.09×</b></div><div class="cdsr">60 日 <b>+8.65%</b></div></div></div>
+          <div class="cgd">
+            <div class="cb"><div class="bt">🟢 多头论据</div><ul>
+              <li><strong>AI 算力 = 电力</strong>：科技板块的"卖铲人 2.0"——下游 AI 投资再多，最终都变成电费</li>
+              <li><strong>特高压 + 电力市场化改革</strong>双重政策红利</li>
+              <li><strong>高股息</strong>：长江电力、国投电力股息率 3-4%，"红利+成长"稀缺</li>
+              <li><strong>季节性催化</strong>：夏季用电高峰前布局是历史规律，5-6 月正是窗口</li>
+              <li>当前热门榜电力第 2 名，市场已开始关注，但板块整体涨幅仍不显著</li>
+            </ul></div>
+            <div class="cb"><div class="bt">🔴 风险点</div><ul>
+              <li><strong>煤价反弹</strong>挤压火电盈利（水电 / 核电不受影响）</li>
+              <li>电价市场化改革节奏低于预期</li>
+              <li>极端干旱影响水电出力</li>
+              <li>炒"AI 用电"逻辑易过度，需警惕情绪化定价</li>
+            </ul></div>
+            <div class="cb fw"><div class="bt">📌 布局思路（仅讨论非建议）</div><ul>
+              <li><strong>子方向偏好</strong>：水电（长江电力、国投电力） &gt; 核电（中国核电） &gt; 绿电运营商 &gt; 火电</li>
+              <li><strong>跟踪</strong>：来水情况、电价市场化进度、AI 数据中心建设拉动用电量、煤价</li>
+              <li><strong>失效条件</strong>：极端干旱 / 煤价大涨超 1200 元 / 电价改革停滞 / "AI 用电"叙事被证伪</li>
+            </ul></div>
+          </div>
+        </article>
+
+        <article class="cd c5" id="cand-5">
+          <div class="cdh"><div class="cdr">⑤</div><div class="cdi"><div class="cdn">农林牧渔（猪周期） <span class="cdt">优先级 B</span></div><div class="cdg">能繁母猪连续去化 · 龙头股价回到 2020 年水平 · 高赔率低胜率配置</div></div>
+          <div class="cds"><div class="cdsr">YTD <b>-14.56%</b></div><div class="cdsr">PE <b>41.9×</b></div><div class="cdsr">60 日 <b>-11.59%</b></div></div></div>
+          <div class="cgd">
+            <div class="cb"><div class="bt">🟢 多头论据</div><ul>
+              <li><strong>猪周期临近底部反转</strong>：<span class="term" data-tk="能繁母猪">能繁母猪</span>存栏连续多月下行，按历史规律 6-9 个月后猪价见底回升</li>
+              <li><strong>粮食安全 + 种业政策</strong>持续加码（中央一号文件主线）</li>
+              <li><strong>板块跌幅充分反映悲观</strong>：牧原 / 温氏 / 新希望股价回到 2020 水平</li>
+              <li><strong>PE 高是周期股底部特征</strong>（业绩低 PE 自然高）—— "PE 反向用法"</li>
+              <li>生猪价格跌至全行业亏损区间，<strong>产能去化加速窗口</strong></li>
+            </ul></div>
+            <div class="cb"><div class="bt">🔴 风险点</div><ul>
+              <li>周期反转节奏可能慢于预期（去化不彻底）</li>
+              <li>饲料成本高位压制盈利反转幅度</li>
+              <li>新希望等高负债公司现金流风险</li>
+              <li>胜率较低，<strong>更适合"小仓位高赔率"配置</strong>而非重仓</li>
+            </ul></div>
+            <div class="cb fw"><div class="bt">📌 布局思路（仅讨论非建议）</div><ul>
+              <li><strong>子方向偏好</strong>：生猪养殖（牧原 / 温氏） &gt; 饲料 &gt; 种业 &gt; 宠物经济</li>
+              <li><strong>跟踪</strong>：能繁母猪存栏（农业农村部月度发布）、生猪期货价格、饲料成本</li>
+              <li><strong>失效条件</strong>：能繁去化反向（环比转正） / 大型猪企 ROE 持续负值 / 现金流断裂 / 生猪期货跌破 12 元/公斤</li>
+              <li><strong>仓位</strong>：因胜率最低，单一仓位上限建议为 5 候选中最小（≤ 10%）</li>
+            </ul></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sc ob" id="avoid">
+      <header class="sch"><span class="scn">PART 3</span><span class="sct">⚠️ 不推荐的"看似滞涨"板块</span></header>
+      <div class="scb">
+        <p>筛选过程中也有一些板块"涨幅不够"，但<strong>看似便宜不等于值得买</strong>，以下板块虽然 YTD 表现差但不建议布局：</p>
+        <div class="tw"><table><thead><tr><th>板块</th><th>YTD</th><th>不推荐原因</th></tr></thead><tbody>
+          <tr><td class="tx"><strong>房地产</strong></td><td class="neg">-3.66%</td><td class="tx">行业出清远未完成，"L 型"复苏看不到拐点；融资端继续紧张</td></tr>
+          <tr><td class="tx"><strong>美容护理</strong></td><td class="neg">-15.22%</td><td class="tx">板块 PE 32.6× 仍偏高 / 化妆品社零增速从 +20% 掉到 +5%，景气下滑</td></tr>
+          <tr><td class="tx"><strong>商贸零售</strong></td><td class="neg">-17.42%</td><td class="tx">电商对实体零售长期挤压趋势未变</td></tr>
+          <tr><td class="tx"><strong>钢铁</strong></td><td class="neg">-7.92%</td><td class="tx">房地产需求长期萎缩，钢铁需求长期承压</td></tr>
+          <tr><td class="tx"><strong>非银金融（券商）</strong></td><td class="neg">-15.48%</td><td class="tx">需要市场情绪 + 量能配合，目前结构性行情不利券商 β</td></tr>
+        </tbody></table></div>
+      </div>
+    </section>
+
+    <section class="sc ob" id="discipline">
+      <header class="sch"><span class="scn">PART 4</span><span class="sct">🛡️ 操作纪律 · 不能忽视的四条</span></header>
+      <div class="scb">
+        <blockquote class="note"><strong>1. 时间维度</strong>　板块轮动通常需要 <strong>2-3 个月</strong>才能确认，不要追求精准择时，<strong>分批左侧布局</strong>更稳妥。建议每个候选分 3-4 批建仓，每批间隔 1-2 周。</blockquote>
+        <blockquote class="warn"><strong>2. 仓位纪律</strong><ul style="margin-top:8px"><li>单一滞涨板块仓位上限 <strong>15-20%</strong>（农业 ≤ 10%）</li><li>5 候选合计不超过 <strong>60%</strong></li><li>留 <strong>30%+ 现金</strong>应对系统性回撤</li></ul></blockquote>
+        <blockquote class="warn"><strong>3. 触发卖出信号（任一触发即重新评估）</strong><ul style="margin-top:8px"><li>上证跌破 4000 点（结构性破位）</li><li>板块基本面出现新利空（医药新一轮集采、白酒批价深度下行、地产风险扩散）</li><li>持仓 -15% 触发硬止损</li><li>个股盈利预测下修 &gt; 20%</li></ul></blockquote>
+        <blockquote class="good"><strong>4. 与已持仓的关系</strong><ul style="margin-top:8px"><li>持有沪电 / 半导体 / PCB / CPO 类标的：<strong>不建议加仓</strong>，浮盈 30%+ 可考虑减仓 1/3</li><li>用减仓资金分批配置上面 5 候选中的 2-3 个</li><li>不要把"已涨过头"的仓位全部清掉——给上行留一些弹性</li></ul></blockquote>
+      </div>
+    </section>
+
+    <section class="gl ob" id="glossary">
+      <h2>📖 术语表 · Glossary</h2>
+      <p class="gin">报告全文带<strong style="color:var(--ac);border-bottom:1px dotted var(--ac)">虚线下划线</strong>的术语，鼠标悬停可见气泡释义。术语按首次出现顺序排列。</p>
+      <div class="glg" id="glossList"></div>
+    </section>
+
+    <footer class="rf ob">
+      <p><strong>数据来源</strong>　westock-data（腾讯自选股行情接口，2026-05-25 实时）/ 申万一级行业指数 / 沪深交易所龙虎榜 / 国家统计局 2026-04 宏观数据</p>
+      <p><strong>方法论</strong>　四象限筛选法：① YTD 涨幅 ② 估值历史分位 ③ 基本面 / 政策催化 ④ 资金面边际信号。31 个申万一级行业全量扫描，分层归类</p>
+      <p><strong>报告归档</strong>　~/investment-council/pages-site/reports/sector-rotation-2026-05-25.html</p>
+      <p style="margin-top:10px;color:var(--am)"><strong>⚠️ 免责声明</strong>　本报告仅供研究讨论与教育用途，<strong>不构成任何投资建议</strong>、不保证准确性、不替代专业投顾。投资有风险，决策请自行承担。</p>
+    </footer>
+  </main>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+// ===== 主题切换 =====
+var SK='ic-sector-theme';
+var saved=null;try{saved=localStorage.getItem(SK)}catch(e){}
+if(saved==='light'||saved==='dark')document.body.setAttribute('data-theme',saved);
+document.getElementById('themeToggle').addEventListener('click',function(){
+  var cur=document.body.getAttribute('data-theme')==='light'?'light':'dark';
+  var nx=cur==='light'?'dark':'light';
+  document.body.setAttribute('data-theme',nx);
+  try{localStorage.setItem(SK,nx)}catch(e){}
+});
+
+// ===== 热度图数据 =====
+var heatData=[
+  {n:'通信',p:189.49},{n:'电子',p:126.66},{n:'有色金属',p:90.78},{n:'综合',p:85.77},
+  {n:'电力设备',p:67.96},{n:'机械设备',p:56.52},{n:'建筑材料',p:53.39},{n:'基础化工',p:38.91},
+  {n:'国防军工',p:31.28},{n:'环保',p:26.36},{n:'石油石化',p:24.43},{n:'煤炭',p:24.27},
+  {n:'轻工制造',p:18.48},{n:'公用事业',p:15.09},{n:'建筑装饰',p:14.86},{n:'传媒',p:13.43},
+  {n:'钢铁',p:12.43},{n:'计算机',p:11.91},{n:'汽车',p:11.25},{n:'纺织服饰',p:9.51},
+  {n:'房地产',p:5.07},{n:'家用电器',p:4.95},{n:'医药生物',p:4.07},{n:'交通运输',p:0.29},
+  {n:'非银金融',p:-0.43},{n:'社会服务',p:-1.53},{n:'农林牧渔',p:-2.34},{n:'商贸零售',p:-5.88},
+  {n:'银行',p:-7.60},{n:'食品饮料',p:-19.31},{n:'美容护理',p:-23.50}
+];
+function tier(p){
+  if(p>=100)return 'tvh';
+  if(p>=50)return 'tih';
+  if(p>=20)return 'tiw';
+  if(p>=0)return 'tic';
+  if(p>=-10)return 'tid';
+  return 'tif';
+}
+var hg=document.getElementById('heatmap-grid');
+var maxAbs=Math.max.apply(null,heatData.map(function(x){return Math.abs(x.p)}));
+hg.innerHTML=heatData.map(function(x){
+  var w=Math.round(Math.abs(x.p)/maxAbs*100);
+  var sign=x.p>=0?'+':'';
+  return '<div class="hc '+tier(x.p)+'" style="--hcw:'+w+'%"><div class="hn"><span>'+x.n+'</span></div><div class="hp">'+sign+x.p.toFixed(2)+'%</div></div>';
+}).join('');
+
+// ===== 术语字典 =====
+var GLOSSARY=[
+  {key:'PE',name:'PE',en:'Price-to-Earnings',def:'市盈率：股价 ÷ 每股净利润。反映"按当前盈利能力，多少年回本"。',ctx:'本报告中沪深 300 PE 14.6× vs 科创 50 PE 179.7×，体现极端风格分化。'},
+  {key:'CPI',name:'CPI',en:'Consumer Price Index',def:'居民消费价格指数：衡量居民消费品和服务价格变动的核心指标。',ctx:'本报告 CPI YoY +1.2% 表示温和通胀，央行有降息空间。'},
+  {key:'PPI',name:'PPI',en:'Producer Price Index',def:'生产者物价指数：衡量工业企业产品出厂价格变动的指标，是上游通胀的核心代理变量。',ctx:'本报告 PPI YoY -1.1% 显示上游仍在通缩区，但化工 +54.5% 逆势。'},
+  {key:'PMI',name:'PMI',en:"Purchasing Managers' Index",def:'采购经理人指数：基于企业采购经理调查的景气度指标，50 为荣枯线。',ctx:'本报告 PMI 制造业 50.3 表示刚踩荣枯线，复苏初期。'},
+  {key:'AI制药',name:'AI 制药',en:'AI for Drug Discovery',def:'用 AI 模型加速新药发现：包括靶点识别、分子筛选、临床试验设计等环节，可大幅缩短研发周期。',ctx:'本报告中 AI 制药是医药板块新逻辑之一，替换"集采压价"旧叙事。'},
+  {key:'创新药BD',name:'创新药 BD',en:'Innovative Drug Business Development',def:'创新药企业的商务拓展：将自研药物以授权、合作等方式出海给跨国药企，常带来大额首付款 + 里程碑付款。',ctx:'本报告中创新药 BD 出海是医药板块 2026 最大变量，港股 18A 公司频繁出现亿美元级交易。'},
+  {key:'CXO',name:'CXO',en:'Contract Research/Development/Manufacturing Organization',def:'医药外包服务：CRO（研发外包）/ CDMO（开发生产外包）/ CMO（生产外包）的统称，常被称为"医药卖铲人"。',ctx:'本报告中 CXO 出口端有美国关税不确定性，是医药板块的主要风险点之一。'},
+  {key:'能繁母猪',name:'能繁母猪存栏',en:'Breeding Sow Inventory',def:'能正常繁殖的母猪数量：是猪周期最关键的领先指标，决定 6-9 个月后的生猪供给。',ctx:'本报告中能繁母猪连续多月下行，意味着 6-9 个月后猪价见底回升，是农业板块布局核心论据。'}
+];
+
+// ===== 自动扫描术语 + Tooltip =====
+var nextNum=0,keyMap={},usedKeys=[];
+var glossMap={};GLOSSARY.forEach(function(g){glossMap[g.key]=g});
+
+// 处理预先标注的 .term 节点
+document.querySelectorAll('.term').forEach(function(t){
+  var k=t.getAttribute('data-tk');
+  if(!glossMap[k])return;
+  if(!keyMap[k]){nextNum++;keyMap[k]=nextNum;usedKeys.push(k)}
+  if(!t.querySelector('sup')){
+    var sup=document.createElement('sup');sup.textContent=keyMap[k];t.appendChild(sup);
+  }
+});
+
+// 渲染术语表
+var gl=document.getElementById('glossList');
+if(usedKeys.length===0){gl.innerHTML='<p style="color:var(--tm)">本报告未匹配字典术语</p>'}
+else{
+  gl.innerHTML=usedKeys.map(function(k){
+    var g=glossMap[k],n=keyMap[k];
+    return '<div class="gi" id="gloss-'+k.replace(/[^A-Za-z0-9_]/g,'_')+'"><div class="gih"><span class="gn">'+n+'</span><span class="gnm">'+g.name+'</span><span class="gen">'+g.en+'</span></div><div class="gdf">'+g.def+'</div><div class="gcx">📌 '+g.ctx+'</div></div>';
+  }).join('');
+}
+
+// Tooltip
+var tip=null;
+function showTip(el){
+  var k=el.getAttribute('data-tk');var g=glossMap[k];if(!g)return;
+  if(!tip){tip=document.createElement('div');tip.className='tip';document.body.appendChild(tip)}
+  tip.innerHTML='<div class="th"><span class="tname">['+keyMap[k]+'] '+g.name+'</span><span class="ten">'+g.en+'</span></div><div class="tdef">'+g.def+'</div><div class="tcx">📌 '+g.ctx+'</div>';
+  var r=el.getBoundingClientRect();var top=r.bottom+8,left=r.left;
+  if(left+340>window.innerWidth-16)left=window.innerWidth-356;if(left<8)left=8;
+  if(top+220>window.innerHeight)top=r.top-228;
+  tip.style.left=left+'px';tip.style.top=top+'px';tip.classList.add('show');
+}
+function hideTip(){if(tip)tip.classList.remove('show')}
+document.querySelectorAll('.term').forEach(function(t){
+  t.addEventListener('mouseenter',function(){showTip(t)});
+  t.addEventListener('mouseleave',hideTip);
+  t.addEventListener('click',function(e){
+    e.preventDefault();var k=t.getAttribute('data-tk');
+    var tgt=document.getElementById('gloss-'+k.replace(/[^A-Za-z0-9_]/g,'_'));
+    if(tgt){window.scrollTo({top:tgt.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'})}
+  });
+});
+window.addEventListener('scroll',hideTip,{passive:true});
+
+// TOC 高亮
+var tocItems=Array.from(document.querySelectorAll('#tocList li'));
+var tocMap={};
+tocItems.forEach(function(li){var a=li.querySelector('a');if(!a)return;var h=a.getAttribute('href');if(h&&h[0]==='#')tocMap[h.slice(1)]=li;a.addEventListener('click',function(e){e.preventDefault();var t=document.getElementById(h.slice(1));if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'})})});
+if('IntersectionObserver' in window){
+  var ids=Object.keys(tocMap),secs=ids.map(function(i){return document.getElementById(i)}).filter(Boolean),cur=null;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&e.intersectionRatio>0.15){if(cur&&tocMap[cur])tocMap[cur].classList.remove('active');cur=e.target.id;if(tocMap[cur])tocMap[cur].classList.add('active')}})},{rootMargin:'-80px 0px -55% 0px',threshold:[0.15,0.5]});
+  secs.forEach(function(s){io.observe(s)});
+}
+
+// 卡片淡入
+var obs=document.querySelectorAll('.ob');
+if('IntersectionObserver' in window){
+  var iof=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('iv');iof.unobserve(e.target)}})},{threshold:0.06});
+  obs.forEach(function(el){iof.observe(el)});
+}else{obs.forEach(function(el){el.classList.add('iv')})}
+})();
+</script>
+</body>
+</html>

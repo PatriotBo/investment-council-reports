@@ -8,6 +8,24 @@
   },
   "reports": [
     {
+      "type": "sector",
+      "code": "SECTOR-ROTATION",
+      "suffix": "",
+      "name": "A 股板块轮动研判",
+      "market": "A股",
+      "industry": "全市场 / 申万一级 31 行业",
+      "date": "2026-05-25",
+      "decision": "ROTATE",
+      "confidence": 65,
+      "current_price": null,
+      "target_t1": null,
+      "target_t2": null,
+      "stop_loss": null,
+      "summary": "通信 +189% / 电子 +127% 已涨过头，机构正在出货；筛出 5 个滞涨板块作为提前布局候选：医药生物 / 食品饮料 / 银行 / 公用事业 / 农业",
+      "file": "reports/sector-rotation-2026-05-25.html"
+    },
+    {
+      "type": "stock",
       "code": "002463",
       "suffix": "SZ",
       "name": "沪电股份",

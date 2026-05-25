@@ -155,6 +155,7 @@ a:hover{color:var(--accent-violet)}
 .report-card.dec-SELL{--card-accent:var(--accent-mint)}
 .report-card.dec-HOLD{--card-accent:var(--accent-amber)}
 .report-card.dec-AVOID{--card-accent:var(--accent-mint)}
+.report-card.dec-ROTATE{--card-accent:var(--accent-violet)}
 
 .rc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px dashed var(--border-soft)}
 .rc-id{flex:1;min-width:0}
@@ -272,6 +273,7 @@ a:hover{color:var(--accent-violet)}
     <button class="filter-chip" data-decision="HOLD">HOLD</button>
     <button class="filter-chip" data-decision="SELL">SELL</button>
     <button class="filter-chip" data-decision="AVOID">AVOID</button>
+    <button class="filter-chip" data-decision="ROTATE">ROTATE</button>
   </div>
 </section>
 
@@ -346,22 +348,26 @@ a:hover{color:var(--accent-violet)}
     var html = filtered.map(function (r) {
       var ccy = r.market === '港股' ? 'HKD' : r.market === '美股' ? 'USD' : 'CNY';
       var suf = r.suffix ? '.' + r.suffix : '';
+      var isSector = (r.type === 'sector');
+      var pricesBlock = isSector
+        ? '<div class="rc-prices" style="grid-template-columns:1fr;text-align:left;padding:14px 14px"><div class="rc-price-cell" style="text-align:left"><div class="k" style="font-size:10px;letter-spacing:.16em">研究类型</div><div class="v" style="font-size:14px;color:var(--accent-violet)">📊 板块轮动研判 · 全市场扫描</div></div></div>'
+        : '<div class="rc-prices">' +
+            '<div class="rc-price-cell"><div class="k">现价</div><div class="v">' + fmtPrice(r.current_price, ccy) + '</div></div>' +
+            '<div class="rc-price-cell t1"><div class="k">T1</div><div class="v">' + fmtPrice(r.target_t1, ccy) + '</div></div>' +
+            '<div class="rc-price-cell t2"><div class="k">T2</div><div class="v">' + fmtPrice(r.target_t2, ccy) + '</div></div>' +
+            '<div class="rc-price-cell stop"><div class="k">止损</div><div class="v">' + fmtPrice(r.stop_loss, ccy) + '</div></div>' +
+          '</div>';
       return '' +
         '<a class="report-card dec-' + r.decision + '" href="' + r.file + '">' +
           '<div class="rc-head">' +
             '<div class="rc-id">' +
-              '<div class="rc-code">' + r.code + suf + '</div>' +
+              '<div class="rc-code">' + (isSector ? '🎯 SECTOR ROTATION' : (r.code + suf)) + '</div>' +
               '<div class="rc-name">' + r.name + '<span class="market-tag">' + (r.market || '—') + '</span></div>' +
             '</div>' +
             '<span class="rc-decision">' + r.decision + '</span>' +
           '</div>' +
           (r.industry ? '<div class="rc-industry">' + r.industry + '</div>' : '') +
-          '<div class="rc-prices">' +
-            '<div class="rc-price-cell"><div class="k">现价</div><div class="v">' + fmtPrice(r.current_price, ccy) + '</div></div>' +
-            '<div class="rc-price-cell t1"><div class="k">T1</div><div class="v">' + fmtPrice(r.target_t1, ccy) + '</div></div>' +
-            '<div class="rc-price-cell t2"><div class="k">T2</div><div class="v">' + fmtPrice(r.target_t2, ccy) + '</div></div>' +
-            '<div class="rc-price-cell stop"><div class="k">止损</div><div class="v">' + fmtPrice(r.stop_loss, ccy) + '</div></div>' +
-          '</div>' +
+          pricesBlock +
           '<p class="rc-summary">' + (r.summary || '') + '</p>' +
           '<div class="rc-foot">' +
             '<div class="rc-meta">' +
