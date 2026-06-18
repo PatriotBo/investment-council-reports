@@ -156,6 +156,7 @@ a:hover{color:var(--accent-violet)}
 .report-card.dec-HOLD{--card-accent:var(--accent-amber)}
 .report-card.dec-AVOID{--card-accent:var(--accent-mint)}
 .report-card.dec-ROTATE{--card-accent:var(--accent-violet)}
+.report-card.dec-MIXED{--card-accent:var(--accent-cyan)}
 
 .rc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px dashed var(--border-soft)}
 .rc-id{flex:1;min-width:0}
@@ -349,8 +350,12 @@ a:hover{color:var(--accent-violet)}
       var ccy = r.market === '港股' ? 'HKD' : r.market === '美股' ? 'USD' : 'CNY';
       var suf = r.suffix ? '.' + r.suffix : '';
       var isSector = (r.type === 'sector');
-      var pricesBlock = isSector
-        ? '<div class="rc-prices" style="grid-template-columns:1fr;text-align:left;padding:14px 14px"><div class="rc-price-cell" style="text-align:left"><div class="k" style="font-size:10px;letter-spacing:.16em">研究类型</div><div class="v" style="font-size:14px;color:var(--accent-violet)">📊 板块轮动研判 · 全市场扫描</div></div></div>'
+      var isBasket = (r.type === 'basket');
+      var isMulti = isSector || isBasket;
+      var typeLabel = isSector ? '📊 板块轮动研判 · 全市场扫描' : (isBasket ? '🎩 多公司圆桌研判 · 横向对比' : '');
+      var codeLabel = isSector ? '🎯 SECTOR ROTATION' : (isBasket ? '🎩 BASKET ROUNDTABLE' : (r.code + suf));
+      var pricesBlock = isMulti
+        ? '<div class="rc-prices" style="grid-template-columns:1fr;text-align:left;padding:14px 14px"><div class="rc-price-cell" style="text-align:left"><div class="k" style="font-size:10px;letter-spacing:.16em">研究类型</div><div class="v" style="font-size:14px;color:var(--accent-violet)">' + typeLabel + '</div></div></div>'
         : '<div class="rc-prices">' +
             '<div class="rc-price-cell"><div class="k">现价</div><div class="v">' + fmtPrice(r.current_price, ccy) + '</div></div>' +
             '<div class="rc-price-cell t1"><div class="k">T1</div><div class="v">' + fmtPrice(r.target_t1, ccy) + '</div></div>' +
@@ -361,7 +366,7 @@ a:hover{color:var(--accent-violet)}
         '<a class="report-card dec-' + r.decision + '" href="' + r.file + '">' +
           '<div class="rc-head">' +
             '<div class="rc-id">' +
-              '<div class="rc-code">' + (isSector ? '🎯 SECTOR ROTATION' : (r.code + suf)) + '</div>' +
+              '<div class="rc-code">' + codeLabel + '</div>' +
               '<div class="rc-name">' + r.name + '<span class="market-tag">' + (r.market || '—') + '</span></div>' +
             '</div>' +
             '<span class="rc-decision">' + r.decision + '</span>' +

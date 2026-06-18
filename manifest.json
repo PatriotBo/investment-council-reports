@@ -8,6 +8,23 @@
   },
   "reports": [
     {
+      "type": "basket",
+      "code": "3STOCKS-COMBO",
+      "suffix": "",
+      "name": "三家公司圆桌研判 · 三安/鼎龙/玻纤",
+      "market": "A股",
+      "industry": "化合物半导体 / CMP 抛光垫 / 玻纤",
+      "date": "2026-06-17",
+      "decision": "MIXED",
+      "confidence": 70,
+      "current_price": null,
+      "target_t1": null,
+      "target_t2": null,
+      "stop_loss": null,
+      "summary": "三安 HOLD（等回踩 ¥15-16）/ 鼎龙 AVOID（PE 104× + 主力 -25 亿） / 玻纤 AVOID（YTD +256% 全靠题材）—— 反直觉发现：滞涨的三安是中线性价比最高的",
+      "file": "reports/3stocks-roundtable-2026-06-17.html"
+    },
+    {
       "type": "sector",
       "code": "SECTOR-ROTATION",
       "suffix": "",
